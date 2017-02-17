@@ -12,6 +12,11 @@ from .models import Article, Comment, Arture, User, Request
 from login.views import authenticated
 
 
+def get_profile_page(request, user_id):
+    user = User.objects.get(id=user_id)
+    return render(request, 'users/profile.html', {})
+
+
 def newsfeed(request, user_id):
     if not authenticated(request):
         return redirect('/login/')
@@ -42,13 +47,14 @@ def upload_picture(request, user_id):
         return HttpResponse('form invalid')
     return HttpResponseForbidden('allowed only via POST')
 
+
 def get_profile_picture(request, user_id):
     if not authenticated(request):
         return redirect('/login/')
 
     if request.method == 'GET':
-        image_url = 'http://192.168.56.1:8000' + User.objects.get(id=user_id).pic.url
-        return redirect(image_url)
+        image_url = User.objects.get(id=user_id).pic.url
+        return HttpResponse(image_url)
     return HttpResponseForbidden('allowed only via GET')
 
 
@@ -57,7 +63,7 @@ def upload_profile_picture(request, user_id):
         return redirect('/login/')
 
     if request.method == 'POST':
-        f = request.POST
+
         form = ImageUploadForm(request.POST, request.FILES)
 
         if form.is_valid():
@@ -65,6 +71,7 @@ def upload_profile_picture(request, user_id):
             user.pic.delete()
             user.pic = form.cleaned_data['image']
             user.save()
+
             return HttpResponse(status=200)
         return HttpResponseForbidden('invalid form data')
     return HttpResponseForbidden('Allowed only via POST')

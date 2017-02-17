@@ -3,6 +3,7 @@ from . import views
 
 
 urlpatterns = [
+    url(r'^$', views.get_profile_page, name='get_profile_page'),
 
     url(r'^newsfeed$', views.newsfeed, name='newsfeed'),
 
