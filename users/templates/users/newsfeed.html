@@ -1,0 +1,187 @@
+<!--
+	info from Django:
+			url:
+		- about post : /aticles/:_id?token=
+		- about user: /users/:_id?token=
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<link rel="stylesheet" href="../../../static/css/style.css"> <title>Arture</title>
+	</head>
+	<body ng-app='mainApp'>
+		<div class="header-container">
+			<div class="head-contents">
+				<h1 id="banner">Arture</h1>
+				<div id="user-info">
+					<span id="user-page-lnk">{{ user_name }}</span>
+					<span id="user-welcome-message" class="system-message">welcome.</span>
+				</div>
+			</div>
+		</div>
+		<div class="main-container">
+			<div class="main-contents">
+				<!--
+				<div class="left-container">
+					<div class="left-side-contents">
+						<div class="user-info">
+
+						</div>
+					</div>
+				</div>
+				-->
+
+				<div class="right-container">
+					<div class="right-side-contents">
+						<div class="info-B">
+							area for showing node recommendation
+							<form action="{% url 'login:signout' %}">{% csrf_token %}
+								<input type="submit" id="signout" name="signout" value="Signout">
+							</form>
+							<form action='/users/{{ user_objectId }}/profile_picture/upload' method="POST" enctype="multipart/form-data">{% csrf_token %}
+								<hr>
+								<p>upload article picture : <input type="file" id="image" name="image"></p>
+								<input type="submit" value="Submit">
+							</form>
+
+							<form action='/users/{{ user_objectId }}/profile_picture' method="GET">{% csrf_token %}
+								<hr>
+								<p>get profile picture</p>
+								<input type="submit" value="Submit">
+							</form>
+
+							<form action="/users/58a54a83397f7f26288fa90c/artures" method="POST">{% csrf_token %}
+								<hr>
+								comment : <input type="text" name="comment">
+								<input type="submit" value="Submit">
+							</form>
+						</div>
+					</div>
+				</div>
+
+				<div class="mid-container" ng-controller='mainController'>
+					<div class="mid-content">
+						<div class="article-input">
+							<div class="contents-input">
+								<textarea name="text-input" class="cinput" placeholder="무슨 생각을 하고 계신가요?" ng-model='text'></textarea>
+								<input type="text" class="cinput non-activate" placeholder="tag"  ng-model='tag'>
+								<input type="text" class="cinput non-activate" placeholder="emotion" ng-model='emotion'>
+								<button class="cinput non-activate" id="contents-submit" ng-click='createPost()'>Post</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="mid-content" ng-repeat="article in feeds">
+						<div class="article">
+							<div class="article-top">
+								<div class="profile-container">
+									<img class="profile-img" src="{% templatetag openvariable %} article.writer_image {% templatetag closevariable %}">
+									<span class="profile-name">{% templatetag openvariable %} article.writer_name {% templatetag closevariable %}</span><br>
+									<span class="time-stamp">{% templatetag openvariable %} setProperTimeString(article.reg_time) {% templatetag closevariable %}</span>
+								</div>
+								<div class="article-top-contents">{% templatetag openvariable %} article.contents {% templatetag closevariable %}</div>
+								<div class="article-top-sub-contents">
+									<span class="tag">#{% templatetag openvariable %} article.tag {% templatetag closevariable %}</span>
+									<span class="emo">{% templatetag openvariable %} article.emotion {% templatetag closevariable %}</span>
+								</div>
+							</div>
+
+							<div class="article-bottom">
+								<!-- "comments" and "more comments button" and "comment write area" -->
+								<div class="comment-input">
+									<img class="profile-img-s" src="http://cphoto.asiae.co.kr/listimglink/6/2015040308595537373_1.jpg">
+									<input class="coinput" type="text" placeholder="댓글을 입력하세요..">
+								</div>
+								<div class="comments-container">
+									<!-- Angular -->
+									<div class="comment-content">
+										<img class="profile-img-s" src="http://cphoto.asiae.co.kr/listimglink/6/2015040308595537373_1.jpg">
+										<div class="comment-text">
+											<span class="profile-name">박수진</span><span class="comment-text-body">asdfasdfasdfasdfasdfasdfasdfasdfasdfas dfasdfasdfasdfasdfasdfasdf</span>
+										</div>
+									</div>
+									<div class="comment-content">
+										<img class="profile-img-s" src="http://cphoto.asiae.co.kr/listimglink/6/2015040308595537373_1.jpg">
+										<div class="comment-text">
+											<span class="profile-name">박수진</span><span class="comment-text-body">asdfasdfasdfasdfasdfasdfasdfasdfasdfas dfasdfasdfasdfasdfasdfasdf</span>
+										</div>
+									</div>
+
+								</div>
+								<div class="comments-bottom">
+									<!-- show more comments.. -->
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="shadow non-activate"></div>
+	</body>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js">	</script>
+	<script src="../../../static/js/test.js"></script>
+	<script src="../../../static/js/main.js"></script>
+	<script>
+		/* --------------------------------------------- */
+		/* --------------------------------------------- */
+		var turnOn = function(elements) {
+			// specific
+			artiInput.style.zIndex = "3";
+			artiInput.style.height = "150px";
+			body.style.overflow = "hidden";
+
+			setTimeout(function() {
+				// specific
+				cinputs[0].style.height="70px";
+				cinputs[1].style.height=cinputs[2].style.height="20px";
+				cinputs[1].style.width=cinputs[2].style.width="calc(33% - 25px)";
+				for(var i=0; i<elements.length; i++) {
+					elements[i].style.pointerEvents="auto";
+					elements[i].classList.replace("non-activate","activate"); }
+			},100);
+		}
+		var turnOff = function(elements) {
+			for(var i=0; i<elements.length; i++) {
+				elements[i].style.pointerEvents="none";
+				elements[i].classList.replace("activate","non-activate");
+			}
+			// specific
+			body.style.overflow = "auto";
+			artiInput.style.height = "90px";
+			artiInput.style.zIndex = "0";
+			cinputs[0].style.height="50px";
+			cinputs[1].style.height=cinputs[1].style.width="0px";
+			cinputs[2].style.height=cinputs[2].style.width="0px";
+			cinputs[0].value = cinputs[1].value = cinputs[2].value = "";
+		}
+		/* --------------------------------------------- */
+		/* --------------------------------------------- */
+		var cinputs = document.getElementsByClassName("cinput");
+		var shadow = document.getElementsByClassName("shadow")[0];
+		var artiInput = document.getElementsByClassName("article-input")[0];
+		var body = document.getElementsByTagName("body")[0];
+		var midContainer = document.getElementsByClassName("mid-container")[0];
+		var headerContainer = document.getElementsByClassName("header-container")[0];
+
+		// initiate
+		turnOff([cinputs[1],cinputs[2],cinputs[3],shadow]);
+		/* ------------  add event listener	------------ */
+		cinputs[0].onfocus = function() {
+			turnOn([cinputs[1],cinputs[2],cinputs[3],shadow]);
+		};
+		shadow.onclick = function() {
+			turnOff([cinputs[1],cinputs[2],cinputs[3],shadow]);
+		};
+		window.onscroll = function() {
+			if(headerContainer.clientHeight + midContainer.clientHeight <= window.pageYOffset + window.innerHeight+5) {
+				console.log("log: end of page");
+				angular.element(midContainer).scope().getFeeds();
+			}
+		};
+		/* --------------------------------------------- */
+	</script>
+</html>
