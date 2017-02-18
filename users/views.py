@@ -11,10 +11,36 @@ from .models import Article, Comment, Arture, User, Request
 
 from login.views import authenticated
 
+from django.views.decorators.csrf import csrf_exempt
+
+# Need to define what is user
 
 def get_profile_page(request, user_id):
-    user = User.objects.get(id=user_id)
-    return render(request, 'users/profile.html', {})
+    
+    profile = User.objects.get(id=user_id)
+    user_objectId = request.session.get('user_objectId')
+    user_name = request.session.get('user_name')
+    login_token = request.session.get('login_token')
+
+    is_mine = False
+    is_friend = False
+    is_request_sended = False
+    is_request_received = False
+
+    if profile.name == user_name:
+        is_mine = True
+
+    return render(request, 'users/profile.html', {'profile_objectId': user_id,
+						'profile_name': profile.name,
+						'profile_img_url' : '192.168.1.209:80'+profile.pic.url,
+						'profile_email': profile.email,
+						'user_objectId' : user_objectId,
+						'user_name' : user_name,
+						'login_token' : login_token,
+						'is_mine' : is_mine,
+						'is_friend' : is_friend,
+						'is_request_sended' : is_request_sended,
+						'is_request_received' : is_request_received})
 
 
 def newsfeed(request, user_id):
@@ -22,15 +48,12 @@ def newsfeed(request, user_id):
         return redirect('/login/')
 
     user_objectId = request.session.get('user_objectId')
-    user_email = request.session.get('user_email')
     user_name = request.session.get('user_name')
     login_token = request.session.get('login_token')
 
     return render(request, 'users/newsfeed.html', {'user_objectId': user_objectId,
-                                                  'user_email': user_email,
                                                   'user_name': user_name,
-                                                  'login_token': login_token
-})
+                                                  'login_token': login_token })
 
 
 def upload_picture(request, user_id):
@@ -72,7 +95,7 @@ def upload_profile_picture(request, user_id):
             user.pic = form.cleaned_data['image']
             user.save()
 
-            return HttpResponse(status=200)
+            return redirect('/users/'+user_id)
         return HttpResponseForbidden('invalid form data')
     return HttpResponseForbidden('Allowed only via POST')
 
@@ -202,7 +225,7 @@ def get_article_list(request, user_id):
                             status=200)
     return HttpResponseForbidden('Allowed only via GET')
 
-
+@csrf_exempt
 def create_article(request, user_id):
     if not authenticated(request):
         return redirect('/login/')

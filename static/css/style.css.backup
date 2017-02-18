@@ -7,11 +7,6 @@
 	src: url('HelveticaNeueLTPro-Ex.otf');
 }
 
-a {
-	text-decoration: none;
-	color: inherit;
-}
-
 body {
 	font-family: HelveticaNeueLTPro-EX;
 
@@ -55,7 +50,7 @@ body {
 	top: 0px;
 	left: 0px;
 	background: black;
-	z-index: 3;
+	z-index: 2;
 	opacity: 0;
 	visibility: visible;
 }
@@ -69,13 +64,12 @@ body {
 	border-top-width: 0px;
 	border-left-width: 0px;
 	border-right-width: 0px;
-	border-bottom-color: #500003;
+	border-bottom-color: #133783;
 	border-bottom-width: 1px;
 
+
 	position: fixed;
-	top: 0px;
-	z-index: 2;
-	
+	z-index: 1;
 }
 
 .main-container {
@@ -85,11 +79,6 @@ body {
 	
 	position: relative;
 	top: 43px;
-}
-
-.top-container {
-	height : 250px;
-	width: 100%;
 }
 
 .left-container {
@@ -135,13 +124,6 @@ body {
 
 	position: relative;
 	margin: auto;
-}
-
-.top-content {
-	width: calc(100% - 20px);
-	height: 100%;
-
-	margin: 0 10px 10px 10px;
 }
 
 .left-content {
@@ -209,7 +191,8 @@ body {
 	border-top-width: 1px;
 
 	position: relative;
-	z-index: 4;
+	z-index: 0;
+
 }
 
 .contents-input {
@@ -494,78 +477,3 @@ div.activate {
 	border-radius: 3px;
 	padding: 5px;
 }
-
-/* user - profile */
-.user-profile {
-	height: 100%;
-	background-color: rgb(29,33,41);
-}
-
-.user-profile-img {
-	width: 175px;
-	height: 175px;
-
-	position : absolute;
-	top: 55px;
-	left: 28px;
-
-	border: 1px solid rgb(200,200,200);
-	border-radius: 3px;
-	background-color: white;
-
-	z-index: 1;
-}
-
-.user-profile-img > img {
-	width: 166px;
-	height: 166px;
-
-	position: absolute;
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-	margin: auto;
-
-	z-index: -1;
-}
-
-.user-profile-name {
-
-	font-size: 23px;
-	color: white;
-
-	position: absolute;
-	left: 215px;
-	top: 175px;
-}
-
-.user-profile-tools {
-	height: 38px;
-	width: calc(100% - 20px);
-
-	background-color: white;
-	border: 1px solid rgb(220,221,225);
-	border-radius: 0px 0px 3px 3px;
-	z-index: 0;
-
-	position: absolute;
-	top: 212px;	
-}
-	
-
-.upload-profile-img {
-	height: 175px;
-	width: 175px;
-	
-	background-color: rgb(0,0,0);
-	opacity: 0;
-	border: none;
-}
-
-.upload-profile-img:hover {
-	opacity: 0.2;
-	transition: opacity 0.2s;
-	cursor: pointer;
-}
-

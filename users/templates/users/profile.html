@@ -7,101 +7,126 @@
 		<title>Arture</title>
 	</head>
 	<body>
-
 		<div class="header-container">
 			<div class="head-content">
-				<h1 id="banner">Arture</h1>
+				<h1 id="banner"><a href="http://192.168.1.209">Arture</a></h1>
 				<div id="user-info">
-					<span id="user-page-lnk">John</span>
-					<span id="user-welcome-message" class="system-message">환영한다.</span>
+					<span id="user-page-lnk"><a href="http://192.168.1.209/users/{{ user_objectId }}">{{ user_name }}</a></span>
+					<span id="user-welcome-message" class="system-message">welcome.</span>
 				</div>
 			</div>
 		</div>
-
-			<div class="main-container">
-				<div class="main-contents">
-
-					<!-- Follow list -a->
-					<div class="right-container">
-						<div class="right-content">
-							<div class="banner">
-								<span class="banner-text">Following</span>
+		<div class="main-container">
+			<div class="main-contents">
+				<div class="top-container">
+					<div class="top-content">
+						<div class="user-profile">
+							<div class="user-profile-img">
+								<img src="http://cphoto.asiae.co.kr/listimglink/6/2015040308595537373_1.jpg"></img>
+								{% if is_mine %}
+								<form id="profile-img-form" action="/users/{{ user_objectId }}/profile_picture/upload" method="POST" enctype="multipart/form-data">{% csrf_token %}
+								<input type="file" id="image" name="image" style="display:block;width:0;height:0;visibility:hidden">
+								<button type="button" class="upload-profile-img" onclick='upload_profile_img()'></button>
+								</form>
+								<script>
+								var img_file_input = document.getElementById("image")
+								var profile_img_form = document.getElementById("profile-img-form")
+								function upload_profile_img() {
+									img_file_input.click()	
+								}
+								img_file_input.onchange = function() { profile_img_form.submit()	}
+								</script>
+								{% endif %}
 							</div>
-						</div>
-						<!-- Angular -a->
-						<div class="mid-right-content">
-							<div class="node-profile">
-								<div class="profile-container">
-								</div>
+							<div class="user-profile-name">
+								<span class="user-profile-name-txt"><a href="http://192.168.1.209/users/{{ profile_objectId }}">{{ profile_name }}</a></span>
 							</div>
-						</div>
-					</div>
-
-					<!-- Friend list -a->
-					<div class="mid-right-container">
-						<div class="mid-right-content">
-							<div class="banner">
-								<span class="banner-text">Friends</span>
-							</div>
-						</div>
-						<!-- Angular -a->
-						<div class="mid-right-content">
-							<div class="friend-profile">
-								<div class="profile-container">
-								</div>
+							<div class="user-profile-tools">
+								{% if is_mine %}
+								{% endif %}
 							</div>
 						</div>
 					</div>
-
-					<!-- Timeline -a->
-					<div class="mid-container">
-						<div class="mid-content">
-							<div class="banner">
-								<span class="banner-text">Timeline</span>
+				</div>
+				<div class="right-container">
+					<div class="right-content">
+						<div class="banner">
+							<span class="banner-text">Following</span>
+						</div>
+					</div>
+					<div class="mid-right-content">
+						<div class="node-profile">
+							<div class="profile-container">
 							</div>
 						</div>
-						<!-- Angular -a->
-						<div class="mid-content">
-							<div class="article">
-								<div class="article-top">
-									<div class="profile-container">
-									</div>
-								</div>
+					</div> 
+				</div>
 
-								<div class="article-bottom">
-									<!-- "comments" and "more comments button" and "comment write area" -a->
-									<div class="comment-input">
+				<!-- Friend list -->
+				<div class="mid-right-container">
+					<div class="mid-right-content">
+						<div class="banner">
+							<span class="banner-text">Friends</span>
+						</div>
+					</div>
+					<!-- Angular -->
+					<div class="mid-right-content">
+						<div class="friend-profile">
+							<div class="profile-container">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Timeline -->
+				<div class="mid-container">
+					<div class="mid-content">
+						<div class="banner">
+							<span class="banner-text">Timeline</span>
+						</div>
+					</div>
+					<!-- Angular -->
+					<div class="mid-content">
+						<div class="article">
+							<div class="article-top">
+								<div class="profile-container">
+								</div>
+							</div>
+
+							<div class="article-bottom">
+								<!-- "comments" and "more comments button" and "comment write area" -->
+								<div class="comment-input">
+									<img class="profile-img-s" src="http://cphoto.asiae.co.kr/listimglink/6/2015040308595537373_1.jpg">
+									<input class="coinput" type="text" placeholder="댓글을 입력하세요..">
+								</div>
+								<div class="comments-container">
+									<!-- Angular -->
+									<div class="comment-content">
 										<img class="profile-img-s" src="http://cphoto.asiae.co.kr/listimglink/6/2015040308595537373_1.jpg">
-										<input class="coinput" type="text" placeholder="댓글을 입력하세요..">
-									</div>
-									<div class="comments-container">
-										<!-- Angular -a->
-										<div class="comment-content">
-											<img class="profile-img-s" src="http://cphoto.asiae.co.kr/listimglink/6/2015040308595537373_1.jpg">
-											<div class="comment-text">
-												<span class="profile-name">박수진</span><span class="comment-text-body">afasdfasdfasdf</span>
-											</div>
-										</div>
-										<div class="comment-content">
-											<img class="profile-img-s" src="http://cphoto.asiae.co.kr/listimglink/6/2015040308595537373_1.jpg">
-											<div class="comment-text">
-												<span class="profile-name">박수진</span><span class="comment-text-body">adfasdfasdfasdf</span>
-											</div>
+										<div class="comment-text">
+											<span class="profile-name">박수진</span><span class="comment-text-body">afasdfasdfasdf</span>
 										</div>
 									</div>
-									<div class="comments-bottom">
-										<!-- show more comments.. -a->
+									<div class="comment-content">
+										<img class="profile-img-s" src="http://cphoto.asiae.co.kr/listimglink/6/2015040308595537373_1.jpg">
+										<div class="comment-text">
+											<span class="profile-name">박수진</span><span class="comment-text-body">adfasdfasdfasdf</span>
+										</div>
 									</div>
 								</div>
+								<div class="comments-bottom">
+									<!-- show more comments.. -->
+								</div>
 							</div>
-						</div><!-- mid content -a->
+						</div>
+					</div><!-- mid content -->
 
-					</div>
 				</div>
 			</div>
 		</div>
-		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
-		<script src="js/profile.js"></script>
+	</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+	<script src="js/profile.js"></script>
 
 	</body>
 </html>
