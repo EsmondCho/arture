@@ -22,8 +22,8 @@
 					<div class="top-content">
 						<div class="user-profile">
 							<div class="user-profile-img">
-								<img src="http://cphoto.asiae.co.kr/listimglink/6/2015040308595537373_1.jpg"></img>
-								{% if is_mine %}
+								<img src="{{ profile_img_url }}"></img>
+								{% if is_mine == True %}
 								<form id="profile-img-form" action="/users/{{ user_objectId }}/profile_picture/upload" method="POST" enctype="multipart/form-data">{% csrf_token %}
 								<input type="file" id="image" name="image" style="display:block;width:0;height:0;visibility:hidden">
 								<button type="button" class="upload-profile-img" onclick='upload_profile_img()'></button>
@@ -42,7 +42,35 @@
 								<span class="user-profile-name-txt"><a href="http://192.168.1.209/users/{{ profile_objectId }}">{{ profile_name }}</a></span>
 							</div>
 							<div class="user-profile-tools">
-								{% if is_mine %}
+								{% if is_mine == False %}
+									{% if is_friend == False %}
+										{% if is_request_sended == False and is_request_received == False %}
+											<form id="request-form">{% csrf_token %}
+												<input type='hidden' name='to_id' value='{{ profile_objectId }}'>
+											</form>
+											<button class="friend-tool" id="add-friend" onclick='sendFriendRequest()' >친구 추가</button>
+											<script>
+												function sendFriendRequest() {
+													$.ajax({
+														url:'http://192.168.1.209/users/{{ user_objectId }}/friend_requests/create',
+														type:'post',
+														data: $('#request-form').serialize(),
+														success:function(data) {
+															$('#add-friend').prop("disabled", true)
+															$('#add-friend').html("친구요청 전송됨")
+															$('#add-friend').attr("id","sended-friend-req")
+														}
+													})	
+												}
+											</script>
+										{% elif is_request_sended == True %}
+											<button class="friend-tool" disabled="true" id="sended-friend-req">친구요청 전송됨</button>
+										{% else %}
+											<button class="friend-tool" disabled="true" id="received-friend-req">친구요청 받음</button>
+										{% endif %}
+									{% else %}
+										<button class="friend-tool" disabled="true">친구</button>
+									{% endif %}
 								{% endif %}
 							</div>
 						</div>
@@ -63,8 +91,8 @@
 				</div>
 
 				<!-- Friend list -->
-				<div class="mid-right-container">
-					<div class="mid-right-content">
+				<div class="left-container">
+					<div class="left-content">
 						<div class="banner">
 							<span class="banner-text">Friends</span>
 						</div>
@@ -125,8 +153,6 @@
 			</div>
 		</div>
 	</div>
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
-	<script src="js/profile.js"></script>
-
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	</body>
 </html>

@@ -12,7 +12,6 @@ Position
 }
 
 body {
-	background-color: #E9EBEE;
 	margin: 0px;
 }
 span {
@@ -58,8 +57,9 @@ select {
 	height: calc(100vh - 83px - 20px);
 	/* 100% - header - footer */
 
-	background: linear-gradient(white,#D3D8E8);
-	position: relative;
+	background-image: url('reservoir.jpg');
+	/* background: linear-gradient(e,#D3D8E8); */
+	/* position: relative; */
 }
 
 .left-container {

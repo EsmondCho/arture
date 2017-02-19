@@ -1,0 +1,4642 @@
+
+
+
+
+
+
+
+
+
+	
+	
+		
+		
+			
+						
+			
+				
+				
+					
+				
+				 
+			
+		
+		
+			
+		
+		
+	
+	
+	
+	
+	
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="imagetoolbar" content="no">
+<title>쇼생크 탈출 : 네이버 영화</title>
+
+	
+	
+	
+	
+	
+		
+		
+	
+
+
+
+<meta property="me2:image" content="http://imgmovie.naver.com/today/naverme/naverme_profile.jpg"/>
+<meta property="me2:post_tag" content="네이버영화 쇼생크 탈출"/>
+<meta property="me2:category1" content="네이버영화"/>
+<meta property="me2:category2" content="쇼생크 탈출"/>
+
+
+
+	
+	
+	
+		<meta property="og:title" content="쇼생크 탈출"/>
+	
+
+
+<meta property="og:type" content="article"/>
+
+<meta property="og:url" content="http://movie.naver.com/movie/bi/mi/point.nhn?code=17421"/> 
+
+
+	
+		<meta property="og:image" content="http://movie.phinf.naver.net/20160119_278/14531650465287bcuk_JPEG/movie_image.jpg?type=m665_443_2"/>
+	
+	
+
+
+	
+	<meta property="og:description" content="촉망 받던 은행 부지점장 ‘앤디(팀 로빈슨 分)’는 아내와 그 애인을 살해한 혐의로 종신형을 받고 쇼..."/>
+
+
+
+<meta property="og:article:thumbnailUrl" content="http://imgmovie.naver.com/today/naverme/naverme_profile.jpg"/>
+<meta property="og:article:author" content="네이버 영화"/>
+<meta property="og:article:author:url" content="http://movie.naver.com/"/>
+
+
+
+
+	
+	
+	
+	
+		<link rel="shortcut icon" href="http://static.naver.net/m/movie/icons/naver_movie_favicon.ico" type="image/x-icon">
+			
+
+
+
+<link rel="stylesheet" type="text/css" href="http://movie.naver.com/css/deploy/movie.all.css?20170215144352" />
+
+<script type="text/javascript" src="http://movie.naver.com/js/deploy/movie.all.js?20170215144352"></script>
+</head>
+<body >
+<div id="wrap" class="basic">
+
+	<!-- GNB -->
+	
+
+
+
+<script type="text/javascript">
+function delayed_submit(object) {
+	if (navigator.userAgent.indexOf('MSIE') == -1) {
+		var b = c = new Date();
+      	while ((b.getTime() - c.getTime()) < 100) {
+			b = new Date();
+      	}
+	} 
+}
+</script>
+
+<script type="text/javascript">
+	var gnb_service = "movie";
+	var gnb_logout = "http://movie.naver.com/movie/bi/mi/point.nhn%3Fcode%3D17421";
+	var gnb_template = "gnb_utf8";
+	var gnb_brightness=3;
+	var gnb_response = true;
+	
+	jindo.$Fn(function(){
+		getGNB();
+	}).attach(window, "load");
+	
+	jindo.$Fn(function(oEvent){ var welSource = jindo.$Element(oEvent.element);
+			if (!welSource.isChildOf(jindo.$Element("gnb"))) {
+				gnbAllLayerClose();
+			}
+	}).attach(document, 'click');
+</script>
+ <!-- skip navigation -->
+<div id="u_skip">
+         <a href="point.nhn?code=17421#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;"><span>메인 메뉴로 바로가기</span></a>
+         <a href="point.nhn?code=17421#content" id="gnb_goContent" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false;"><span>본문으로 바로가기</span></a>
+</div>
+<!-- //skip navigation -->
+<div class="gnb_container">
+	<div class="gnb_content">
+	<!-- 광고영역 -->
+	<div class="da_banner">
+		<iframe id="topBanner" name="f27029" src="http://ad.naver.com/adshow?unit=286A" width="270" height="29" marginheight="0" marginwidth="0" scrolling="no" frameborder="0" align="center" allowtransparency="true" title="상단배너"></iframe>
+	</div>
+	<!-- //광고영역 -->
+		<div class="gnb_box">
+			<div class="gnb_wrap">
+				<div id="gnb">
+				    <script type="text/javascript" charset="utf-8" src="http://static.gn.naver.net/template/gnb_utf8.nhn"></script>
+				</div>
+			</div>
+			<!-- 검색창 -->
+			<form id="jSearchForm" action="http://movie.naver.com/movie/search/result.nhn" method="get" style="margin:0;display:none;">
+				<input type="text" name="query" maxlength="100"/>
+				<input type="hidden" name="section" value="all"/>
+				<input type="hidden" name="ie" value="utf8"/>
+			</form>
+			<fieldset id="jSearchArea" class="srch_area">
+				<legend><span class="blind">영화검색 영역</span></legend>
+				<div class="srch_field_on _view">
+					<span class="ipt_srch">
+						<label for="ipt_tx_srch" id="search_placeholder">영화검색</label>
+						<input type="text" id="ipt_tx_srch" class="ipt_tx_srch" name="query" maxlength="100" accesskey="s" style="ime-mode:active;" autocomplete="off" />
+						<span class="align"></span>
+						<span class="auto_tx"><a href="point.nhn?code=17421#" title="자동완성 펼치기"><img src="http://static.naver.net/movie/2012/06/srch_arrow_down.gif" width="7" height="4" title="자동완성 펼치기" alt="자동완성 펼치기" /></a></span>
+					</span>
+					<button type="submit" title="검색" class="btn_srch" onClick="clickcr(this,'GNB.search','','',event); delayed_submit(this);"><span class="blind">검색</span></button>
+					 <!-- 자동 완성 영역임 #autocomplate_template-->
+				</div>
+			</fieldset>
+			<!-- //검색창 -->
+		</div>
+	</div>
+</div>
+
+	<!-- //GNB -->
+
+	<!-- header -->
+	
+
+
+
+
+
+	<div id="header">
+		<a href="point.nhn?code=17421#content" title="본문으로 이동" class="blind">본문 바로가기</a>
+		<h1 class="svc_name">
+			<a href="http://www.naver.com/" title="naver로 바로가기" class="ci_logo" id="lnb_gonaver"><img src="http://static.naver.net/movie/2013/07/logo_ci.png" width="62" height="13" alt="NAVER" /></a><!-- N=a:LNB.naver -->
+			<a href="http://movie.naver.com/" title="영화서비스홈으로 바로가기" class="svc_logo"><img src="http://static.naver.net/movie/2012/06/logo_svc.png" width="34" height="19" alt="영화" /></a><!-- N=a:LNB.movie -->
+		</h1>
+		<div id="scrollbar" class="scrollbar scrollbar-noscript">
+			<div class="scrollbar-box">
+				<div class="scrollbar-content">
+                    <div class="in_scroll">
+                        <ul class="navi">
+                        <li>
+                            <a href="http://movie.naver.com/" title="영화홈" class="menu01"><strong>영화홈</strong></a><!-- N=a:LNB.home -->
+                        </li>
+                        <li>
+                            <a href="http://movie.naver.com/movie/running/current.nhn" title="상영작·예정작" class="menu02_on"><strong>상영작·예정작</strong></a><!-- N=a:LNB.movies -->
+                            <ul class="navi_sub" id="navi_movie" style="display:none">
+                            <li><a href="http://movie.naver.com/movie/running/current.nhn" title="현재 상영영화" class="sub2_1"><em>현재 상영영화</em></a><!-- N=a:LNB.now --></li>
+                            <li><a href="http://movie.naver.com/movie/running/premovie.nhn" title="개봉 예정영화" class="sub2_2"><em>개봉 예정영화</em></a><!-- N=a:LNB.soon --></li>
+                            <li><a href="http://movie.naver.com/movie/running/weekendmovie.nhn" title="TV/DVD 영화" class="sub2_3"><em>TV/DVD 영화</em></a><!-- N=a:LNB.guide --></li>
+                            <li><a href="http://movie.naver.com/movie/running/movieclip.nhn" title="예고편" class="sub2_4"><em>예고편</em></a><!-- N=a:LNB.tailer --></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="http://movie.naver.com/movie/sdb/rank/rmovie.nhn" title="영화랭킹" class="menu03"><strong>영화랭킹</strong></a><!-- N=a:LNB.db -->
+                        </li>
+                        <li>
+                            <a href="http://movie.naver.com/movie/bi/mi/reserve.nhn" title="예매" class="menu05"><strong>예매</strong></a><!-- N=a:LNB.ticket -->
+                        </li>
+                        <li>
+                            <a href="http://movie.naver.com/movie/preview/index.nhn" title="시사회·이벤트" class="menu06"><strong>시사회·이벤트</strong></a><!-- N=a:LNB.event -->
+                        </li>
+                        <li>
+                            <a href="http://movie.naver.com/movie/point/af/list.nhn" title="평점&middot리뷰" class="menu07"><strong>평점&middot리뷰</strong></a><!-- N=a:LNB.comm -->
+                        </li>
+                        <li>
+                            <a href="http://nstore.naver.com/movie/home.nhn" title="다운로드" class="menu08" target="_blank"><strong>다운로드</strong></a><!-- N=a:LNB.download -->
+                        </li>
+						<li class="nav_indi">
+						        <a href="http://movie.naver.com/movie/indifilm/festival.nhn" title="인디극장"><strong>인디극장</strong></a><!-- N=a:LNB.indie -->
+						</li>                        
+                        </ul>
+                        
+	                        <!-- [D] view 모드 전환간 클래스는 _on,_off / 비활성화는 _disabled -->
+	                        <div id="viewmode-option-area" class="lnb_etc">
+								<div class="info_view">
+									<a href="point.nhn?code=17421#" class="_info-anchor btn_view_md"><em>보기옵션</em></a>
+									<div class="ly_info_view" id="_viewmode-option-info-layer" style="display:none">
+										<span></span>
+										브라우저의 해상도에 따라 기본 혹은 넓게보기가 가능합니다. 넓게보기는 가로해상도 1872픽셀 이상에서만 동작합니다.
+									</div>
+								</div>
+								<div class="view_mode">
+									<a href="point.nhn?code=17421#" title="" class="_basic-btn normal_on"><em>기본보기</em></a>
+                                    <a href="point.nhn?code=17421#" title="" class="_wide-btn wide_off"><em>넓게보기</em></a>
+								</div>
+							</div>
+						
+                    </div>
+				</div>
+			</div>
+			<div class="scrollbar-v">
+				<div class="scrollbar-button-up"></div>
+				<div class="scrollbar-track">
+					<div class="scrollbar-thumb"></div>
+				</div>
+				<div class="scrollbar-button-down"></div>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+	if ("상영작·예정작" == "상영작·예정작"
+			|| "상영작·예정작" == "현재 상영영화"
+			|| "상영작·예정작" == "개봉 예정영화"
+			|| "상영작·예정작" == "TV/DVD 영화"
+			|| "상영작·예정작" == "예고편") {
+		jindo.$Element("navi_movie").show();
+	}
+	</script>
+	<!-- //header -->
+	
+	<!-- container -->
+	<div id="container">
+			<!-- 프로모션 레이어 -->
+		<div class="ly_promo" id="thumb_promotion_layer"><h3>원하시는 영화를 선택해보세요.</h3>
+			화제가 되고 있는 최신영화 정보를 한 눈에 확인하실 수 있습니다.
+			<a href="point.nhn?code=17421#" class="btn_clse" title="닫기" id="thumb_promotion_layer_close">닫기</a>
+		</div>
+	
+
+		<!-- 상단 현재 상영작 썸네일 리스트 -->
+		<div class="spot">
+			<div class="top_list" id="_TopArea">
+				<div class="first_mv_list current_mv_list _mv_default_list">
+					<button type="button" class="_prev-btn thumb_prev" onClick="clickcr(this,'rnk.prev','','',event);"><em>이전</em></button>
+					<a href="http://movie.naver.com/movie/running/current.nhn?order=reserve" class="h_current_mv" id="first_mv_list_link"><h2><strong class="blind">상영작 예매순위</strong></h2></a><!-- N=a:rnk.ntitle -->
+					<div class="top_poster_area">
+                        <ul class="top_thumb_lst">
+						
+							
+								<li  data-title="재심"><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=149512"><img src="http://movie2.phinf.naver.net/20170206_116/1486347780659NI0zd_JPEG/movie_image.jpg?type=n77_110_2" width="42" height="60" alt="재심" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a></li>
+							
+						
+							
+								<li  data-title="조작된 도시"><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=127382"><img src="http://movie2.phinf.naver.net/20170206_87/1486347556947SbfPd_JPEG/movie_image.jpg?type=n77_110_2" width="42" height="60" alt="조작된 도시" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a></li>
+							
+						
+							
+								<li  data-title="트롤"><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=101904"><img src="http://movie2.phinf.naver.net/20170131_247/1485837102862FEQpu_JPEG/movie_image.jpg?type=n77_110_2" width="42" height="60" alt="트롤" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a></li>
+							
+						
+							
+								<li  data-title="공조"><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=142384"><img src="http://movie2.phinf.naver.net/20170118_143/1484714583493K148x_JPEG/movie_image.jpg?type=n77_110_2" width="42" height="60" alt="공조" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a></li>
+							
+						
+							
+								<li  data-title="그레이트 월"><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=126034"><img src="http://movie2.phinf.naver.net/20170210_125/1486708641979dq1uz_JPEG/movie_image.jpg?type=n77_110_2" width="42" height="60" alt="그레이트 월" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a></li>
+							
+						
+							
+								<li  data-title="더 큐어"><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=143372"><img src="http://movie.phinf.naver.net/20170215_293/1487139004248ExVyx_JPEG/movie_image.jpg?type=n77_110_2" width="42" height="60" alt="더 큐어" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a></li>
+							
+						
+							
+								<li  data-title="발레리나"><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=130984"><img src="http://movie.phinf.naver.net/20170116_155/1484549791780cKhGa_JPEG/movie_image.jpg?type=n77_110_2" width="42" height="60" alt="발레리나" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a></li>
+							
+						
+							
+								<li  data-title="마이펫 오지"><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=157500"><img src="http://movie.phinf.naver.net/20170119_111/14847903644704wpI3_JPEG/movie_image.jpg?type=n77_110_2" width="42" height="60" alt="마이펫 오지" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a></li>
+							
+						
+							
+								<li  data-title="트리플 엑스 리턴즈"><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=102278"><img src="http://movie2.phinf.naver.net/20170208_36/14865215818208kKCw_JPEG/movie_image.jpg?type=n77_110_2" width="42" height="60" alt="트리플 엑스 리턴즈" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a></li>
+							
+						
+							
+								<li  data-title="50가지 그림자: 심연"><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=144081"><img src="http://movie2.phinf.naver.net/20170209_186/1486602690791shLj1_JPEG/movie_image.jpg?type=n77_110_2" width="42" height="60" alt="50가지 그림자: 심연" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a></li>
+							
+						
+							
+								<li  data-title="컨택트"><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=136869"><img src="http://movie2.phinf.naver.net/20170126_165/1485396001082SL5mI_JPEG/movie_image.jpg?type=n77_110_2" width="42" height="60" alt="컨택트" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a></li>
+							
+						
+							
+								<li  data-title="라라랜드"><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=134963"><img src="http://movie2.phinf.naver.net/20161123_188/1479862185516tYkKO_JPEG/movie_image.jpg?type=n77_110_2" width="42" height="60" alt="라라랜드" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a></li>
+							
+						
+							
+								<li  data-title="모아나"><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=130849"><img src="http://movie2.phinf.naver.net/20170120_142/1484874386518CyDv1_JPEG/movie_image.jpg?type=n77_110_2" width="42" height="60" alt="모아나" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a></li>
+							
+						
+							
+								<li  data-title="레고 배트맨 무비"><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=132627"><img src="http://movie2.phinf.naver.net/20170109_192/1483925158727Ampy8_JPEG/movie_image.jpg?type=n77_110_2" width="42" height="60" alt="레고 배트맨 무비" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a></li>
+							
+						
+							
+								<li  data-title="너의 이름은."><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=150198"><img src="http://movie2.phinf.naver.net/20161208_214/1481159570776FFFlp_JPEG/movie_image.jpg?type=n77_110_2" width="42" height="60" alt="너의 이름은." onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a></li>
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+                        </ul>
+                    </div>
+					<button type="button" class="_next-btn thumb_next" onClick="clickcr(this,'rnk.next','','',event);"><em>다음</em></button>
+				</div>
+				<div class="second_mv_list expected_mv_list _mv_default_list">
+					<button type="button" class="_prev-btn thumb_prev" onClick="clickcr(this,'rnk.prev','','',event);"><em>이전</em></button>
+					<a href="http://movie.naver.com/movie/running/premovie.nhn" class="h_expected_mv" id="second_mv_list_link"><h2><strong class="blind">예정작 개봉일순</strong></h2></a><!-- N=a:rnk.stitle -->
+					<div class="top_poster_area">
+						<ol class="top_thumb_lst">
+						
+							
+								<li  data-title="싱글라이더"><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=146459"><img src="http://movie.phinf.naver.net/20170124_208/1485221882294AahVz_JPEG/movie_image.jpg?type=n77_110_2" width="42" height="60" alt="싱글라이더" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a></li>
+							
+						
+							
+								<li  data-title="핵소 고지"><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=142305"><img src="http://movie2.phinf.naver.net/20170118_51/1484706629500KiUn8_JPEG/movie_image.jpg?type=n77_110_2" width="42" height="60" alt="핵소 고지" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a></li>
+							
+						
+							
+								<li  data-title="루시드 드림"><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=130713"><img src="http://movie2.phinf.naver.net/20170123_132/1485160659795SfWgk_JPEG/movie_image.jpg?type=n77_110_2" width="42" height="60" alt="루시드 드림" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a></li>
+							
+						
+							
+								<li  data-title="23 아이덴티티"><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=144927"><img src="http://movie2.phinf.naver.net/20170207_225/1486428081012r6FQr_JPEG/movie_image.jpg?type=n77_110_2" width="42" height="60" alt="23 아이덴티티" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a></li>
+							
+						
+							
+								<li  data-title="문라이트"><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=152684"><img src="http://movie2.phinf.naver.net/20170126_221/1485409667792K5pSs_JPEG/movie_image.jpg?type=n77_110_2" width="42" height="60" alt="문라이트" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a></li>
+							
+						
+							
+								<li  data-title="미인어"><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=127383"><img src="http://movie2.phinf.naver.net/20170216_35/1487227118982de9JY_JPEG/movie_image.jpg?type=n77_110_2" width="42" height="60" alt="미인어" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a></li>
+							
+						
+							
+								<li  data-title="존 윅 - 리로드"><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=143932"><img src="http://movie2.phinf.naver.net/20170216_95/1487223532020lh0qU_JPEG/movie_image.jpg?type=n77_110_2" width="42" height="60" alt="존 윅 - 리로드" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a></li>
+							
+						
+							
+								<li  data-title="극장판 빰바라빤쮸: 바나나 왕국의 비밀"><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=153782"><img src="http://movie2.phinf.naver.net/20170202_61/1486003131003TM9Uo_JPEG/movie_image.jpg?type=n77_110_2" width="42" height="60" alt="극장판 빰바라빤쮸: 바나나 왕국의 비밀" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a></li>
+							
+						
+							
+								<li  data-title="레이디버그"><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=157564"><img src="http://movie.phinf.naver.net/20170124_249/1485221914778hn4uw_JPEG/movie_image.jpg?type=n77_110_2" width="42" height="60" alt="레이디버그" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a></li>
+							
+						
+							
+								<li  data-title="용을 찾아서"><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=158839"><img src="http://movie2.phinf.naver.net/20170126_108/1485396912721hKIoL_JPEG/movie_image.jpg?type=n77_110_2" width="42" height="60" alt="용을 찾아서" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a></li>
+							
+						
+							
+								<li  data-title="극장판 소드 아트 온라인 -오디널 스케일-"><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=159408"><img src="http://movie.phinf.naver.net/20170203_137/1486084416321ESQw3_JPEG/movie_image.jpg?type=n77_110_2" width="42" height="60" alt="극장판 소드 아트 온라인 -오디널 스케일-" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a></li>
+							
+						
+							
+								<li  data-title="안해"><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=159554"><img src="http://movie.phinf.naver.net/20170217_52/14872960867839NPtV_JPEG/movie_image.jpg?type=n77_110_2" width="42" height="60" alt="안해" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a></li>
+							
+						
+							
+								<li  data-title="샤룩칸의 팬"><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=119546"><img src="http://movie.phinf.naver.net/20170203_78/1486105634728Pe17h_JPEG/movie_image.jpg?type=n77_110_2" width="42" height="60" alt="샤룩칸의 팬" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a></li>
+							
+						
+							
+								<li  data-title="도성풍운 2"><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=129007"><img src="http://movie.phinf.naver.net/20170215_81/1487121863688HOgy2_JPEG/movie_image.jpg?type=n77_110_2" width="42" height="60" alt="도성풍운 2" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a></li>
+							
+						
+							
+								<li  data-title="바이킹 레거시"><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=158732"><img src="http://movie.phinf.naver.net/20170214_161/1487039226960tCe8M_JPEG/movie_image.jpg?type=n77_110_2" width="42" height="60" alt="바이킹 레거시" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a></li>
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+						</ol>
+					</div>
+					<button type="button" class="_next-btn thumb_next" onClick="clickcr(this,'rnk.next','','',event);"><em>다음</em></button>
+				</div>
+				
+				<a href="point.nhn?code=17421#" class="open_lst _expand-btn"><em id="expandButtonName" class="blind">상영예매순위, 예정작 개봉일순 더보기</em></a><!-- N=a:rnk.open -->
+
+				<div class="open_mv_list _expansion-wrap" style="display:none">
+					<div class="current_open">
+						<div class="open_title_area">
+							<h2 class="h_current_open">상영작 예매순위</h2>
+							<a href="http://movie.naver.com/movie/running/current.nhn?order=reserve" title="더보기" class="open_more"><em>더보기</em></a><!-- N=a:rnk.nmore -->
+						</div>
+						<ul class="current_list">
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=149512" title="재심"><img src="http://movie.phinf.naver.net/20170206_116/1486347780659NI0zd_JPEG/movie_image.jpg?type=n77_110_2"  width="77" height="110" alt="재심" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lnimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=127382" title="조작된 도시"><img src="http://movie.phinf.naver.net/20170206_87/1486347556947SbfPd_JPEG/movie_image.jpg?type=n77_110_2"  width="77" height="110" alt="조작된 도시" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lnimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=101904" title="트롤"><img src="http://movie.phinf.naver.net/20170131_247/1485837102862FEQpu_JPEG/movie_image.jpg?type=n77_110_2"  width="77" height="110" alt="트롤" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lnimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=142384" title="공조"><img src="http://movie.phinf.naver.net/20170118_143/1484714583493K148x_JPEG/movie_image.jpg?type=n77_110_2"  width="77" height="110" alt="공조" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lnimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=126034" title="그레이트 월"><img src="http://movie2.phinf.naver.net/20170210_125/1486708641979dq1uz_JPEG/movie_image.jpg?type=n77_110_2"  width="77" height="110" alt="그레이트 월" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lnimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=143372" title="더 큐어"><img src="http://movie.phinf.naver.net/20170215_293/1487139004248ExVyx_JPEG/movie_image.jpg?type=n77_110_2"  width="77" height="110" alt="더 큐어" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lnimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=130984" title="발레리나"><img src="http://movie.phinf.naver.net/20170116_155/1484549791780cKhGa_JPEG/movie_image.jpg?type=n77_110_2"  width="77" height="110" alt="발레리나" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lnimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=157500" title="마이펫 오지"><img src="http://movie2.phinf.naver.net/20170119_111/14847903644704wpI3_JPEG/movie_image.jpg?type=n77_110_2"  width="77" height="110" alt="마이펫 오지" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lnimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=102278" title="트리플 엑스 리턴즈"><img src="http://movie2.phinf.naver.net/20170208_36/14865215818208kKCw_JPEG/movie_image.jpg?type=n77_110_2"  width="77" height="110" alt="트리플 엑스 리턴즈" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lnimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=144081" title="50가지 그림자: 심연"><img src="http://movie2.phinf.naver.net/20170209_186/1486602690791shLj1_JPEG/movie_image.jpg?type=n77_110_2"  width="77" height="110" alt="50가지 그림자: 심연" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lnimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=136869" title="컨택트"><img src="http://movie2.phinf.naver.net/20170126_165/1485396001082SL5mI_JPEG/movie_image.jpg?type=n77_110_2"  width="77" height="110" alt="컨택트" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lnimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=134963" title="라라랜드"><img src="http://movie.phinf.naver.net/20161123_188/1479862185516tYkKO_JPEG/movie_image.jpg?type=n77_110_2"  width="77" height="110" alt="라라랜드" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lnimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=130849" title="모아나"><img src="http://movie2.phinf.naver.net/20170120_142/1484874386518CyDv1_JPEG/movie_image.jpg?type=n77_110_2"  width="77" height="110" alt="모아나" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lnimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=132627" title="레고 배트맨 무비"><img src="http://movie.phinf.naver.net/20170109_192/1483925158727Ampy8_JPEG/movie_image.jpg?type=n77_110_2"  width="77" height="110" alt="레고 배트맨 무비" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lnimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=150198" title="너의 이름은."><img src="http://movie.phinf.naver.net/20161208_214/1481159570776FFFlp_JPEG/movie_image.jpg?type=n77_110_2"  width="77" height="110" alt="너의 이름은." onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lnimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=137956" title="맨체스터 바이 더 씨"><img src="http://movie2.phinf.naver.net/20170201_13/14859267991028clIo_JPEG/movie_image.jpg?type=n77_110_2"  width="77" height="110" alt="맨체스터 바이 더 씨" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lnimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=151192" title="그래, 가족"><img src="http://movie2.phinf.naver.net/20170215_277/14871221977133lG65_JPEG/movie_image.jpg?type=n77_110_2"  width="77" height="110" alt="그래, 가족" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lnimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=144314" title="더 킹"><img src="http://movie.phinf.naver.net/20170118_172/1484704779507T3ahF_JPEG/movie_image.jpg?type=n77_110_2"  width="77" height="110" alt="더 킹" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lnimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=134841" title="라이언"><img src="http://movie.phinf.naver.net/20170125_191/1485324072000CEr65_JPEG/movie_image.jpg?type=n77_110_2"  width="77" height="110" alt="라이언" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lnimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=134887" title="스노든"><img src="http://movie2.phinf.naver.net/20170119_294/1484789563015tsUUJ_JPEG/movie_image.jpg?type=n77_110_2"  width="77" height="110" alt="스노든" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lnimg --></li>
+												
+						</ul>
+					</div>
+					<div class="expected_open">
+						<div class="open_title_area">
+							<h2 class="h_expected_open">예정작 개봉일순</h2>
+							<a href="http://movie.naver.com/movie/running/premovie.nhn" title="더보기" class="open_more"><em>더보기</em></a><!-- N=a:rnk.smore -->
+						</div>
+						<ol class="current_list">
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=146459" title="싱글라이더"><img src="http://movie2.phinf.naver.net/20170124_208/1485221882294AahVz_JPEG/movie_image.jpg?type=n77_110_2" width="77" height="110" alt="싱글라이더" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lsimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=142305" title="핵소 고지"><img src="http://movie2.phinf.naver.net/20170118_51/1484706629500KiUn8_JPEG/movie_image.jpg?type=n77_110_2" width="77" height="110" alt="핵소 고지" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lsimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=130713" title="루시드 드림"><img src="http://movie2.phinf.naver.net/20170123_132/1485160659795SfWgk_JPEG/movie_image.jpg?type=n77_110_2" width="77" height="110" alt="루시드 드림" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lsimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=144927" title="23 아이덴티티"><img src="http://movie2.phinf.naver.net/20170207_225/1486428081012r6FQr_JPEG/movie_image.jpg?type=n77_110_2" width="77" height="110" alt="23 아이덴티티" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lsimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=152684" title="문라이트"><img src="http://movie.phinf.naver.net/20170126_221/1485409667792K5pSs_JPEG/movie_image.jpg?type=n77_110_2" width="77" height="110" alt="문라이트" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lsimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=127383" title="미인어"><img src="http://movie2.phinf.naver.net/20170216_35/1487227118982de9JY_JPEG/movie_image.jpg?type=n77_110_2" width="77" height="110" alt="미인어" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lsimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=143932" title="존 윅 - 리로드"><img src="http://movie2.phinf.naver.net/20170216_95/1487223532020lh0qU_JPEG/movie_image.jpg?type=n77_110_2" width="77" height="110" alt="존 윅 - 리로드" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lsimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=153782" title="극장판 빰바라빤쮸: 바나나 왕국의 비밀"><img src="http://movie2.phinf.naver.net/20170202_61/1486003131003TM9Uo_JPEG/movie_image.jpg?type=n77_110_2" width="77" height="110" alt="극장판 빰바라빤쮸: 바나나 왕국의 비밀" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lsimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=157564" title="레이디버그"><img src="http://movie2.phinf.naver.net/20170124_249/1485221914778hn4uw_JPEG/movie_image.jpg?type=n77_110_2" width="77" height="110" alt="레이디버그" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lsimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=158839" title="용을 찾아서"><img src="http://movie.phinf.naver.net/20170126_108/1485396912721hKIoL_JPEG/movie_image.jpg?type=n77_110_2" width="77" height="110" alt="용을 찾아서" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lsimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=159408" title="극장판 소드 아트 온라인 -오디널 스케일-"><img src="http://movie.phinf.naver.net/20170203_137/1486084416321ESQw3_JPEG/movie_image.jpg?type=n77_110_2" width="77" height="110" alt="극장판 소드 아트 온라인 -오디널 스케일-" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lsimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=159554" title="안해"><img src="http://movie2.phinf.naver.net/20170217_52/14872960867839NPtV_JPEG/movie_image.jpg?type=n77_110_2" width="77" height="110" alt="안해" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lsimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=119546" title="샤룩칸의 팬"><img src="http://movie.phinf.naver.net/20170203_78/1486105634728Pe17h_JPEG/movie_image.jpg?type=n77_110_2" width="77" height="110" alt="샤룩칸의 팬" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lsimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=129007" title="도성풍운 2"><img src="http://movie.phinf.naver.net/20170215_81/1487121863688HOgy2_JPEG/movie_image.jpg?type=n77_110_2" width="77" height="110" alt="도성풍운 2" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lsimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=158732" title="바이킹 레거시"><img src="http://movie.phinf.naver.net/20170214_161/1487039226960tCe8M_JPEG/movie_image.jpg?type=n77_110_2" width="77" height="110" alt="바이킹 레거시" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lsimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=138370" title="시티 워: 익스트림 킬러"><img src="http://movie.phinf.naver.net/20170210_187/1486689363605Ig7iH_JPEG/movie_image.jpg?type=n77_110_2" width="77" height="110" alt="시티 워: 익스트림 킬러" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lsimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=137904" title="실종: 택시 납치 사건"><img src="http://movie2.phinf.naver.net/20170217_281/1487311293188313Y8_JPEG/movie_image.jpg?type=n77_110_2" width="77" height="110" alt="실종: 택시 납치 사건" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lsimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=111079" title="우리 동네 히어로"><img src="http://movie2.phinf.naver.net/20170207_31/1486433332249gRfbR_JPEG/movie_image.jpg?type=n77_110_2" width="77" height="110" alt="우리 동네 히어로" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lsimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=142627" title="임페리엄"><img src="http://movie.phinf.naver.net/20170124_240/1485222302291vP13l_JPEG/movie_image.jpg?type=n77_110_2" width="77" height="110" alt="임페리엄" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lsimg --></li>
+						
+	                        <li ><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=159553" title="퍼펙트 크라임"><img src="http://movie.phinf.naver.net/20170209_237/1486603342603uTdDs_JPEG/movie_image.jpg?type=n77_110_2" width="77" height="110" alt="퍼펙트 크라임" onError="src='http://static.naver.net/movie/2012/06/dft_img77x110.png'" /></a><!-- N=a:rnk.lsimg --></li>
+						
+						</ol>
+					</div>
+				</div>
+				
+
+
+	<div class="btn_ad">
+		<iframe id="leftBanner" name="f130250" src="http://ad.naver.com/adshow?unit=288D" width="130" height="250" marginheight="0" marginwidth="0" scrolling="no" frameborder="0" align="center" allowTransparency="true" title="사이드 배너"></iframe>
+	</div>
+
+			</div>
+		</div>
+		<!-- //상단 현재 상영작 썸네일 리스트 -->
+        <script type="text/template" id="_TopAreaThumbnailExpander_tpl">
+            <div class="zoom_img" style="width:77px;height:110px;left:{=nLeft}px">
+                <a href="http://movie.naver.com/movie/bi/mi/{=sUrl}">
+                    <span class="img_mask">
+                            <p>{=sTitle}</p>
+                    </span>
+                    <img src="http://movie.naver.com/movie/bi/mi/{=sImgSrc}" alt="" />
+                </a>
+            </div>
+        </script>
+        
+        <script type="text/javascript">
+			jindo.$Fn(
+				function (we) {
+					if (jindo.$('thumb_promotion_layer') != null) {
+						jindo.$Fn(
+							function(e) {
+								jindo.$Element("thumb_promotion_layer").hide();
+								jindo.$Cookie().set("NM_THUMB_PROMOTION_BLOCK", "Y", 1000);	//1000 days  
+							}
+						).attach(jindo.$("thumb_promotion_layer_close"), "click").attach(jindo.$("_TopArea"), "click");
+					}
+				}
+			).attach(document, 'domready');
+        </script>
+        
+
+<!-- content -->
+<div id="content">
+	<input type="hidden" name="movieCode" id="movieCode" value="17421"/>
+	<input type="hidden" name="pointAfterActualPointYn" id="pointAfterActualPointYn" value=""/>
+	<input type="hidden" name="pointAfterOrder" id="pointAfterOrder" value=""/>
+	<input type="hidden" name="pointAfterPage" id="pointAfterPage" value="1"/>
+	<input type="hidden" name="reviewOrder" id="reviewOrder" value=""/>
+	<input type="hidden" name="reviewPage" id="reviewPage" value="1"/>
+	<input type="hidden" name="pointBeforeInterestYn" id="pointBeforeInterestYn" value=""/>
+	<input type="hidden" name="pointBeforePage" id="pointBeforePage" value="1"/>
+	<div class="article">
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+		
+		
+		
+		
+		
+		
+	
+
+
+
+	
+		
+			
+			
+				
+			
+		
+	
+	
+
+
+	
+		
+			
+			
+				
+			
+		
+	
+	
+
+
+
+
+
+
+
+	
+		
+			
+			
+				
+			
+		
+	
+	
+
+<!-- 영화정보(wide) -->
+<div class="wide_info_area" style="display: none">
+	<!-- 포스터 -->
+	<div class="poster">
+		
+			
+				<a href="point.nhn?code=17421#" onclick="javascript:common.iwopen('17421');clickcr(this,'ifo.img','','',event);return false;"><img src="http://movie2.phinf.naver.net/20160119_278/14531650465287bcuk_JPEG/movie_image.jpg?type=m77_110_2" alt="쇼생크 탈출" onerror="this.src='http://static.naver.net/movie/2012/06/dft_img77x110_1.png'"/><span>포스터 크게보기</span></a>
+			
+			
+		
+	</div>
+	<!-- //포스터 -->
+	<div class="mv_info">
+		<h3 class="h_movie">
+			
+			<a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=17421">쇼생크 탈출</a><!-- N=a:ifo.title -->
+			
+				
+				
+			
+			
+			<strong class="h_movie2" title="The Shawshank Redemption										, 					1994">The Shawshank Redemption
+					
+					, 
+					1994</strong>
+		</h3>
+		
+		<div class="main_score">
+			
+					
+				
+				<div class="score">
+					<div class="uio_ntz_btn see">
+						<span class="ntz _actualPointHelpWide">
+							<em class="blind">관람객 평점</em>
+							<a href="point.nhn?code=17421#" id="actualPointHelpButtonWide" class="help _actualPointHelpWide">관람객 평점 도움말</a>
+						</span>
+						<div class="ly_ntz _actualPointHelpWide" id="actualPointHelpWide" style="display:none">
+							<span></span>
+							관람객 평점은 네이버영화에서<br>예매하고 실제 관람 후 이용자들이<br>작성한 평점입니다.
+							<button type="button" class="btn_close _actualPointHelpWide" id="actualPointHelpCloseButtonWide"><em>닫기</em></button>
+						</div>
+						<div class="ly_count" id="actualPointCountWide" style="display:none">
+							<span></span>
+							참여 <em>15</em>명
+						</div>
+					</div>
+					<a id="actualPointPersentWide" href="http://movie.naver.com/movie/bi/mi/point.nhn?code=17421&amp;onlyActualPointYn=Y#pointAfterTab" class="ntz_score">
+						<div class="star_score">
+							
+								
+									<span class="st_off"><span class="st_on" style="width:98.7%">관람객 평점 9.87점</span></span><em class="num9">9</em><em class="dot">.</em><em class="num8">8</em><em class="num7">7</em>
+								
+								
+							
+						</div>
+					</a><!-- N=a:ifo.mgrating -->
+				</div>
+				
+							
+				
+				
+				<div class="score">
+					<div class="spc_score_area">
+						<a href="point.nhn?code=17421#pointExpertTab" class="spc">
+							<span class="spc_score"><em class="blind">기자 &middot; 평론가 평점</em></span>
+							<div class="star_score">
+								<span class="st_off"><span class="st_on" style="width:85.0%"></span></span><em class="num8">8</em><em class="dot">.</em><em class="num5">5</em><em class="num0">0</em>
+							</div>
+						</a><!-- N=a:ifo.crating -->
+					</div>
+				</div>
+				
+				
+			
+
+			
+			<div class="score">
+				<div class="uio_ntz_btn">
+					<span class="ntz">
+						<em class="blind">네티즌 평점</em><a href="point.nhn?code=17421#" class="help" id="pointHelpButtonWide" title="네티즌 평점 도움말 보기">네티즌 평점 도움말</a>
+					</span>
+					<div class="ly_ntz _pointHelpWide" id="pointHelpWide" style="display:none">
+						<span></span>
+						
+							
+							
+								국내 개봉작입니다. 관람하신 영화에 대한<br> 평점을 남겨주세요. 140자평 뿐 아니라 블<br>로그 영화 리뷰작성 시 등록한 별점도 함께<br> 반영됩니다.
+							
+						
+						<button type="button" class="btn_close _pointHelpWide" id="pointHelpCloseButtonWide"><em>닫기</em></button>
+					</div>
+					<div class="ly_count" id="pointNetizenCountWide" style="display:none">
+						<span></span>
+						참여 <em>16,284</em>명
+					</div>
+				</div>
+				<div class="star_score ">
+					<a href="point.nhn?code=17421#pointAfterTab" id="pointNetizenPersentWide"><span class="st_off"><span class="st_on" style="width:94.0%"></span></span><em class="num9">9</em><em class="dot">.</em><em class="num4">4</em><em class="num0">0</em></a><!-- N=a:ifo..arating -->
+				</div>
+			</div>
+			
+			
+			
+				<div id="noPointWide" class="score">
+					<div class="my_score_area">
+						<!--[D] 내평점이 없는경우 화살표를 없애기 위해 class="my"가 빠진다 -->
+						<a href="point.nhn?code=17421#pointAfterTab">
+							<span class="my_score"><em class="blind">내 평점</em></span>
+							<div class="star_score">
+								<span class="st_off"><span class="st_on" style="width:0%">0점</span></span>
+								<span class="btn_write">등록</span>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div id="existPointWide" class="score" style="display : none">
+					<div class="my_score_area">
+						<a href="javascript:pointWide.toggleMyPoint();" class="my">
+							<span class="my_score">
+								<em class="blind">내 평점</em>
+							</span>
+							<div id="starPointWide" class="star_score">
+								<span class="st_off"><span id="pointStarWide" class="st_on" style="width:0%"></span></span>
+							</div>
+						</a><!-- N=a:ifo.marating -->
+						<div class="ly_my" id="myPointLayerWide" style="display:none">
+							<span id="pointTextWide"></span><a id="pointRemoveWide" href="javascript:checkAlreadyPointAfterExist('wide', );" class="btn_del">삭제</a>
+							<a href="javascript:pointWide.toggleMyPoint();" class="btn_close"><em>닫기</em></a>
+						</div>
+					</div>
+				</div>				
+		</div>
+		
+		
+		<p class="info_spec">
+			
+				<span><a href="http://movie.naver.com/movie/sdb/browsing/bmovie.nhn?genre=1">드라마</a
+				></span>
+			
+			
+				<span><a href="http://movie.naver.com/movie/sdb/browsing/bmovie.nhn?nation=US">미국</a
+				></span>
+			
+			<span>142분 </span>
+			<span><a href="http://movie.naver.com/movie/sdb/browsing/bmovie.nhn?open=2016">2016</a
+						><a href="http://movie.naver.com/movie/sdb/browsing/bmovie.nhn?open=20160224">.02.24</a> 재개봉,
+			 <a href="http://movie.naver.com/movie/sdb/browsing/bmovie.nhn?open=1995">1995</a
+						><a href="http://movie.naver.com/movie/sdb/browsing/bmovie.nhn?open=19950128">.01.28</a> 개봉</span>
+			
+			
+				<span>
+					[국내]
+						
+							<a href="http://movie.naver.com/movie/sdb/browsing/bmovie.nhn?grade=1001003">15세 관람가</a>
+							
+						
+					
+
+					[해외]
+						
+							<a href="http://movie.naver.com/movie/sdb/browsing/bmovie.nhn?grade=1011004">R</a>
+							<a href="point.nhn?code=17421#" onclick="popupMovieGrade(); return false;" target="_blank" class="help" title="도움말"><em>도움말</em></a><!-- N=a:ifo.gradeguide -->
+							
+						
+					
+				</span>
+			
+			
+		</p>
+		<div class="info_spec2">
+			<dl class="step1">
+				<dt>감독</dt>
+				<dd>
+					
+						
+							
+								<a href="http://movie.naver.com/movie/bi/pi/basic.nhn?code=2167">프랭크 다라본트</a>
+							
+							
+						
+					
+				</dd>
+			</dl>
+			
+			<dl class="step2">
+				<dt>출연</dt>
+				<dd>
+					
+						
+						
+							
+								
+									<a href="http://movie.naver.com/movie/bi/pi/basic.nhn?code=1546">팀 로빈스<span>(앤디 듀프레인)</a>,
+								
+								
+							
+						
+					
+						
+						
+							
+								
+									<a href="http://movie.naver.com/movie/bi/pi/basic.nhn?code=2088">모건 프리먼<span>(엘리스 보이드 레드 레딩)</a>
+								
+								
+							
+						
+					
+				</dd>
+			</dl>
+			
+			<a href="http://movie.naver.com/movie/bi/mi/detail.nhn?code=17421" title="더보기" class="more">더보기</a>
+		</div>
+			<div class="end_btn_area">
+				<ul>
+					
+					
+					
+						<li><a href="http://nstore.naver.com/tvstore/detail.nhn?mcode=17421" title="다운로드" class="btn_dnld" target="_blank"><em>다운로드</em></a></li>
+					
+
+					
+					
+					
+										
+					
+					
+					
+						<li><a href="http://book.naver.com/bookdb/book_detail.nhn?bid=6260548" title="원작 도서" class="btn_original" target="_blank"><em>원작 도서</em></a><!-- N=a:ifo.book --></li>
+					
+					
+					
+						<li>
+							<div class="u_likeit_module"></div>
+						</li>
+				</ul>
+			</div>
+
+		<div class="spi_area">
+			<div id="wideSpiLayer" class="naver-splugin" data-style="standard-v1-text" data-me-display="off" data-oninitialize="movie_oninitialize()"></div>
+		</div>
+	</div>
+	
+</div>
+<!-- //영화정보(wide) -->
+<!-- 영화정보(basic) -->
+<div class="mv_info_area" >
+	<div class="mv_info">
+		<h3 class="h_movie">
+		
+		<a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=17421">쇼생크 탈출</a><!-- N=a:ifo.title --></h3>
+		<strong class="h_movie2" title="The Shawshank Redemption, 1994">The Shawshank Redemption, 1994</strong>
+		
+		
+		<div class="main_score">
+			
+			
+				
+				<div class="score">
+					<div class="uio_ntz_btn see">
+						<span class="ntz _actualPointHelpBasic">
+							<em class="blind">관람객 평점</em>
+							<a href="point.nhn?code=17421#" id="actualPointHelpButtonBasic" class="help _actualPointHelpBasic">관람객 평점 도움말</a>
+						</span>
+						<div class="ly_ntz" id="actualPointHelpBasic" style="display:none" z-index="20">
+							<span></span>
+							관람객 평점은 네이버영화에서<br>예매하고 실제 관람 후 이용자들이<br>작성한 평점입니다.
+							<button type="button" class="btn_close _actualPointHelpBasic" id="actualPointHelpCloseButtonBasic"><em>닫기</em></button>
+						</div>
+						<div class="ly_count" id="actualPointCountBasic" style="display:none">
+							<span></span>
+							참여 <em>15</em>명
+						</div>
+					</div>
+					<a id="actualPointPersentBasic" href="http://movie.naver.com/movie/bi/mi/point.nhn?code=17421&amp;onlyActualPointYn=Y#pointAfterTab" class="ntz_score">
+						<div class="star_score">
+							
+								
+									<span class="st_off"><span class="st_on" style="width:98.7%">관람객 평점 9.87점</span></span><em class="num9">9</em><em class="dot">.</em><em class="num8">8</em><em class="num7">7</em>
+								
+								
+							
+						</div>
+					</a><!-- N=a:ifo.mgrating -->
+				</div>
+				
+				
+				
+				
+				<div class="score">
+					<div class="spc_score_area">
+						<a href="point.nhn?code=17421#pointExpertTab" class="spc">
+							<span class="spc_score"><em class="blind">기자 &middot; 평론가 평점</em></span>
+							<div class="star_score">
+								<span class="st_off"><span class="st_on" style="width:85.0%"></span></span><em class="num8">8</em><em class="dot">.</em><em class="num5">5</em><em class="num0">0</em>
+							</div>
+						</a><!-- N=a:ifo.crating -->
+					</div>
+				</div>
+				
+				
+			
+			
+			
+			
+			<div class="score score_left">
+				<div class="uio_ntz_btn">
+					<span class="ntz">
+						<em class="blind">네티즌 평점</em><a href="point.nhn?code=17421#" class="help" id="pointHelpButtonBasic" title="네티즌 평점 도움말 보기">네티즌 평점 도움말</a>
+					</span>
+					<div class="ly_ntz" id="pointHelpBasic" style="display:none" z-index="20">
+						<span></span>
+						<strong class="blind">네티즌 평점 도움말</strong>
+						
+							
+							
+								국내 개봉작입니다. 관람하신 영화에 대한<br> 평점을 남겨주세요. 140자평 뿐 아니라 블<br>로그 영화 리뷰작성 시 등록한 별점도 함께<br> 반영됩니다.
+							
+						
+						<button type="button" class="btn_close" id="pointHelpCloseButtonBasic"><em>닫기</em></button>
+					</div>
+					<div class="ly_count" id="pointNetizenCountBasic" style="display:none">
+						<span></span>
+						참여 <em>16,284</em>명
+					</div>
+				</div>
+				<div class="star_score ">
+					<a href="point.nhn?code=17421#pointAfterTab" id="pointNetizenPersentBasic"><span class="st_off"><span class="st_on" style="width:94.0%"></span></span><em class="num9">9</em><em class="dot">.</em><em class="num4">4</em><em class="num0">0</em></a><!-- N=a:ifo.arating -->
+				</div>
+			</div>
+			
+
+			
+				<div  id="noPoint" class="score">
+					<div class="my_score_area">
+						<!--[D] 내평점이 없는경우 화살표를 없애기 위해 class="my"가 빠진다 -->
+						<a href="point.nhn?code=17421#pointAfterTab">
+							<span class="my_score"><em class="blind">내 평점</em></span>
+							<div class="star_score">
+								<span class="st_off"><span class="st_on" style="width:0%">0점</span></span>
+								<span class="btn_write">등록</span>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div id="existPoint" class="score" style="display : none">
+					<div class="my_score_area">
+						<a href="javascript:pointBasic.toggleMyPoint();" class="my">
+							<span class="my_score">
+								<em class="blind">내 평점</em>
+							</span>
+							<div id="starPoint" class="star_score">
+								<span class="st_off"><span id="pointStar" class="st_on" style="width:0%"></span></span>
+							</div>
+						</a><!-- N=a:ifo.marating -->
+						<div class="ly_my" id="myPointLayerBasic" style="display:none">
+							<span id="pointText"></span><a id="pointRemove" href="javascript:checkAlreadyPointAfterExist('basic', );" class="btn_del">삭제</a>
+							<a href="javascript:pointBasic.toggleMyPoint();" class="btn_close"><em>닫기</em></a>
+						</div>
+					</div>
+				</div>
+			
+		</div>
+				
+		<dl class="info_spec">
+			<dt class="step1"><em>개요</em></dt>
+			<dd><p><span><a
+					href="http://movie.naver.com/movie/sdb/browsing/bmovie.nhn?genre=1">드라마</a><!-- N=a:ifo.genre --></span><span><a
+					href="http://movie.naver.com/movie/sdb/browsing/bmovie.nhn?nation=US">미국</a><!-- N=a:ifo.nation --></span><span>142분 </span><span><a
+									href="http://movie.naver.com/movie/sdb/browsing/bmovie.nhn?open=2016">2016</a><a href="http://movie.naver.com/movie/sdb/browsing/bmovie.nhn?open=20160224">.02.24</a> 재개봉, <a
+									href="http://movie.naver.com/movie/sdb/browsing/bmovie.nhn?open=1995">1995</a><!-- N=a:ifo.year --><a href="http://movie.naver.com/movie/sdb/browsing/bmovie.nhn?open=19950128">.01.28</a><!-- N=a:ifo.day --> 개봉</span></p></dd>
+			
+				<dt class="step2"><em>감독</em></dt>
+				<dd><p><a href="http://movie.naver.com/movie/bi/pi/basic.nhn?code=2167">프랭크 다라본트</a><!-- N=a:ifo.director --></p></dd>
+
+			
+			
+				<dt class="step3"><em>출연</em></dt>
+				<dd><p><a href="http://movie.naver.com/movie/bi/pi/basic.nhn?code=1546">팀 로빈스</a><!-- N=a:ifo.actor -->(앤디 듀프레인), <a href="http://movie.naver.com/movie/bi/pi/basic.nhn?code=2088">모건 프리먼</a><!-- N=a:ifo.actor -->(엘리스 보이드 레드 레딩)</p><a href="http://movie.naver.com/movie/bi/mi/detail.nhn?code=17421" title="더보기"
+						class="more">더보기</a><!-- N=a:ifo.actmore --></dd>
+			
+			
+			
+				<dt class="step4"><em>등급</em></dt>
+				<dd>
+					<p>
+						[국내] 
+						
+							<a href="http://movie.naver.com/movie/sdb/browsing/bmovie.nhn?grade=1001003">15세 관람가</a><!-- N=a:ifo.filmrate -->
+							
+						
+						
+						
+						
+						 [해외] 
+						
+							<a href="http://movie.naver.com/movie/sdb/browsing/bmovie.nhn?grade=1011004">R</a><!-- N=a:ifo.filmrate -->
+							<a href="point.nhn?code=17421#" onclick="popupMovieGrade(); return false;" target="_blank" class="help" title="도움말"><em>도움말</em></a><!-- N=a:ifo.gradeguide -->
+							
+						
+						
+					</p>
+				</dd>
+			
+						
+		</dl>
+		<!-- [D] 개봉전 : 기대지수 -->
+		
+		 <!-- //개봉전 : 기대지수 -->
+		
+		<ul class="photo_video">
+			
+				<li><a
+					href="http://movie.naver.com/movie/bi/mi/photoView.nhn?code=17421&amp;imageNid=6504071#tab">
+						<img src="http://movie.phinf.naver.net/20160216_252/1455603306394MkwTN_JPEG/movie_image.jpg?type=n53_40_2"
+						width="53" height="40" alt="쇼생크 탈출" onerror="this.src='http://static.naver.net/movie/2012/06/dft_img50x33.png'"/>
+				</a><!-- N=a:ifo.photo --></li>
+				
+			
+				<li><a
+					href="http://movie.naver.com/movie/bi/mi/photoView.nhn?code=17421&amp;imageNid=6506757#tab">
+						<img src="http://movie2.phinf.naver.net/20160308_254/1457414182177FKJcg_JPEG/movie_image.jpg?type=n53_40_2"
+						width="53" height="40" alt="쇼생크 탈출" onerror="this.src='http://static.naver.net/movie/2012/06/dft_img50x33.png'"/>
+				</a><!-- N=a:ifo.photo --></li>
+				
+			
+				<li><a
+					href="http://movie.naver.com/movie/bi/mi/photoView.nhn?code=17421&amp;imageNid=6504072#tab">
+						<img src="http://movie2.phinf.naver.net/20160216_237/1455603306616YmvTu_JPEG/movie_image.jpg?type=n53_40_2"
+						width="53" height="40" alt="쇼생크 탈출" onerror="this.src='http://static.naver.net/movie/2012/06/dft_img50x33.png'"/>
+				</a><!-- N=a:ifo.photo --></li>
+				
+			
+			
+				<li><a
+					href="http://movie.naver.com/movie/bi/mi/mediaView.nhn?code=17421&amp;mid=29750#tab">
+						<span class="vtr">영상</span> <img
+						src="http://imgmovie.naver.net/multimedia/MOVIECLIP/TRAILER/29750_20160129025838.gif" width="53"
+						height="40" alt="쇼생크 탈출" onerror="this.src='http://static.naver.net/movie/2012/06/dft_img50x33.png'"/>
+				</a><!-- N=a:ifo.video --></li>
+			
+				<li><a
+					href="http://movie.naver.com/movie/bi/mi/mediaView.nhn?code=17421&amp;mid=30039#tab">
+						<span class="vtr">영상</span> <img
+						src="http://imgmovie.naver.net/multimedia/MOVIECLIP/MAKING/30039_20160302114944.jpg" width="53"
+						height="40" alt="쇼생크 탈출" onerror="this.src='http://static.naver.net/movie/2012/06/dft_img50x33.png'"/>
+				</a><!-- N=a:ifo.video --></li>
+			
+				<li><a
+					href="http://movie.naver.com/movie/bi/mi/mediaView.nhn?code=17421&amp;mid=29947#tab">
+						<span class="vtr">영상</span> <img
+						src="http://imgmovie.naver.net/multimedia/MOVIECLIP/MAKING/29947_20160223112825.jpg" width="53"
+						height="40" alt="쇼생크 탈출" onerror="this.src='http://static.naver.net/movie/2012/06/dft_img50x33.png'"/>
+				</a><!-- N=a:ifo.video --></li>
+			
+		</ul>
+		
+		<div class="btn_sns">
+
+				
+				<div class="end_btn_area">
+					<ul>
+						
+						
+						
+							<li><a href="http://nstore.naver.com/tvstore/detail.nhn?mcode=17421" title="다운로드" class="btn_dnld" target="_blank"><em>다운로드</em></a><!-- N=a:ifo.download --></li>
+							
+						
+
+						
+						
+						
+											
+						
+						
+						
+							<li><a href="http://book.naver.com/bookdb/book_detail.nhn?bid=6260548" title="원작 도서" class="btn_original" target="_blank"><em>원작 도서</em></a><!-- N=a:ifo.book --></li>
+							
+						
+						
+						
+							<li>
+								<div class="u_likeit_module"></div>
+							</li>
+					</ul>
+				</div>
+
+			<div class="spi_area">
+				<div id = "spiLayer" class="naver-splugin" data-style="standard-v1-text" data-me-display="off" data-oninitialize="movie_oninitialize()"></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 포스터 -->
+	<div class="poster">
+		
+			
+				<a href="point.nhn?code=17421#" onclick="javascript:common.iwopen('17421');clickcr(this,'ifo.img','','',event);return false;"><img src="http://movie2.phinf.naver.net/20160119_278/14531650465287bcuk_JPEG/movie_image.jpg?type=m203_290_2" alt="쇼생크 탈출" onerror="this.src='http://static.naver.net/movie/2012/06/dft_img203x290.png'" /><span>포스터 크게보기</span></a>
+			
+			
+		
+	</div>
+	<!-- //포스터 -->
+</div>
+<!-- //영화정보(basic) -->
+<a name="tab" id="tab"></a>
+<div class="sub_tab_area">
+	<!-- [D] on, off로 컨트롤 -->
+	<ul id="movieEndTabMenu" class="end_sub_tab">
+		<li><a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=17421"
+			title="주요정보"
+			class="tab01_off"><em>주요정보</em></a><!-- N=a:tab.main --></li>
+		
+			<li><a href="http://movie.naver.com/movie/bi/mi/detail.nhn?code=17421"
+				title="배우/제작진"
+				class="tab02_off"><em>배우/제작진</em></a><!-- N=a:tab.cast --></li>
+		
+		
+			<li><a href="http://movie.naver.com/movie/bi/mi/photoView.nhn?code=17421"
+				title="포토"
+				class="tab03_off"><em>포토</em></a><!-- N=a:tab.photo --></li>
+		
+		
+			<li><a href="http://movie.naver.com/movie/bi/mi/media.nhn?code=17421"
+				title="동영상"
+				class="tab04_off"><em>동영상</em></a><!-- N=a:tab.video --></li>
+		
+		<li><a href="point.nhn?code=17421"
+			title="평점/리뷰"
+			class="tab05_on"><em>평점/리뷰</em></a><!-- N=a:tab.ratereview --></li>
+		
+		<li><a href="http://movie.naver.com/movie/bi/mi/scriptAndRelate.nhn?code=17421"
+			title="명대사/연관영화"
+			class="tab07_off"><em>명대사/연관영화</em></a><!-- N=a:tab.quoterelate --></li>
+	</ul>
+</div>
+
+
+
+
+
+
+	
+
+
+
+	
+
+
+
+	
+
+
+
+	
+		
+		
+			
+		
+	
+
+	
+		
+		
+			
+		
+	
+
+
+
+	
+	
+	
+	
+		
+	
+	
+
+	
+	
+	
+		
+	
+	
+	
+
+
+<script type="text/javascript">
+	var today = new Date();
+	var dd = today.getDate();
+	var mm = today.getMonth() + 1;
+	var yyyy = today.getFullYear();
+	
+	if (dd < 10) {
+		dd = '0' + dd;
+	}
+	
+	if (mm < 10) {
+		mm = '0' + mm;
+	}
+	
+	var d = document.head ? document.head : document
+			.getElementsByTagName("head")[0];
+	var s = document.createElement("script");
+	s.src = ("http://spi.naver.net/js/release/ko_KR/splugin.js?" + yyyy + mm + dd);
+	s.charset = "utf-8";
+	d.appendChild(s);
+	
+	function displayMovieHomepageLayerW() {
+		jindo.$("movieHomePageLayerW").style.display = "";
+		jindo.$Element("movieHomePageButtonW")
+				.className("btn_site_on");
+	}
+
+	function hideMovieHomepageLayerW() {
+		jindo.$("movieHomePageLayerW").style.display = "none";
+		jindo.$Element("movieHomePageButtonW")
+				.className("btn_site");
+	}
+	
+	function displayMovieHomepageLayer() {
+		jindo.$("movieHomePageLayer").style.display = "";
+		jindo.$Element("movieHomePageButton")
+				.className("btn_site_on");
+	}
+
+	function hideMovieHomepageLayer() {
+		jindo.$("movieHomePageLayer").style.display = "none";
+		jindo.$Element("movieHomePageButton")
+				.className("btn_site");
+	}
+	
+	function setCookieForNotOpenReserveHelpLayerPopup() {
+		
+		var cookieForNotOpenLayerPopup = jindo.$Cookie();
+		cookieForNotOpenLayerPopup.set("reserveOpenLayerYn", "N", 1);
+		
+	}
+	
+	var baseToolTip = {
+			
+	};
+	
+	var pointWide = {
+			pwmManager : new PwmManager(),
+			
+			toggleMyPoint : function () {
+				if (jindo.$("myPointLayerWide").style.display == "none") {
+					jindo.$("myPointLayerWide").style.display = "";
+				} else {
+					jindo.$("myPointLayerWide").style.display = "none";
+				}
+			},
+			
+			del : function (existPointType, nid) {
+				if (existPointType == "actualPoint") {
+					if (confirm("관람객 평점 삭제시, 평점 작성으로 적립된 포인트는 회수됩니다. 평점을 삭제할까요?") == false) {
+						return false;
+					}
+				} else {
+					if (confirm("본인 삭제 시 복구할 수 없습니다.\n평점을 삭제하시겠습니까?") == false) {
+						return false;
+					}
+				}
+				
+				var deleteApiUrl = "/api/internal/point/pointBeforeDelete.nhn";
+				if (true) {
+					deleteApiUrl = "/api/internal/point/pointAfterDelete.nhn";
+				}
+				
+				var ajax = new jindo.$Ajax(deleteApiUrl, { 
+					method : "POST",
+					async : false,
+					onload : this.delCallback
+				});
+				ajax.header("ajax", "true");
+				ajax.request({
+					"nid":nid
+				});
+			},
+			
+			delCallback : function(req) {
+				var returnValue = req.text();
+				
+				if(returnValue != "success"){
+					alert(returnValue);
+					return;
+				}
+				
+				top.location.href = '/movie/bi/mi/point.nhn?code=17421#pointAfterTab';
+				top.location.reload(true);
+			}
+	};
+	
+	var pointBasic = {
+			pwmManager : new PwmManager(),
+			
+			toggleMyPoint : function () {
+				if (jindo.$("myPointLayerBasic").style.display == "none") {
+					jindo.$("myPointLayerBasic").style.display = "";
+				} else {
+					jindo.$("myPointLayerBasic").style.display = "none";
+				}
+			},
+			
+			del : function (existPointType, nid) {
+				if (existPointType == "actualPoint") {
+					if (confirm("관람객 평점 삭제시, 평점 작성으로 적립된 포인트는 회수됩니다. 평점을 삭제할까요?") == false) {
+						return false;
+					}
+				} else {
+					if (confirm("본인 삭제 시 복구할 수 없습니다.\n평점을 삭제하시겠습니까?") == false) {
+						return false;
+					}
+				}
+				
+				var deleteApiUrl = "/api/internal/point/pointBeforeDelete.nhn";
+				if (true) {
+					deleteApiUrl = "/api/internal/point/pointAfterDelete.nhn";
+				}
+			
+				var ajax = new jindo.$Ajax(deleteApiUrl, { 
+					method : "POST",
+					async : false,
+					onload : this.delCallback
+				});
+				ajax.header("ajax", "true");
+				ajax.request({
+					"nid":nid
+				});
+			},
+			
+			delCallback : function(req) {
+				var returnValue = req.text();
+				
+				if(returnValue != "success"){
+					alert(returnValue);
+					return;
+				}
+				
+				top.location.href = '/movie/bi/mi/point.nhn?code=17421#pointAfterTab';
+				top.location.reload(true);
+			}
+	};
+	
+	
+	function checkAlreadyPointAfterExist (screenMode, nid) {
+		var existPointType = "pointBefore";
+		
+		if (true) {
+			var oAjax = new jindo.$Ajax("/api/internal/point/pointAfterExistJson.nhn", {
+		    	onload : function (oRes) {
+		    		var resultCode = oRes.json().resultCode;
+		    		
+		    		if (resultCode == "error") {							// 서버 오류
+		    			alert("오류가 발생했습니다. 잠시 후 다시 시도해주세요.");
+		    			return false;
+		    		} else {
+		    			existPointType = oRes.json().existPointType;
+		    			
+		    			if (screenMode == "basic") {
+		    				pointBasic.del(existPointType, nid);
+		    			} else {
+		    				pointWide.del(existPointType, nid);
+		    			}
+		    		}
+		    	},
+				timeout : 5,
+		    	onerror : function (oRes) {
+		    		alert("오류가 발생했습니다. 잠시 후 다시 시도해주세요.");
+		    		return false;
+		    	},
+		    	ontimeout : function (oRes) {
+		    		alert("처리가 지연되고 있습니다. 다시 시도해주세요.");
+		    		return false;
+		    	}
+		    });
+		    
+		    oAjax.request({
+		    	"movieCode" : "17421",
+		    	"isActualPoint" : ""
+		    });
+		} else {
+			if (screenMode == "basic") {
+				pointBasic.del(existPointType, nid);
+			} else {
+				pointWide.del(existPointType, nid);
+			}
+		}
+	}
+	
+	var gradePopupWin;
+	function popupMovieGrade() {
+		
+		if (screen === undefined || screen.availHeight === undefined || screen.availHeight > 800) {
+			gradePopupWin = window.open("/movie/bi/mi/gradePopup.nhn?nationCode=US", "gradePopup", "width=460, height=800, history=no, resizable=no, scrollbars=yes, status=no, menubar=no, toolbar=no");
+		} else {
+			gradePopupWin = window.open("/movie/bi/mi/gradePopup.nhn?nationCode=US", "gradePopup", "width=460, height=560, history=no, resizable=no, scrollbars=yes, status=no, menubar=no, toolbar=no");
+		}
+		
+		if (gradePopupWin) {
+			gradePopupWin.focus();
+		}
+	}
+	
+	function resizeGradePopup(height) {
+		
+		if (screen === undefined || screen.availHeight === undefined || screen.availHeight >= height) {
+			gradePopupWin.resizeTo(460, height);
+		}
+	}
+
+	var htInitData = {
+		    evKey  : "movie",
+		    serviceName: "영화",
+		    url : "http://movie.naver.com/movie/bi/mi/basic.nhn?code=17421",
+		    title  : "쇼생크 탈출 :: 네이버 영화",
+		    me : {
+		        display : "off",
+		    },
+		    // [메일 보내기 버튼]
+		    mail : {
+		        display : "on",
+		        srvid : "social",
+				srvurl : "http://movie.naver.com/movie/bi/mi/socialPlugInTemplate.nhn?code=17421"
+		    },
+		    // [블로그 보내기 버튼]
+		    blog : {
+		        display        : "on", 
+		        blogId : "naver",
+				sourceType : "111",
+				sourceTitle : "[네이버 영화] 쇼생크 탈출",
+				sourceForm : 2
+		    },
+		    // [카페 보내기 버튼]
+		    cafe : {
+		        display : "on",
+		        sourceType : "111",
+				sourceTitle : "[네이버 영화] 쇼생크 탈출"
+		    },
+		    // [메모 보내기 버튼]
+		    memo : {
+		        display : "on" // on/off
+		    },
+		    // [일정 보내기 버튼]
+		    calendar : {
+		        display : "on" // on/off
+		    },
+		    // [북마크 버튼]
+		    bookmark : {
+		        display : "on" // on/off
+		    },
+		    // [URL복사 버튼]
+		    copyurl : {
+		        display : "on", // on/off
+		        url : "http://movie.naver.com/movie/bi/mi/basic.nhn?code=17421"
+		    },
+		    // [트위터 보내기 버튼]
+		    twitter : {
+		        display : "on" // on/off
+		    },
+		    // [페이스북 보내기 버튼]
+		    facebook : {
+		        display : "on" // on/off
+		    },
+		    // [밴드 보내기 버튼]
+		    band : {
+		        display : "on"
+		    },
+		    // [라인 보내기 버튼]
+		    line : {
+		        display : "off"
+		    },
+		    // [카카오톡 보내기 버튼]
+		    kakaotalk : {
+		        display : "off"
+		    },
+		    // [카카오스토리 보내기 버튼]
+		    kakaostory : {
+		        display : "off"
+		    },
+		    // [감정플러그인]
+		    score : {
+		        display : "off"
+		    },
+		    option : {
+		    	baseElement: 'spiButton',
+		        layerPostion: 'outside-bottom',
+		        align: 'left',
+		        top: 4,
+		        left: 0,
+		        marginLeft: 8,
+		        marginTop: 10
+		    }
+		};
+	
+	jindo.$Fn(function() {
+		initUserPoint('17421');
+		
+		pointHelpWideLayerToggle = function() {
+			setTimeout( function() {
+				if (document.activeElement != null) {
+					var focusedEl = jindo.$Element(document.activeElement);
+					if (focusedEl != null) {
+						if ( !focusedEl.hasClass("_pointHelpWide") ) {
+							 jindo.$Element("pointHelpWide").hide();
+						}
+					}
+				}
+			}, 100);
+		};
+	
+	//개봉전 평점 개선 관련. 개봉전 영화인 경우 평점을 보여주지 않는다.
+	if (false == false){
+		new jindo.LayerManager("pointHelpWide", {
+			sCheckEvent : "click",
+			nHideDelay : 0
+		}).link(jindo.$("pointHelpWide"), jindo.$("pointHelpButtonWide"));
+		jindo.$Element("pointHelpButtonWide").attach("click", function(e){
+			e.stop(jindo.$Event.CANCEL_DEFAULT);
+			jindo.$Element("pointHelpWide").toggle();
+		});
+
+		jindo.$Element("pointHelpCloseButtonWide").attach("click", function(e){
+			e.stop(jindo.$Event.CANCEL_DEFAULT);
+			jindo.$Element("pointHelpWide").toggle();
+		});
+	}
+	else {
+		//기대지수 도움말 레이어 토글.(기본보기)
+		new jindo.LayerManager("preference_help", {
+			sCheckEvent : "click",
+			nHideDelay : 0
+		}).link(jindo.$("preference_help"), jindo.$("preference_help_show"));
+
+		jindo.$Element("preference_help_show").attach("click", function(e){
+			e.stop(jindo.$Event.CANCEL_DEFAULT);
+			jindo.$Element("preference_help").toggle();
+		});
+
+		jindo.$Element("preference_help_close").attach("click", function(e){
+			e.stop(jindo.$Event.CANCEL_DEFAULT);
+			jindo.$Element("preference_help").hide();
+		});
+
+		//기대지수 도움말 레이어 토글.(넓게보기)
+		new jindo.LayerManager("preference_help_wide", {
+			sCheckEvent : "click",
+			nHideDelay : 0
+		}).link(jindo.$("preference_help_wide"), jindo.$("preference_help_show_wide"));
+
+		jindo.$Element("preference_help_show_wide").attach("click", function(e){
+			e.stop(jindo.$Event.CANCEL_DEFAULT);
+			jindo.$Element("preference_help_wide").toggle();
+		});
+
+		jindo.$Element("preference_help_close_wide").attach("click", function(e){
+			e.stop(jindo.$Event.CANCEL_DEFAULT);
+			jindo.$Element("preference_help_wide").hide();
+		});
+	}
+	    
+	    var waelPointHelpWide = jindo.$ElementList('._pointHelpWide');
+	    
+	    jindo.$A(waelPointHelpWide.$value()).forEach(function(value, index, array) {
+			jindo.$Fn(pointHelpWideLayerToggle, this).attach(value, "blur");
+		});
+		    
+		
+		if (false == false){
+			pointHelpBasicLayerToggle = function() {
+				setTimeout( function() {
+					if (document.activeElement != null) {
+						var focusedEl = jindo.$Element(document.activeElement);
+						if (focusedEl != null) {
+							if ( !focusedEl.hasClass("_pointHelpBasic") ) {
+								 jindo.$Element("pointHelpBasic").hide();
+							}
+						}
+					}
+				}, 100);
+			};
+		
+			new jindo.LayerManager("pointHelpBasic", {
+				sCheckEvent : "click",
+				nHideDelay : 0
+			}).link(jindo.$("pointHelpBasic"), jindo.$("pointHelpButtonBasic"));
+			
+			jindo.$Element("pointHelpButtonBasic").attach("click", function(e){
+				e.stop(jindo.$Event.CANCEL_DEFAULT);
+				jindo.$Element("pointHelpBasic").toggle();
+			});
+			
+			jindo.$Element("pointHelpCloseButtonBasic").attach("click", function(e){
+				e.stop(jindo.$Event.CANCEL_DEFAULT);
+				jindo.$Element("pointHelpBasic").toggle();
+			});
+			
+			
+		    var waelPointHelpBasic = jindo.$ElementList('._pointHelpBasic');
+		    
+		    jindo.$A(waelPointHelpBasic.$value()).forEach(function(value, index, array) {
+				jindo.$Fn(pointHelpBasicLayerToggle, this).attach(value, "blur");
+			});
+		}
+		
+	if (false == false){
+		
+		new jindo.LayerManager("pointNetizenCountWide", {
+			sCheckEvent : "mouseover",
+			nHideDelay : 100
+		}).link(jindo.$("pointNetizenCountWide"), jindo.$("pointNetizenPersentWide"));
+		new jindo.LayerManager("pointNetizenCountWide", {
+			sCheckEvent : "focus",
+			nHideDelay : 0
+		}).link(jindo.$("pointNetizenCountWide"), jindo.$("pointNetizenPersentWide"));
+
+		new jindo.LayerManager("pointNetizenCountWide", {
+			sCheckEvent : "blur",
+			nHideDelay : 0
+		}).link(jindo.$("pointNetizenCountWide"), jindo.$("pointNetizenPersentWide"));
+
+		jindo.$Element("pointNetizenPersentWide").attach("mouseover", function (e) {
+			e.stop(jindo.$Event.CANCEL_DEFAULT);
+			jindo.$Element("pointNetizenCountWide").toggle();
+		}).attach("focus", function (e) {
+			e.stop(jindo.$Event.CANCEL_DEFAULT);
+			jindo.$Element("pointNetizenCountWide").show();
+		}).attach("blur", function (e) {
+			e.stop(jindo.$Event.CANCEL_DEFAULT);
+			jindo.$Element("pointNetizenCountWide").hide();
+		});
+	}
+		
+		
+		if (false == false){
+			new jindo.LayerManager("pointNetizenCountBasic", { 
+				sCheckEvent : "mouseover", 
+				nHideDelay : 100
+			}).link(jindo.$("pointNetizenCountBasic"), jindo.$("pointNetizenPersentBasic"));
+			
+			new jindo.LayerManager("pointNetizenCountBasic", { 
+				sCheckEvent : "focus", 
+				nHideDelay : 0
+			}).link(jindo.$("pointNetizenCountBasic"), jindo.$("pointNetizenPersentBasic"));
+			
+			new jindo.LayerManager("pointNetizenCountBasic", { 
+				sCheckEvent : "blur", 
+				nHideDelay : 0
+			}).link(jindo.$("pointNetizenCountBasic"), jindo.$("pointNetizenPersentBasic"));
+			
+			jindo.$Element("pointNetizenPersentBasic").attach("mouseover", function (e) {
+				e.stop(jindo.$Event.CANCEL_DEFAULT);
+				jindo.$Element("pointNetizenCountBasic").toggle();
+			}).attach("focus", function (e) {
+				e.stop(jindo.$Event.CANCEL_DEFAULT);
+				jindo.$Element("pointNetizenCountBasic").show();
+			}).attach("blur", function (e) {
+				e.stop(jindo.$Event.CANCEL_DEFAULT);
+				jindo.$Element("pointNetizenCountBasic").hide();
+			});
+		}
+		
+		if (jindo.$("actualPointHelpWide") != null) {
+			
+	    	actualPointHelpWideLayerToggle = function() {
+				setTimeout( function() {
+					if (document.activeElement != null) {
+						var focusedEl = jindo.$Element(document.activeElement);
+						if (focusedEl != null) {
+							if ( !focusedEl.hasClass("_actualPointHelpWide") ) {
+								 jindo.$Element("actualPointHelpWide").hide();
+							}
+						}
+					}
+				}, 100);
+			};
+			
+			new jindo.LayerManager("actualPointHelpWide", {
+				sCheckEvent : "click",
+				nHideDelay : 0
+			}).link(jindo.$("actualPointHelpWide"), jindo.$("actualPointHelpButtonWide"));
+			
+			jindo.$Element("actualPointHelpButtonWide").attach("click", function(e){
+				e.stop(jindo.$Event.CANCEL_DEFAULT);
+				jindo.$Element("actualPointHelpWide").toggle();
+			});
+			
+			jindo.$Element("actualPointHelpCloseButtonWide").attach("click", function(e){
+				e.stop(jindo.$Event.CANCEL_DEFAULT);
+				jindo.$Element("actualPointHelpWide").toggle();
+			});
+		    
+			
+		    var waelActualPointHelpWide = jindo.$ElementList('._actualPointHelpWide');
+		    
+		    jindo.$A(waelActualPointHelpWide.$value()).forEach(function(value, index, array) {
+				jindo.$Fn(actualPointHelpWideLayerToggle, this).attach(value, "blur");
+			});
+		}
+
+		if (jindo.$("actualPointHelpBasic") != null) {
+			
+			actualPointHelpBasicLayerToggle = function() {
+				setTimeout( function() {
+					if (document.activeElement != null) {
+						var focusedEl = jindo.$Element(document.activeElement);
+						if (focusedEl != null) {
+							if ( !focusedEl.hasClass("_actualPointHelpBasic") ) {
+								 jindo.$Element("actualPointHelpBasic").hide();
+							}
+						}
+					}
+				}, 100);
+			};
+			
+			new jindo.LayerManager("actualPointHelpBasic", {
+				sCheckEvent : "click",
+				nHideDelay : 0
+			}).link(jindo.$("actualPointHelpBasic"), jindo.$("actualPointHelpButtonBasic"));
+			
+			jindo.$Element("actualPointHelpButtonBasic").attach("click", function(e){
+				e.stop(jindo.$Event.CANCEL_DEFAULT);
+				jindo.$Element("actualPointHelpBasic").toggle();
+			});
+			
+			jindo.$Element("actualPointHelpCloseButtonBasic").attach("click", function(e){
+				e.stop(jindo.$Event.CANCEL_DEFAULT);
+				jindo.$Element("actualPointHelpBasic").toggle();
+			});
+			
+			
+		    var waelActualPointHelpBasic = jindo.$ElementList('._actualPointHelpBasic');
+		    
+		    jindo.$A(waelActualPointHelpBasic.$value()).forEach(function(value, index, array) {
+				jindo.$Fn(actualPointHelpBasicLayerToggle, this).attach(value, "blur");
+			});
+		}
+	    
+	    if (true) {
+		    
+		    if (jindo.$Element("actualPointCountWide") != null) {
+				new jindo.LayerManager("actualPointCountWide", { 
+					sCheckEvent : "mouseover", 
+					nHideDelay : 100
+				}).link(jindo.$("actualPointCountWide"), jindo.$("actualPointPersentWide"));
+				new jindo.LayerManager("actualPointCountWide", { 
+					sCheckEvent : "focus", 
+					nHideDelay : 0
+				}).link(jindo.$("actualPointCountWide"), jindo.$("actualPointPersentWide"));
+				new jindo.LayerManager("actualPointCountWide", { 
+					sCheckEvent : "blur", 
+					nHideDelay : 0
+				}).link(jindo.$("actualPointCountWide"), jindo.$("actualPointPersentWide"));
+			
+		    }
+		    if (jindo.$Element("actualPointPersentWide") != null) {
+				jindo.$Element("actualPointPersentWide").attach("mouseover", function (e) {
+					e.stop(jindo.$Event.CANCEL_DEFAULT);
+					jindo.$Element("actualPointCountWide").toggle();
+				}).attach("focus", function (e) {
+					e.stop(jindo.$Event.CANCEL_DEFAULT);
+					jindo.$Element("actualPointCountWide").show();
+				}).attach("blur", function (e) {
+					e.stop(jindo.$Event.CANCEL_DEFAULT);
+					jindo.$Element("actualPointCountWide").hide();
+				});
+		    }
+			
+			if (jindo.$Element("actualPointCountBasic") != null) {
+				new jindo.LayerManager("actualPointCountBasic", { 
+					sCheckEvent : "mouseover", 
+					nHideDelay : 100
+				}).link(jindo.$("actualPointCountBasic"), jindo.$("actualPointPersentBasic"));
+				
+				new jindo.LayerManager("actualPointCountBasic", { 
+					sCheckEvent : "focus", 
+					nHideDelay : 0
+				}).link(jindo.$("actualPointCountBasic"), jindo.$("actualPointPersentBasic"));
+				
+				new jindo.LayerManager("actualPointCountBasic", { 
+					sCheckEvent : "blur", 
+					nHideDelay : 0
+				}).link(jindo.$("actualPointCountBasic"), jindo.$("actualPointPersentBasic"));
+			}
+			if (jindo.$Element("actualPointPersentBasic") != null) {
+				jindo.$Element("actualPointPersentBasic").attach("mouseover", function (e) {
+					e.stop(jindo.$Event.CANCEL_DEFAULT);
+					jindo.$Element("actualPointCountBasic").toggle();
+				}).attach("focus", function (e) {
+					e.stop(jindo.$Event.CANCEL_DEFAULT);
+					jindo.$Element("actualPointCountBasic").show();
+				}).attach("blur", function (e) {
+					e.stop(jindo.$Event.CANCEL_DEFAULT);
+					jindo.$Element("actualPointCountBasic").hide();
+				});
+			}
+	    }
+
+		if (false) {
+			
+			new jindo.LayerManager("adultMovieHelpWide", {
+				sCheckEvent : "mouseover",
+				nHideDelay : 100
+			}).link(jindo.$("adultMovieHelpWide"), jindo.$("adultMovieWide"));
+			new jindo.LayerManager("adultMovieHelpWide", {
+				sCheckEvent : "focus",
+				nHideDelay : 0
+			}).link(jindo.$("adultMovieHelpWide"), jindo.$("adultMovieWide"));
+			new jindo.LayerManager("adultMovieHelpWide", {
+				sCheckEvent : "blur",
+				nHideDelay : 0
+			}).link(jindo.$("adultMovieHelpWide"), jindo.$("adultMovieWide"));
+
+			jindo.$Element("adultMovieWide").attach("mouseover", function (e) {
+				e.stop(jindo.$Event.CANCEL_DEFAULT);
+				jindo.$Element("adultMovieHelpWide").toggle("block");
+			}).attach("focus", function (e) {
+				e.stop(jindo.$Event.CANCEL_DEFAULT);
+				jindo.$Element("adultMovieHelpWide").show("block");
+			}).attach("blur", function (e) {
+				e.stop(jindo.$Event.CANCEL_DEFAULT);
+				jindo.$Element("adultMovieHelpWide").hide();
+			});
+
+			jindo.$Element("adultMovieHelpWideCloseButton").attach("click", function(e){
+				e.stop(jindo.$Event.CANCEL_DEFAULT);
+				jindo.$Element("adultMovieHelpWide").toggle("block");
+			});
+			
+			new jindo.LayerManager("adultMovieHelpBasic", {
+				sCheckEvent : "mouseover",
+				nHideDelay : 100
+			}).link(jindo.$("adultMovieHelpBasic"), jindo.$("adultMovieBasic"));
+			new jindo.LayerManager("adultMovieHelpBasic", {
+				sCheckEvent : "focus",
+				nHideDelay : 0
+			}).link(jindo.$("adultMovieHelpBasic"), jindo.$("adultMovieBasic"));
+			new jindo.LayerManager("adultMovieHelpBasic", {
+				sCheckEvent : "blur",
+				nHideDelay : 0
+			}).link(jindo.$("adultMovieHelpBasic"), jindo.$("adultMovieBasic"));
+
+			jindo.$Element("adultMovieBasic").attach("mouseover", function (e) {
+				e.stop(jindo.$Event.CANCEL_DEFAULT);
+				jindo.$Element("adultMovieHelpBasic").toggle("block");
+			}).attach("focus", function (e) {
+				e.stop(jindo.$Event.CANCEL_DEFAULT);
+				jindo.$Element("adultMovieHelpBasic").show("block");
+			}).attach("blur", function (e) {
+				e.stop(jindo.$Event.CANCEL_DEFAULT);
+				jindo.$Element("adultMovieHelpBasic").hide();
+			});
+
+			jindo.$Element("adultMovieHelpBasicCloseButton").attach("click", function(e){
+				e.stop(jindo.$Event.CANCEL_DEFAULT);
+				jindo.$Element("adultMovieHelpBasic").toggle("block");
+			});
+		}
+
+	    var cookie = jindo.$Cookie();
+		var reserveOpenLayerYn = cookie.get("reserveOpenLayerYn");
+	    
+		if ( (reserveOpenLayerYn == null) || (reserveOpenLayerYn != "N") ) {
+			if (false) {
+				
+				reserveHelpWideLayerToggle = function() {
+					setTimeout( function() {
+						if (document.activeElement != null) {
+							var focusedEl = jindo.$Element(document.activeElement);
+							if (focusedEl != null) {
+								if ( !focusedEl.hasClass("_reserveHelpWide") ) {
+									 jindo.$Element("reserveHelpWide").hide();
+								}
+							}
+						}
+					}, 100);
+				};
+				
+				new jindo.LayerManager("reserveHelpWide", { 
+					sCheckEvent : "mouseover", 
+					nHideDelay : 100
+				}).link(jindo.$("reserveHelpWide"), jindo.$("reserveWide"));
+				
+				new jindo.LayerManager("reserveHelpWide", { 
+					sCheckEvent : "focus", 
+					nHideDelay : 0
+				}).link(jindo.$("reserveHelpWide"), jindo.$("reserveWide"));
+				
+				new jindo.LayerManager("reserveHelpWide", { 
+					sCheckEvent : "blur", 
+					nHideDelay : 0
+				}).link(jindo.$("reserveHelpWide"), jindo.$("reserveWide"));
+				
+				jindo.$Element("reserveWide").attach("mouseover", function (e) {
+					e.stop(jindo.$Event.CANCEL_DEFAULT);
+					jindo.$Element("reserveHelpWide").toggle();
+				}).attach("focus", function (e) {
+					e.stop(jindo.$Event.CANCEL_DEFAULT);
+					jindo.$Element("reserveHelpWide").show();
+				}).attach("blur", function (e) {
+					e.stop(jindo.$Event.CANCEL_DEFAULT);
+					jindo.$Element("reserveHelpWide").hide();
+				});
+				
+				jindo.$Element("reserveHelpWideCloseButton").attach("click", function(e){
+					e.stop(jindo.$Event.CANCEL_DEFAULT);
+					setCookieForNotOpenReserveHelpLayerPopup();
+					jindo.$Element("reserveHelpWide").toggle();
+				});
+				
+				
+			    var waelReserveHelpWide = jindo.$ElementList('._reserveHelpWide');
+			    
+			    jindo.$A(waelReserveHelpWide.$value()).forEach(function(value, index, array) {
+					jindo.$Fn(reserveHelpWideLayerToggle, this).attach(value, "blur");
+				});
+				
+				
+				reserveHelpBasicLayerToggle = function() {
+					setTimeout( function() {
+						if (document.activeElement != null) {
+							var focusedEl = jindo.$Element(document.activeElement);
+							if (focusedEl != null) {
+								if ( !focusedEl.hasClass("_reserveHelpBasic") ) {
+									 jindo.$Element("reserveHelpBasic").hide();
+								}
+							}
+						}
+					}, 100);
+				};
+				
+				new jindo.LayerManager("reserveHelpBasic", { 
+					sCheckEvent : "mouseover", 
+					nHideDelay : 100
+				}).link(jindo.$("reserveHelpBasic"), jindo.$("reserveBasic"));
+				
+				new jindo.LayerManager("reserveHelpBasic", { 
+					sCheckEvent : "focus", 
+					nHideDelay : 0
+				}).link(jindo.$("reserveHelpBasic"), jindo.$("reserveBasic"));
+				
+				new jindo.LayerManager("reserveHelpBasic", { 
+					sCheckEvent : "blur", 
+					nHideDelay : 0
+				}).link(jindo.$("reserveHelpBasic"), jindo.$("reserveBasic"));
+				
+				jindo.$Element("reserveBasic").attach("mouseover", function (e) {
+					e.stop(jindo.$Event.CANCEL_DEFAULT);
+					jindo.$Element("reserveHelpBasic").toggle();
+				}).attach("focus", function (e) {
+					e.stop(jindo.$Event.CANCEL_DEFAULT);
+					jindo.$Element("reserveHelpBasic").show();
+				}).attach("blur", function (e) {
+					e.stop(jindo.$Event.CANCEL_DEFAULT);
+					jindo.$Element("reserveHelpBasic").hide();
+				});
+				
+				jindo.$Element("reserveHelpBasicCloseButton").attach("click", function(e){
+					e.stop(jindo.$Event.CANCEL_DEFAULT);
+					setCookieForNotOpenReserveHelpLayerPopup();
+					jindo.$Element("reserveHelpBasic").toggle();
+				});
+				
+				
+			    var waelReserveHelpBasic = jindo.$ElementList('._reserveHelpBasic');
+			    
+			    jindo.$A(waelReserveHelpBasic.$value()).forEach(function(value, index, array) {
+					jindo.$Fn(reserveHelpBasicLayerToggle, this).attach(value, "blur");
+				});
+			}
+		}
+		
+		
+		if (jindo.$Element("boxofficeHelpButtonBasic") != null) {
+			new jindo.LayerManager("boxofficeHelpLayerBasic", {
+				sCheckEvent : "click",
+				nHideDelay : 0
+			}).link(jindo.$("boxofficeHelpLayerBasic"), jindo.$("boxofficeHelpButtonBasic"));
+			
+			jindo.$Element("boxofficeHelpButtonBasic").attach("click", function(e){
+				e.stop(jindo.$Event.CANCEL_DEFAULT);
+				jindo.$Element("boxofficeHelpLayerBasic").toggle();
+			});
+			
+			jindo.$Element("boxofficeHelpCloseButtonBasic").attach("click", function(e){
+				e.stop(jindo.$Event.CANCEL_DEFAULT);
+				jindo.$Element("boxofficeHelpLayerBasic").hide();
+			});
+		}
+	
+		
+		if (jindo.$Element("boxofficeHelpButtonWide") != null) {
+			new jindo.LayerManager("boxofficeHelpLayerWide", {
+				sCheckEvent : "click",
+				nHideDelay : 0
+			}).link(jindo.$("boxofficeHelpLayerWide"), jindo.$("boxofficeHelpButtonWide"));
+			
+			jindo.$Element("boxofficeHelpButtonWide").attach("click", function(e){
+				e.stop(jindo.$Event.CANCEL_DEFAULT);
+				jindo.$Element("boxofficeHelpLayerWide").toggle();
+			});
+			
+			jindo.$Element("boxofficeHelpCloseButtonWide").attach("click", function(e){
+				e.stop(jindo.$Event.CANCEL_DEFAULT);
+				jindo.$Element("boxofficeHelpLayerWide").hide();
+			});
+		}
+
+			
+		if (false) {
+			serviceId = "NCOBROADCAST";
+			contentId = "";
+		}
+		else {
+			serviceId = "MOVIE";
+			contentId = "17421";
+		}
+
+		
+		(function(oData) {
+		    window.__oLikeItData = oData;
+		    var s = document.createElement("script");
+		    s.type = "text/javascript";
+		    s.charset = "utf-8";
+		    s.src = oData.domain + "/static/js/likeIt.v2.desktop.init.js?v="+ (new Date()).toDateString().replace(/\s/g,"");
+		    (document.head || document.getElementsByTagName("head")[0]).appendChild(s);
+		})({ serviceId : serviceId, contentId : contentId, displayId : "MOVIE", domain : "http://common.like.naver.com" });
+			
+	}).attach(document, "domready");
+	
+	window.onload = function() {
+		window.__splugin = SocialPlugIn_Core({
+	        // nEvent Key
+	        "evKey"       : "movie",
+	        // 서비스명
+	        "serviceName" : "영화"
+		});		
+	}
+	
+var nsc = "movie.movie";
+
+
+//
+
+if(false == true) {
+	jindo.$Element("btn_interest").attach("click", function(e){
+		e.stop(jindo.$Event.CANCEL_DEFAULT);
+		queryAndUpdatePreference('17421','interest');
+	});
+	
+	jindo.$Element("btn_notInterest").attach("click", function(e){
+		e.stop(jindo.$Event.CANCEL_DEFAULT);
+		queryAndUpdatePreference('17421','notInterest');
+	});
+	jindo.$Element("btn_interest_wide").attach("click", function(e){
+		e.stop(jindo.$Event.CANCEL_DEFAULT);
+		queryAndUpdatePreference('17421','interest');
+	});
+	
+	jindo.$Element("btn_notInterest_wide").attach("click", function(e){
+		e.stop(jindo.$Event.CANCEL_DEFAULT);
+		queryAndUpdatePreference('17421','notInterest');
+	});
+}
+//1000 단위로 구분자를 추가하는 function.
+function addCommas(str){
+	   var arr,int,dec;
+	   str += '';
+	   arr = str.split('.');
+	   int = arr[0] + '';
+	   dec = arr.length>1?'.'+arr[1]:'';
+	   return int.replace(/(\d)(?=(\d{3})+$)/g,"$1,") + dec;
+}
+//개봉전 평점 개선(선호도) Ajax function.
+function queryAndUpdatePreference(mcode, preference) {
+	
+    var oAjax = new jindo.$Ajax("/movie/bi/mi/preferenceRegisterJson.nhn", {
+    	onload : function (oRes) {
+    		if (oRes.json().resultCode == "error") {						// 서버 오류
+    			alert("서버 오류입니다.");
+			} else if (oRes.json().resultCode == "readOnlyService") {	// 정기점검중
+				alert("서비스 점검 중입니다.");
+			} else if (oRes.json().resultCode == "login") {				// 로그인 유도
+				if (confirm(CONSTANTS.sLoginMessage)) {
+					parent.location.href = CONSTANTS.sLoginUrl + encodeURIComponent(parent.location);
+				}
+			} else {
+	    		if(oRes.json().resultCode == 'success') {
+	    			//기본 보기 화면 갱신.
+					var percentage = oRes.json().interest / (oRes.json().interest + oRes.json().notInterested) * 100
+					jindo.$Element("interest_cnt").html("<em class='blind'>보고싶어요</em>" + addCommas(oRes.json().interest));
+					jindo.$Element("not_interest_cnt").html("<em class='blind'>글쎄요</em>" + addCommas(oRes.json().notInterested));
+					jindo.$Element("preference_graph").css('width', percentage +"%");
+					//넓게 보기 화면 갱신.
+					jindo.$Element("interest_cnt_wide").html("<em class='blind'>보고싶어요</em>" + addCommas(oRes.json().interest));
+					jindo.$Element("not_interest_cnt_wide").html("<em class='blind'>글쎄요</em>" + addCommas(oRes.json().notInterested));
+					jindo.$Element("preference_graph_wide").css('width', percentage +"%");
+					
+					if(jindo.$Element("interest_cnt_point") != null && jindo.$Element("not_interest_cnt_point") != null && jindo.$Element("preference_graph_point") != null) {
+						jindo.$Element("interest_cnt_point").html("<em class='blind'>보고싶어요</em>" + addCommas(oRes.json().interest));
+						jindo.$Element("not_interest_cnt_point").html("<em class='blind'>글쎄요</em>" + addCommas(oRes.json().notInterested));
+						jindo.$Element("preference_graph_point").css('width', percentage +"%");
+					}
+					
+					if(jindo.$Element("interest_cnt_basic") != null && jindo.$Element("not_interest_cnt_basic") != null && jindo.$Element("preference_graph_basic") != null) {
+						jindo.$Element("interest_cnt_basic").html("<em class='blind'>보고싶어요</em>" + addCommas(oRes.json().interest));
+						jindo.$Element("not_interest_cnt_basic").html("<em class='blind'>글쎄요</em>" + addCommas(oRes.json().notInterested));
+						jindo.$Element("preference_graph_basic").css('width', percentage +"%");
+					}
+					if(oRes.json().preferenceType == "interest") {
+						alert("'보고싶어요' 가 선택되었습니다.");
+					}
+					else {
+						alert("'글쎄요' 가 선택되었습니다.");
+					}
+	    		} else if(oRes.json().resultCode == 'CommonAlreadyExistInterestException') {
+	    			alert("이미 '보고싶어요' 를 체크하셨습니다.");
+	    		} else if(oRes.json().resultCode == 'CommonAlreadyExistNotInterestException') {
+	    			alert("이미 '글쎄요' 를 체크하셨습니다.");
+	    		} else if(oRes.json().resultCode == 'CommonAlreadyExistInterestNNBException') {
+	    			alert("이미 '보고싶어요' 를 체크하셨습니다. \n기대평가는 영화별로 1인당 1회만 등록 가능합니다.");
+	    		} else if(oRes.json().resultCode == 'CommonAlreadyExistNotInterestNNBException') {
+	    			alert("이미 '글쎄요' 를 체크하셨습니다. \n기대평가는 영화별로 1인당 1회만 등록 가능합니다.");
+	    		} else if(oRes.json().resultCode == 'CommonAlreadyExistInterestNDIException') {
+	    			alert("이미 '보고싶어요' 를 체크하셨습니다. \n기대평가는 영화별로 1인당 1회만 등록 가능합니다.");
+	    		} else if(oRes.json().resultCode == 'CommonAlreadyExistNotInterestNDIException') {
+	    			alert("이미 '글쎄요' 를 체크하셨습니다. \n기대평가는 영화별로 1인당 1회만 등록 가능합니다.");
+	    		}
+	    		else {
+	    			alert("서버 오류입니다.");
+	    		}
+			}
+
+    	},
+		timeout : 5,
+    	onerror : function (oRes) {
+    		alert("서버 오류입니다.");
+    	},
+    	ontimeout : function (oRes) {
+    		alert("잠시 후 다시 시도해 주세요.");
+    	}
+    });
+    
+    // Ajax 요청
+    oAjax.request({
+    	"mcode" : mcode,
+    	"preferenceType" : preference
+    });
+}
+
+function initUserPoint(mcode) {
+	var oAjax = new jindo.$Ajax("/api/internal/point/pointExistJson.nhn", {
+        method : "GET",
+        onload : function (oRes) {
+                var resultCode = oRes.json().resultCode;
+                
+                if (resultCode == "error") {                                                    // 서버 오류
+                        return false;
+                } else {
+                        var point = oRes.json().point;
+                        
+                      	//평점 표기 추가.
+                    	if(point == 10) {
+                    		jindo.$Element("starPoint").append("<em class='num1'>1</em>").append("<em class='num0'>0</em>");
+                    		jindo.$Element("starPointWide").append("<em class='num1'>1</em>").append("<em class='num0'>0</em>");
+                    	}
+                    	else {
+                    		jindo.$Element("starPoint").append("<em class='num"+point+"'>"+point+"</em>");
+                    		jindo.$Element("starPointWide").append("<em class='num"+point+"'>"+point+"</em>");
+                    	}
+                      	
+                    	//평점 존재시의 마크업에 사용자 평점을 적용시킴.
+                        jindo.$Element("pointStar").css("width",point + "0%");
+                        jindo.$Element("pointStarWide").css("width",point + "0%");
+                        
+                        var pointType = oRes.json().pointType;
+                        if (pointType == "POINT") {
+                        	//평점 타입이 '평점' 인 경우.
+                        	var ment = oRes.json().ment;
+                        	var nid = oRes.json().nid;
+                        	jindo.$Element("pointText").text(ment);
+                        	jindo.$Element("pointRemove").attr("href","javascript:checkAlreadyPointAfterExist('basic', "+nid+")");
+                        	jindo.$Element("pointTextWide").text(ment);
+                        	jindo.$Element("pointRemoveWide").attr("href","javascript:checkAlreadyPointAfterExist('wide', "+nid+")");
+                        }
+                        else if (pointType == "REVIEW") {
+                        	//평점 타입이 '리뷰' 인 경우.
+                        	var nid = oRes.json().nid;
+                        	var title = oRes.json().title;
+                        	jindo.$Element("pointRemove").leave();
+                        	jindo.$Element("pointText").text("[리뷰] ").append("<a href='http://movie.naver.com/movie/bi/mi/reviewread.nhn?code=17421&amp;nid=&quot;+nid+&quot;#tab'>"+title+"</a>");
+                        	jindo.$Element("pointRemoveWide").leave();
+                        	jindo.$Element("pointTextWide").text("[리뷰] ").append("<a href='http://movie.naver.com/movie/bi/mi/reviewread.nhn?code=17421&amp;nid=&quot;+nid+&quot;#tab'>"+title+"</a>");
+                        	
+                        }
+                        
+                        //평점이 없을때의 표기를 숨기고, 평점이 존재하는 표기로 바꿈.
+                        jindo.$Element("existPoint").show();
+                        jindo.$Element("existPointWide").show();
+                        jindo.$Element("noPoint").hide();
+                        jindo.$Element("noPointWide").hide();
+                }
+        },
+                timeout : 5,
+        onerror : function (oRes) {
+                alert("사용자 평점을 불러오는 중에 오류가 발생했습니다. 잠시 후 다시 시도해주세요.");
+                return false;
+        },
+        ontimeout : function (oRes) {
+                alert("사용자 평점을 불러오는 작업이 지연되고 있습니다. 다시 시도해주세요.");
+                return false;
+        }
+    });
+    
+    oAjax.request({
+        "movieCode" : "17421"
+    });
+}
+
+function movie_oninitialize() {
+	return htInitData;
+}
+</script>
+		
+	<div class="section_group section_group_frst">
+		<!-- 네티즌평점 -->
+		<a name="pointAfterTab"></a>
+		<div class="obj_section noline">
+			<div class="score_ntz">
+				<ul class="tab_open">
+					<!-- [D] 활성화시 클래스 "on" 추가 -->
+					<li id="beforePointTab" class=""><a href="point.nhn?code=17421#" onclick="changePoint('before'); return false;" title="개봉전 네티즌 평점 보기"><em class="blind">개봉전 네티즌 평점 보기</em></a><!-- N=a:urt.before --></li>
+					<li id="afterPointTab" class="on"><a href="point.nhn?code=17421#" onclick="changePoint('after'); return false;" title="개봉후 네티즌 평점 보기"><em class="blind">개봉후 네티즌 평점 보기</em></a><!-- N=a:urt.after --></li>
+				</ul>
+				<!-- 기대지수 -->
+				<div class="exp_area" id="preference_area" style="display:none">
+					<div class="title_area"><h4 class="h_exp"><strong class="blind">기대지수</strong></h4>
+					        <div class="ntz_help">
+				                <a href="point.nhn?code=17421#" class="btn_help" id="preference_help_show_point" title="기대지수 도움말 보기"><em>도움말</em></a>
+				                <div class="ly_help" id="preference_help_point" style="display:none">
+					                <span></span>
+					                <h6 class="blind">기대지수 도움말</h6>
+					                국내 미개봉작에 대한 기대지수입니다.<br>'보고싶어요'와 '글쎄요' 중  원하시는 버튼을 선택해주세요.
+					                <button type="button" id="preference_close_point" class="btn_close"><em>닫기</em></button>
+					        	</div>
+							</div>
+				    </div>
+				    <div class="exp_box">
+						<button type="button" id="btn_interest_point" class="btn_want">보고싶어요</button>
+						<div class="exp_info">
+							<h4 class="blind">기대지수 정보</h4>
+							<span class="exp_cnt" id="interest_cnt_point"><em class="blind">보고싶어요</em>0</span>
+							<span class="exp_cnt" id="not_interest_cnt_point"><em class="blind">글쎄요</em>0</span>
+							<div class="exp_bar">
+							
+								
+									<span id="preference_graph_point" style="width:50%"></span>
+								
+								
+															
+						</div>		
+						</div>
+						<button type="button" id="btn_notInterest_point" class="btn_dnwant">글쎄요</button>
+					</div>
+				</div>
+				<!-- 기대지수 끝-->
+
+				
+				
+				
+					
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+					
+				
+				
+				
+				
+				
+				
+				
+				
+					
+					
+					
+				
+				
+				
+				
+				
+				
+				
+					
+					
+					
+				
+				
+				
+				
+				
+				
+				
+				
+				
+					
+					
+					
+					
+					
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+					
+	            
+	            	
+	            	
+	            	
+	            
+	            
+					
+					
+					
+				
+	            
+					
+					
+					
+				
+	            
+					
+					
+					           	
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+		           	
+		           	
+		           	
+		           	
+		           	
+					
+					
+					
+					
+	           	
+	           	
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+					
+				
+				
+				
+				
+				
+				
+				
+				
+					
+					
+					
+				
+				
+				
+				
+				
+				
+				
+					
+					
+					
+				
+				
+				
+				
+				
+				
+				
+				
+				
+					
+					
+					
+					
+					
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+	            
+	            	
+	            	
+	            	
+	            
+	            
+					
+					
+					
+				
+	            
+					
+					
+					
+				
+	            
+					
+					
+					           	
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+		           	
+		           	
+		           	
+		           	
+					
+					
+					
+					
+					
+	           	
+				
+				
+					
+						
+							
+							
+								
+							
+						
+					
+					
+				
+				
+				
+					
+						
+							
+							
+								
+							
+						
+					
+					
+				
+				
+				
+					
+						
+							
+							
+								
+							
+						
+					
+					
+				
+				
+					<!-- 평점 그래프 -->
+					<div class="graph_area" id="graph_area">
+					
+						<!-- 네티즌 평점 -->
+						<div class="grade_netizen">
+							<!-- title_area [D] 탭 1개일 경우 class = tt2 추가 -->
+							
+							<div class="title_area grade_tit ">
+								<!-- [D] 탭 1개일 경우 [a]태그 삭제 -->
+								<h4 class="ntz_tt on" id="netizen_point_tab_h4">
+								
+									
+										<a href="point.nhn?code=17421#" id="netizen_point_tab">네티즌 평점</a><!-- N=a:arg.netizen -->
+									
+									
+								
+								</h4>
+								<div class="ntz_help">
+									<a href="point.nhn?code=17421#" class="btn_help" id="netizen_point_help" title="네티즌 평점 도움말 보기"><em>도움말</em></a><!-- N=a:arg.nhelp -->
+									<div class="ly_help" id="netizen_point_help_div" style="display:none">
+										<span></span>
+										로그인 후 누구나 참여하실 수 있으며,<br> 140자평 뿐 아니라 블로그 영화 리뷰 작성시 등록하신 별점도 함께 반영됩니다.<br> 영화별로 1아이디당 1개만 등록 가능하며 본인이 등록한 것은 직접 삭제할 수 있습니다.
+										<button type="button" id="netizen_point_help_close" class="btn_close"><em>닫기</em></button>
+									</div>
+								</div>
+								
+								<div class="sc_area" id="netizen_point_tab_inner">
+									<div class="star_score">
+										<span class="st_off"><span class="st_on" style="width:94.0%"></span></span>
+										<em class="num9">9</em><em class="dot">.</em><em class="num4">4</em><em class="num0">0</em>
+									</div>
+									<span class="user_count"><span class="blind">참여</span><em>16,284</em>명</span>
+								</div>
+							</div>
+							<!-- //title_area -->	
+							
+							<div class="grade_grp_area tab_conts" id="netizen_point_tab_div">
+								<!-- 점수분포_막대그래프 -->
+								<div class="grp_conts">
+									<h5 class="score_tt on" id="netizen_point_h5"><a href="point.nhn?code=17421#" id="netizen_point">점수 분포</a><!-- N=a:arg.nscore --></h5>
+									<div class="graph_box" id="netizen_point_graph">
+										<ul class="grp_info">
+											<li class="info_ntz">네티즌</li>
+											<li class="info_aud">관람객</li>
+										</ul>
+										<ul class="grp_sty">
+											<li>
+												<strong class="sc1">1점</strong>
+												<div class="grp_bar">
+													<span class="grp_ty">
+														<span class="grp_bar1" style="height:4.936276033571651%;">
+															<span class="bar_inf">5<em>%</em></span>
+															
+														</span>
+														<span class="grp_bar2" style="height:0.0%"></span>
+													</span>
+												</div>
+											</li>
+											<li>
+												<strong class="sc2">2점</strong>
+												<div class="grp_bar">
+													<span class="grp_ty">
+														<span class="grp_bar1" style="height:0.13677339135840846%;">
+															<span class="bar_inf">0<em>%</em></span>
+															
+														</span>
+														<span class="grp_bar2" style="height:0.0%"></span>
+													</span>
+												</div>
+											</li>
+											<li>
+												<strong class="sc3">3점</strong>
+												<div class="grp_bar">
+													<span class="grp_ty">
+														<span class="grp_bar1" style="height:0.09325458501709667%;">
+															<span class="bar_inf">0<em>%</em></span>
+															
+														</span>
+														<span class="grp_bar2" style="height:0.0%"></span>
+													</span>
+												</div>
+											</li>
+											<li>
+												<strong class="sc4">4점</strong>       
+												<div class="grp_bar">
+													<span class="grp_ty">
+														<span class="grp_bar1" style="height:0.12433944668946223%;">
+															<span class="bar_inf">0<em>%</em></span>
+															
+														</span>
+														<span class="grp_bar2" style="height:0.0%"></span>
+													</span>
+												</div>
+											</li>
+											<li>
+												<strong class="sc5">5점</strong>       
+												<div class="grp_bar">
+													<span class="grp_ty">
+														<span class="grp_bar1" style="height:0.24867889337892446%;">
+															<span class="bar_inf">0<em>%</em></span>
+															
+														</span>
+														<span class="grp_bar2" style="height:0.0%"></span>
+													</span>
+												</div>
+											</li>
+											<li>
+												<strong class="sc6">6점</strong>       
+												<div class="grp_bar">
+													<span class="grp_ty">
+														<span class="grp_bar1" style="height:0.391669257071806%;">
+															<span class="bar_inf">0<em>%</em></span>
+															
+														</span>
+														<span class="grp_bar2" style="height:0.0%"></span>
+													</span>
+												</div>
+											</li>
+											<li>
+												<strong class="sc7">7점</strong>       
+												<div class="grp_bar">
+													<span class="grp_ty">
+														<span class="grp_bar1" style="height:0.7709045694746658%;">
+															<span class="bar_inf">1<em>%</em></span>
+															
+														</span>
+														<span class="grp_bar2" style="height:0.0%"></span>
+													</span>
+												</div>
+											</li>
+											<li>
+												<strong class="sc8">8점</strong>       
+												<div class="grp_bar">
+													<span class="grp_ty">
+														<span class="grp_bar1" style="height:1.952129313024557%;">
+															<span class="bar_inf">2<em>%</em></span>
+															
+														</span>
+														<span class="grp_bar2" style="height:6.666666666666667%"></span>
+													</span>
+												</div>
+											</li>
+											<li>
+												<strong class="sc9">9점</strong>       
+												<div class="grp_bar">
+													<span class="grp_ty">
+														<span class="grp_bar1" style="height:4.407833385141436%;">
+															<span class="bar_inf">4<em>%</em></span>
+															
+														</span>
+														<span class="grp_bar2" style="height:0.0%"></span>
+													</span>
+												</div>
+											</li>
+											<li>
+												<strong class="sc10">10점</strong>     
+												<div class="grp_bar">
+													<span class="grp_ty">
+														<span class="grp_bar1" style="height:86.938141125272%;">
+															<span class="bar_inf">87<em>%</em></span>
+															
+														</span>
+														<span class="grp_bar2" style="height:93.33333333333333%"></span>
+													</span>
+												</div>
+											</li>
+										</ul>
+										
+
+
+	
+		<dl class="movie_grp_info">
+			<dt>한줄분석</dt>
+			<dd>이 영화를 가장 좋아하는 그룹은 <span class="info_tx1">20대 남자</span>입니다.</dd>
+		</dl>
+	
+	
+									</div>
+								</div>
+								<!-- // grp_conts  -->
+	 
+								<div class="grp_conts" id="netizen_group_tab">
+									<h5 class="age_tt" id="netizen_group_h5"><a href="point.nhn?code=17421#" id="netizen_group">남녀별,연령별</a><!-- N=a:arg.nsnage --></h5>
+									<div class="graph_box" id="netizen_group_graph" style="display:none;">
+									
+										<!-- 남녀별 그래프 -->
+										<div class="grp_sty2">
+											<!-- [D]원형 그래프 영역 -->
+											<div id="netizenGenderPointGraph" class="grp_pie" style="width:112px;height:112px">
+												<h3 class="_gender-label">참여율</h3>
+											</div>
+											
+											<ul>
+												<li class="ma">
+													<span class="grp_s"></span>
+													<span class="grp_score">
+													<span class="ic_star">평점</span>
+														<em>9.37</em>
+													</span>
+													<strong>남자</strong>
+												</li>
+												<li class="fa">
+													<span class="grp_s"></span>
+													<span class="grp_score">
+													<span class="ic_star">평점</span>
+														<em>9.48</em>
+													</span>
+													<strong>여자</strong>
+												</li>
+											</ul>
+										</div>
+										<!-- // grp_sty2 남녀별 그래프 -->
+										
+										<!-- 연령별 그래프 -->
+										<div class="grp_sty3">
+											<ul class="grp_age">
+												<li class="age10 _netizenAgePoint 9.48">
+													<strong>10대</strong>
+													<span class="grp_score3">
+													<span class="ic_star">평점</span>
+														<em>9.48</em>
+													</span>
+												</li>
+												<li class="age20 _netizenAgePoint 9.49">
+													<strong>20대</strong>
+													<span class="grp_score3">
+													<span class="ic_star">평점</span>
+														<em>9.49</em>
+													</span>
+												</li>
+												<li class="age30 _netizenAgePoint 9.34">
+													<strong>30대</strong>
+													<span class="grp_score3">
+													<span class="ic_star">평점</span>
+														<em>9.34</em>
+													</span>
+												</li>
+												<li class="age40 _netizenAgePoint 8.97">
+													<strong>40대</strong>
+													<span class="grp_score3">
+													<span class="ic_star">평점</span>
+														<em>8.97</em>
+													</span>
+												</li>
+											</ul>
+											
+											<div class="grp_age2">
+												<!-- [D]원형 그래프 영역 -->
+												<div id="netizenAgePointGraph" class="grp_pie" style="width:112px;height:112px">
+													 <h3 class="_age-label">참여율</h3>
+												</div>
+												
+												<div class="grp_agegroup">
+													<strong>연령별 구분</strong>
+													<em>10대</em>
+													<em>20대</em>
+													<em>30대</em>
+													<em>40대 이상</em>
+												</div>
+											</div>
+										</div>
+										<!-- // grp_sty3 연령별 그래프 -->
+										
+
+
+	
+		<dl class="movie_grp_info">
+			<dt>한줄분석</dt>
+			<dd>이 영화를 가장 좋아하는 그룹은 <span class="info_tx1">20대 남자</span>입니다.</dd>
+		</dl>
+	
+	
+									</div>
+									<!-- // -->
+								</div>
+							</div>
+							<!-- // grade_grp_area -->
+						</div>
+						<!-- // 네티즌 평점 -->
+						
+						<!-- 관람객 평점 -->
+						
+							<div class="grade_audience">
+								<div class="title_area grade_tit">
+									<h4 class="audience_tt" id="actual_point_tab_h4"><a href="point.nhn?code=17421#" id="actual_point_tab">관람객 평점</a><!-- N=arg.actual --></h4>
+									<div class="ntz_help">
+										<a href="point.nhn?code=17421#" class="btn_help" id="actual_point_help" title="관람객 평점 도움말 보기"><em>도움말</em></a><!-- N=arg.achelp -->
+										<div class="ly_help" id="actual_point_help_div" style="display:none">
+											<span></span>
+											관람객 평점은 네이버 영화에서 예매하고<br> 실제 관람 후 이용자들이 작성한 평점입니다.
+											<button type="button" id="actual_point_help_close" class="btn_close"><em>닫기</em></button>
+										</div>
+									</div>
+									<div class="sc_area" id="actual_point_tab_inner">
+										<div class="star_score">
+											<span class="st_off"><span class="st_on" style="width:98.7%"></span></span>
+											<em class="num9">9</em><em class="dot">.</em><em class="num8">8</em><em class="num7">7</em>
+										</div>
+										<span class="user_count"><span class="blind">참여</span><em>15</em>명</span>
+									</div>
+								</div>
+								<!-- // title_area -->
+								
+								<div class="grade_grp_area tab_conts" id="actual_point_tab_div" style="display:none;">
+									<!-- 점수분포_막대그래프 -->
+									<div class="grp_conts">
+										<h5 class="score_tt on" id="actual_point_h5"><a href="point.nhn?code=17421#" id="actual_point">점수 분포</a><!-- N=arg.acscore --></h5>
+										<div class="graph_box" id="actual_point_graph">
+											<ul class="grp_info">
+												<li class="info_ntz">네티즌</li>
+												<li class="info_aud">관람객</li>
+											</ul>
+											<ul class="grp_sty">
+												<li>
+													<strong class="sc1">1점</strong>
+													<div class="grp_bar">
+														<span class="grp_ty">
+															<span class="grp_bar1" style="height:4.936276033571651%;"></span>
+															<span class="grp_bar2" style="height:0.0%">
+																<span class="bar_inf">0<em>%</em></span>
+																
+															</span>
+														</span>
+													</div>
+												</li>
+												<li>
+													<strong class="sc2">2점</strong>
+													<div class="grp_bar">
+														<span class="grp_ty">
+															<span class="grp_bar1" style="height:0.13677339135840846%;"></span>
+															<span class="grp_bar2" style="height:0.0%">
+																<span class="bar_inf">0<em>%</em></span>
+																
+															</span>
+														</span>
+													</div>
+												</li>
+												<li>
+													<strong class="sc3">3점</strong>
+													<div class="grp_bar">
+														<span class="grp_ty">
+															<span class="grp_bar1" style="height:0.09325458501709667%;"></span>
+															<span class="grp_bar2" style="height:0.0%">
+																<span class="bar_inf">0<em>%</em></span>
+																
+															</span>
+														</span>
+													</div>
+												</li>
+												<li>
+													<strong class="sc4">4점</strong>       
+													<div class="grp_bar">
+														<span class="grp_ty">
+															<span class="grp_bar1" style="height:0.12433944668946223%;"></span>
+															<span class="grp_bar2" style="height:0.0%">
+																<span class="bar_inf">0<em>%</em></span>
+																
+															</span>
+														</span>
+													</div>
+												</li>
+												<li>
+													<strong class="sc5">5점</strong>       
+													<div class="grp_bar">
+														<span class="grp_ty">
+															<span class="grp_bar1" style="height:0.24867889337892446%;"></span>
+															<span class="grp_bar2" style="height:0.0%">
+																<span class="bar_inf">0<em>%</em></span>
+																
+															</span>
+														</span>
+													</div>
+												</li>
+												<li>
+													<strong class="sc6">6점</strong>       
+													<div class="grp_bar">
+														<span class="grp_ty">
+															<span class="grp_bar1" style="height:0.391669257071806%;"></span>
+															<span class="grp_bar2" style="height:0.0%">
+																<span class="bar_inf">0<em>%</em></span>
+																
+															</span>
+														</span>
+													</div>
+												</li>
+												<li>
+													<strong class="sc7">7점</strong>       
+													<div class="grp_bar">
+														<span class="grp_ty">
+															<span class="grp_bar1" style="height:0.7709045694746658%;"></span>
+															<span class="grp_bar2" style="height:0.0%">
+																<span class="bar_inf">0<em>%</em></span>
+																
+															</span>
+														</span>
+													</div>
+												</li>
+												<li>
+													<strong class="sc8">8점</strong>       
+													<div class="grp_bar">
+														<span class="grp_ty">
+															<span class="grp_bar1" style="height:1.952129313024557%;"></span>
+															<span class="grp_bar2" style="height:6.666666666666667%">
+																<span class="bar_inf">7<em>%</em></span>
+																
+															</span>
+														</span>
+													</div>
+												</li>
+												<li>
+													<strong class="sc9">9점</strong>       
+													<div class="grp_bar">
+														<span class="grp_ty">
+															<span class="grp_bar1" style="height:4.407833385141436%;"></span>
+															<span class="grp_bar2" style="height:0.0%">
+																<span class="bar_inf">0<em>%</em></span>
+																
+															</span>
+														</span>
+													</div>
+												</li>
+												<li>
+													<strong class="sc10">10점</strong>     
+													<div class="grp_bar">
+														<span class="grp_ty">
+															<span class="grp_bar1" style="height:86.938141125272%;"></span>
+															<span class="grp_bar2" style="height:93.33333333333333%">
+																<span class="bar_inf">93<em>%</em></span>
+																
+															</span>
+														</span>
+													</div>
+												</li>
+											</ul>
+											
+
+
+	
+		<dl class="movie_grp_info">
+			<dt>한줄분석</dt>
+			<dd>이 영화를 가장 좋아하는 그룹은 <span class="info_tx1">20대 남자</span>입니다.</dd>
+		</dl>
+	
+	
+										</div>
+									</div>
+									<!-- // grp_conts  -->
+		 
+									<div class="grp_conts" id="actual_group_tab">
+										<h5 class="age_tt" id="actual_group_h5"><a href="point.nhn?code=17421#" id="actual_group">남녀별,연령별</a><!-- N=arg.acsnage --></h5>
+										<div class="graph_box" id="actual_group_graph" style="display:none;">
+											
+											<!-- 남녀별 그래프 -->
+											<div class="grp_sty2">
+												<!-- [D]원형 그래프 영역 -->
+												<div id="actualGenderPointGraph" class="grp_pie" style="width:112px;height:112px">
+													<h3 class="_gender-label">참여율</h3>
+												</div>
+												
+												<ul>
+													<li class="ma">
+														<span class="grp_s"></span>
+														<span class="grp_score">
+														<span class="ic_star">평점</span>
+															<em>10.0</em>
+														</span>
+														<strong>남자</strong>
+													</li>
+													<li class="fa">
+														<span class="grp_s"></span>
+														<span class="grp_score">
+														<span class="ic_star">평점</span>
+															<em>9.75</em>
+														</span>
+														<strong>여자</strong>
+													</li>
+												</ul>
+											</div>
+											<!-- // grp_sty2 남녀별 그래프 -->
+											
+											<!-- 연령별 그래프 -->
+											<div class="grp_sty3">
+												<ul class="grp_age">
+													<li class="age10 _actualAgePoint 10.0">
+														<strong>10대</strong>
+														<span class="grp_score3">
+														<span class="ic_star">평점</span>
+															<em>10.0</em>
+														</span>
+													</li>
+													<li class="age20 _actualAgePoint 9.83">
+														<strong>20대</strong>
+														<span class="grp_score3">
+														<span class="ic_star">평점</span>
+															<em>9.83</em>
+														</span>
+													</li>
+													<li class="age30 _actualAgePoint 10.0">
+														<strong>30대</strong>
+														<span class="grp_score3">
+														<span class="ic_star">평점</span>
+															<em>10.0</em>
+														</span>
+													</li>
+													<li class="age40 _actualAgePoint 10.0">
+														<strong>40대</strong>
+														<span class="grp_score3">
+														<span class="ic_star">평점</span>
+															<em>10.0</em>
+														</span>
+													</li>
+												</ul>
+												
+												<div class="grp_age2">
+													<!-- [D]원형 그래프 영역 -->
+													<div id="actualAgePointGraph" class="grp_pie" style="width:112px;height:112px">
+														 <h3 class="_age-label">참여율</h3>
+													</div>
+													
+													<div class="grp_agegroup">
+														<strong>연령별 구분</strong>
+														<em>10대</em>
+														<em>20대</em>
+														<em>30대</em>
+														<em>40대 이상</em>
+													</div>
+												</div>
+											</div>
+											<!-- // grp_sty3 연령별 그래프 -->
+											
+
+
+	
+		<dl class="movie_grp_info">
+			<dt>한줄분석</dt>
+			<dd>이 영화를 가장 좋아하는 그룹은 <span class="info_tx1">20대 남자</span>입니다.</dd>
+		</dl>
+	
+	
+										</div>
+										<!-- // -->
+									</div>
+								</div>
+								<!-- grp_conts -->
+							</div>
+						
+						<!-- // 그래프영역 -->
+					</div>
+					 <div class="grp_comment" id="graph_comment">그래프는 5분 주기로 업데이트 됩니다.</div>
+					<!-- // 관람객 평점 -->
+					
+				<div class="title_area" id="beforePointArea" style="display:none">
+					<h4 class="h_score_neti"><strong class="blind">네티즌 평점</strong></h4>
+					<div class="ntz_help">
+						<a href="point.nhn?code=17421#" id="beforePointHelpButton" class="btn_help" title="네티즌 평점 도움말 보기"><em>도움말</em></a>
+						<div class="ly_help" id="beforePointHelpLayer" style="display:none">
+							<span></span>
+							네티즌분들이 직접 등록하신 평점으로 로그인 후 누구나 참여하실 수 있으며, 140자평 뿐 아니라 블로그 영화리뷰 작성 시 등록한 별점도 함께 반영됩니다. 영화별로 1아이디당 1개만 평점 등록이 가능하며, 본인이 등록한 것은 직접 삭제할 수 있습니다
+							<button type="button" class="btn_close" id="beforePointHelpCloseButton"><em>닫기</em></button>
+						</div>
+					</div>
+					<div class="sc_area b_star">
+						<h2 class="tit_all">전체</h2>
+						<div class="star_score">
+							<span class="st_off"><span class="st_on" style="width:81.1%">별점 - 총 10점 중</span></span><em class="num8">8</em><em class="dot">.</em><em class="num1">1</em><em class="num1">1</em>
+						</div>
+						<span class="user_count">참여 <em>196</em>명</span>
+					</div>
+				</div>
+				<div class="title_area" id="afterPointArea" style="display:none">
+					<h4 class="h_score_neti"><strong class="blind">네티즌 평점</strong></h4>
+					<div class="ntz_help">
+						<a href="point.nhn?code=17421#" id="afterPointHelpButton" class="btn_help" title="네티즌 평점 도움말 보기"><em>도움말</em></a>
+						<div class="ly_help" id="afterPointHelpLayer" style="display:none">
+							<span></span>
+							네티즌분들이 직접 등록하신 평점으로 로그인 후 누구나 참여하실 수 있으며, 140자평 뿐 아니라 블로그 영화리뷰 작성 시 등록한 별점도 함께 반영됩니다. 영화별로 1아이디당 1개만 평점 등록이 가능하며, 본인이 등록한 것은 직접 삭제할 수 있습니다
+							<button type="button" class="btn_close" id="afterPointHelpCloseButton"><em>닫기</em></button>
+						</div>
+					</div>
+					<div class="sc_area">
+						<h2 class="tit_all">전체</h2>
+						<div class="star_score">
+							<span class="st_off"><span class="st_on" style="width:94.0%">별점 - 총 10점 중</span></span><em class="num9">9</em><em class="dot">.</em><em class="num4">4</em><em class="num0">0</em>
+						</div>
+						<span class="user_count">참여 <em>16,284</em>명</span>
+					</div>
+				</div>
+		
+		</div>
+			<div class="ifr_module2">
+				<iframe src="http://movie.naver.com/movie/bi/mi/pointWriteFormList.nhn?code=17421&amp;type=after&amp;isActualPointWriteExecute=false&amp;isMileageSubscriptionAlready=false&amp;isMileageSubscriptionReject=false" id="pointAfterListIframe" name="pointAfterListIframe" width="100%" frameborder="0" scrolling="no" class="ifr" title="네티즌 평점 리스트"></iframe>
+			</div>
+		</div>
+		<!-- //네티즌평점 -->
+
+		<!-- 전문가 평점 -->
+		
+			<a name="pointExpertTab"></a>
+			<div class="obj_section">
+				<div class="score_special">
+					<div class="title_area">
+						<h4 class="h_score_spe"><strong class="blind">기자 &middot; 평론가 평점</strong></h4>
+						<div class="star_score">
+							
+							
+							
+											
+							<span class="st_off"><span class="st_on" style="width: 85%">별점 - 총 10점 중</span></span>
+							<em class="num8">8</em><em class="dot">.</em><em class="num5">5</em><em class="num0">0</em>
+						</div>
+						<span class="user_count">참여 <em>1 </em>명
+						</span>
+					</div>
+					
+					
+						
+						
+						
+						
+						<div class="reporter">
+							<ul>
+								
+									
+										
+											
+												
+													
+													
+												
+												
+											
+											<li>
+												<div class="reporter_line">
+													<p class="thumb">
+														<a href="http://movie.naver.com/movie/bi/pi/basic.nhn?code=158681"><img src="http://ncc.phinf.naver.net/20150225_157/1424852513931LeGQC_JPEG/%B1%E8%C7%FC%BC%AE.jpg" width="38"
+															height="38" alt="김형석" /></a><!-- N=a:cra.img -->
+													</p>
+													<dl class="p_review">
+														<dt><a href="http://movie.naver.com/movie/bi/pi/basic.nhn?code=158681">김형석</a><!-- N=a:cra.name -->영화 저널리스트</dt>
+														<dd class="good">많은 이들의 '인생 영화'</dd>
+													</dl>
+												</div>
+												<div class="re_score_grp">
+													<div class="reporter_score">
+														<strong class="so_good"><em class="blind">추천합니다</em></strong>
+														<div class="star_score">
+															<span class="st_off"><span class="st_on" style="width: 85%">별점 - 총 10점 중</span></span><em>8.5</em>
+														</div>
+													</div>
+													<dl class="subject_score">
+														
+														<dt>스토리</dt>
+														<dd>10</dd>
+														
+														
+														<dt>비주얼</dt>
+														<dd>8</dd>
+														
+														
+														<dt>연출</dt>
+														<dd>8</dd>
+														
+														
+														<dt>연기</dt>
+														<dd>8</dd>
+														
+													</dl>
+												</div>
+												<p class="tx_report">20년 넘게 지났지만 언제나 꺼내 봐도, 이미 여러 번 본 장면들임에도 불구하고, 여전한 감동을 주는 몇 안 되는 영화들 중 하나. 스티븐 킹의 탄탄한 스토리를 토대로, 영화는 단 한 순간도 품격을 잃지 않으며 잘 조율되어 있다. 영화가 개봉되었을 때 프랭크 다라본트 감독은, 이 영화를 본 후 삶의 의미를 되찾았다는 내용의 수많은 편지를 받았다고 한다. 단순한 영화를 넘어, 용기와 희망을 북돋우는 힐링 무비.</p>
+											</li>
+										
+										
+									
+								
+							</ul>
+						</div>
+						
+						
+						
+						
+						
+					
+				</div>
+			</div>	
+		
+		<!-- // 전문가 평점 -->
+	</div>
+	<div class="section_group">
+		<!-- 리뷰 -->
+		<div class="obj_section">
+			<div class="ifr_module2"  id="reviewTab">
+					<iframe src="http://movie.naver.com/movie/bi/mi/reviewList.nhn?code=17421" id="reviewListIframe" name="reviewListIframe"  width="100%" frameborder="0" scrolling="no" class="ifr" title="네티즌 리뷰 리스트"></iframe>
+			</div>
+		</div>
+		<!-- //리뷰 -->
+		
+		
+		
+
+
+<!-- 검색어 순위 -->
+
+<div class="obj_section">
+	<div class="rank_keyword">
+		<div class="title_area">
+			<h4 class="h_rank_keyword"><strong class="blind">MOIVE RANKING</strong></h4>
+			<span class="tx_info">2017.02.18 기준</span>
+			<!-- a href="/movie/sdb/index.nhn" class="btn_more"><em class="blind">더보기</em></a -->
+		</div>
+		<div class="keyword_obj first_child">
+			<h4 class="h_kwd_mv"><a href="http://movie.naver.com/movie/sdb/rank/rmovie.nhn" title="">영화 인기검색어</a><!-- N=a:key*m.title --></h4>
+			<ol>
+			
+							
+				<li>
+					<a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=127382" class="top_class">
+						<em class="rank_01"></em>
+						<p class="rank_tx">조작된 도시</p>
+					</a><!-- N=a:key*m.list -->
+					<div class="kwd_info">
+					
+						
+						
+						
+							<span class="stay">보합</span>
+							<em class="num_per">0</em>					
+						
+					
+					</div>
+				</li>
+			
+							
+				<li>
+					<a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=149512" >
+						<em class="rank_02"></em>
+						<p class="rank_tx">재심</p>
+					</a><!-- N=a:key*m.list -->
+					<div class="kwd_info">
+					
+						
+							<span class="up">상승</span>
+							<em class="num_per">1</em>
+						
+						
+						
+					
+					</div>
+				</li>
+			
+							
+				<li>
+					<a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=142384" >
+						<em class="rank_03"></em>
+						<p class="rank_tx">공조</p>
+					</a><!-- N=a:key*m.list -->
+					<div class="kwd_info">
+					
+						
+						
+							<span class="down">하락</span>
+							<em class="num_per">1</em>
+						
+						
+					
+					</div>
+				</li>
+			
+							
+				<li>
+					<a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=144314" >
+						<em class="rank_04"></em>
+						<p class="rank_tx">더 킹</p>
+					</a><!-- N=a:key*m.list -->
+					<div class="kwd_info">
+					
+						
+						
+						
+							<span class="stay">보합</span>
+							<em class="num_per">0</em>					
+						
+					
+					</div>
+				</li>
+			
+							
+				<li>
+					<a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=126034" >
+						<em class="rank_05"></em>
+						<p class="rank_tx">그레이트 월</p>
+					</a><!-- N=a:key*m.list -->
+					<div class="kwd_info">
+					
+						
+							<span class="up">상승</span>
+							<em class="num_per">2</em>
+						
+						
+						
+					
+					</div>
+				</li>
+			
+				
+					</ol>
+					<ol>						
+							
+				<li>
+					<a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=143372" >
+						<em class="rank_06"></em>
+						<p class="rank_tx">더 큐어</p>
+					</a><!-- N=a:key*m.list -->
+					<div class="kwd_info">
+					
+						
+							<span class="up">상승</span>
+							<em class="num_per">3</em>
+						
+						
+						
+					
+					</div>
+				</li>
+			
+							
+				<li>
+					<a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=144081" >
+						<em class="rank_07"></em>
+						<p class="rank_tx">50가지 그림자: 심연</p>
+					</a><!-- N=a:key*m.list -->
+					<div class="kwd_info">
+					
+						
+						
+							<span class="down">하락</span>
+							<em class="num_per">2</em>
+						
+						
+					
+					</div>
+				</li>
+			
+							
+				<li>
+					<a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=136869" >
+						<em class="rank_08"></em>
+						<p class="rank_tx">컨택트</p>
+					</a><!-- N=a:key*m.list -->
+					<div class="kwd_info">
+					
+						
+						
+							<span class="down">하락</span>
+							<em class="num_per">2</em>
+						
+						
+					
+					</div>
+				</li>
+			
+							
+				<li>
+					<a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=102278" >
+						<em class="rank_09"></em>
+						<p class="rank_tx">트리플 엑스 리턴즈</p>
+					</a><!-- N=a:key*m.list -->
+					<div class="kwd_info">
+					
+						
+						
+							<span class="down">하락</span>
+							<em class="num_per">1</em>
+						
+						
+					
+					</div>
+				</li>
+			
+							
+				<li>
+					<a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=142305" >
+						<em class="rank_10"></em>
+						<p class="rank_tx">핵소 고지</p>
+					</a><!-- N=a:key*m.list -->
+					<div class="kwd_info">
+					
+						
+						
+						
+							<span class="stay">보합</span>
+							<em class="num_per">0</em>					
+						
+					
+					</div>
+				</li>
+			
+			</ol>
+		</div>
+		<div class="keyword_obj expand">
+			<h4 class="h_kwd_people"><a href="http://movie.naver.com/movie/sdb/rank/rpeople.nhn" title="">영화인 인기검색어</a><!-- N=a:key*p.title --></h4>
+			<ol>
+			
+							
+				<li>
+					<a href="http://movie.naver.com/movie/bi/pi/basic.nhn?code=162941" class="top_class">
+						<em class="rank_01"></em>
+						<p class="rank_tx">드니 빌뇌브</p>
+					</a><!-- N=a:key*p.list -->
+					<div class="kwd_info">
+					
+						
+						
+						
+							<span class="stay">보합</span>
+							<em class="num_per">0</em>					
+						
+					
+					</div>
+				</li>
+			
+							
+				<li>
+					<a href="http://movie.naver.com/movie/bi/pi/basic.nhn?code=241245" >
+						<em class="rank_02"></em>
+						<p class="rank_tx">다코타 존슨</p>
+					</a><!-- N=a:key*p.list -->
+					<div class="kwd_info">
+					
+						
+						
+						
+							<span class="stay">보합</span>
+							<em class="num_per">0</em>					
+						
+					
+					</div>
+				</li>
+			
+							
+				<li>
+					<a href="http://movie.naver.com/movie/bi/pi/basic.nhn?code=12234" >
+						<em class="rank_03"></em>
+						<p class="rank_tx">에이미 아담스</p>
+					</a><!-- N=a:key*p.list -->
+					<div class="kwd_info">
+					
+						
+						
+						
+							<span class="stay">보합</span>
+							<em class="num_per">0</em>					
+						
+					
+					</div>
+				</li>
+			
+							
+				<li>
+					<a href="http://movie.naver.com/movie/bi/pi/basic.nhn?code=37393" >
+						<em class="rank_04"></em>
+						<p class="rank_tx">신카이 마코토</p>
+					</a><!-- N=a:key*p.list -->
+					<div class="kwd_info">
+					
+						
+						
+						
+							<span class="stay">보합</span>
+							<em class="num_per">0</em>					
+						
+					
+					</div>
+				</li>
+			
+							
+				<li>
+					<a href="http://movie.naver.com/movie/bi/pi/basic.nhn?code=9433" >
+						<em class="rank_05"></em>
+						<p class="rank_tx">제임스 맥어보이</p>
+					</a><!-- N=a:key*p.list -->
+					<div class="kwd_info">
+					
+						
+						
+						
+							<span class="stay">보합</span>
+							<em class="num_per">0</em>					
+						
+					
+					</div>
+				</li>
+			
+				
+					</ol>
+					<ol>						
+							
+				<li>
+					<a href="http://movie.naver.com/movie/bi/pi/basic.nhn?code=5989" >
+						<em class="rank_06"></em>
+						<p class="rank_tx">박광현</p>
+					</a><!-- N=a:key*p.list -->
+					<div class="kwd_info">
+					
+						
+						
+						
+							<span class="stay">보합</span>
+							<em class="num_per">0</em>					
+						
+					
+					</div>
+				</li>
+			
+							
+				<li>
+					<a href="http://movie.naver.com/movie/bi/pi/basic.nhn?code=261797" >
+						<em class="rank_07"></em>
+						<p class="rank_tx">데인 드한</p>
+					</a><!-- N=a:key*p.list -->
+					<div class="kwd_info">
+					
+						
+							<span class="up">상승</span>
+							<em class="num_per">3</em>
+						
+						
+						
+					
+					</div>
+				</li>
+			
+							
+				<li>
+					<a href="http://movie.naver.com/movie/bi/pi/basic.nhn?code=55840" >
+						<em class="rank_08"></em>
+						<p class="rank_tx">심은경</p>
+					</a><!-- N=a:key*p.list -->
+					<div class="kwd_info">
+					
+						
+						
+						
+							<span class="stay">보합</span>
+							<em class="num_per">0</em>					
+						
+					
+					</div>
+				</li>
+			
+							
+				<li>
+					<a href="http://movie.naver.com/movie/bi/pi/basic.nhn?code=153572" >
+						<em class="rank_09"></em>
+						<p class="rank_tx">제니퍼 로렌스</p>
+					</a><!-- N=a:key*p.list -->
+					<div class="kwd_info">
+					
+						
+						
+							<span class="down">하락</span>
+							<em class="num_per">2</em>
+						
+						
+					
+					</div>
+				</li>
+			
+							
+				<li>
+					<a href="http://movie.naver.com/movie/bi/pi/basic.nhn?code=135256" >
+						<em class="rank_10"></em>
+						<p class="rank_tx">엠마 스톤</p>
+					</a><!-- N=a:key*p.list -->
+					<div class="kwd_info">
+					
+						
+						
+							<span class="down">하락</span>
+							<em class="num_per">1</em>
+						
+						
+					
+					</div>
+				</li>
+			
+			</ol>
+		</div>
+		<div class="keyword_obj expand">
+			<h4 class="ticket_rsv"><a href="http://movie.naver.com/movie/sdb/rank/rreserve.nhn" title="">티켓 예매순</a><!-- N=a:key*t.title --></h4>
+			<ol>
+			
+				
+				<li>
+					<a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=149512" class="top_class">
+						<em class="rank_01"></em>
+						<p class="rank_tx">재심</p>
+					</a><!-- N=a:key*t.list -->
+					<div class="kwd_info">
+						<em class="rsv_per">33.37%</em>
+					</div>
+				</li>
+			
+				
+				<li>
+					<a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=127382" >
+						<em class="rank_02"></em>
+						<p class="rank_tx">조작된 도시</p>
+					</a><!-- N=a:key*t.list -->
+					<div class="kwd_info">
+						<em class="rsv_per">21.56%</em>
+					</div>
+				</li>
+			
+				
+				<li>
+					<a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=101904" >
+						<em class="rank_03"></em>
+						<p class="rank_tx">트롤 </p>
+					</a><!-- N=a:key*t.list -->
+					<div class="kwd_info">
+						<em class="rsv_per">9.55%</em>
+					</div>
+				</li>
+			
+				
+				<li>
+					<a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=142384" >
+						<em class="rank_04"></em>
+						<p class="rank_tx">공조</p>
+					</a><!-- N=a:key*t.list -->
+					<div class="kwd_info">
+						<em class="rsv_per">8.99%</em>
+					</div>
+				</li>
+			
+				
+				<li>
+					<a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=126034" >
+						<em class="rank_05"></em>
+						<p class="rank_tx">그레이트 월</p>
+					</a><!-- N=a:key*t.list -->
+					<div class="kwd_info">
+						<em class="rsv_per">7.49%</em>
+					</div>
+				</li>
+			
+				
+					</ol>
+					<ol>						
+				
+				<li>
+					<a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=143372" >
+						<em class="rank_06"></em>
+						<p class="rank_tx">더 큐어</p>
+					</a><!-- N=a:key*t.list -->
+					<div class="kwd_info">
+						<em class="rsv_per">4.42%</em>
+					</div>
+				</li>
+			
+				
+				<li>
+					<a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=130984" >
+						<em class="rank_07"></em>
+						<p class="rank_tx">발레리나</p>
+					</a><!-- N=a:key*t.list -->
+					<div class="kwd_info">
+						<em class="rsv_per">2.00%</em>
+					</div>
+				</li>
+			
+				
+				<li>
+					<a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=157500" >
+						<em class="rank_08"></em>
+						<p class="rank_tx">마이펫 오지</p>
+					</a><!-- N=a:key*t.list -->
+					<div class="kwd_info">
+						<em class="rsv_per">1.50%</em>
+					</div>
+				</li>
+			
+				
+				<li>
+					<a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=102278" >
+						<em class="rank_09"></em>
+						<p class="rank_tx">트리플 엑스 리턴즈</p>
+					</a><!-- N=a:key*t.list -->
+					<div class="kwd_info">
+						<em class="rsv_per">1.41%</em>
+					</div>
+				</li>
+			
+				
+				<li>
+					<a href="http://movie.naver.com/movie/bi/mi/basic.nhn?code=144081" >
+						<em class="rank_10"></em>
+						<p class="rank_tx">50가지 그림자: 심연</p>
+					</a><!-- N=a:key*t.list -->
+					<div class="kwd_info">
+						<em class="rsv_per">1.29%</em>
+					</div>
+				</li>
+			
+			</ol>
+		</div>
+	</div>
+</div>
+<!-- //검색어 순위 -->
+
+		
+<p class="db_bottom">영화정보의 수정이나 신규생성이 필요한 경우 고객센터 DB제보로 문의해주세요.<a href="https://help.naver.com/support/service/main.nhn?serviceNo=800&categoryNo=2617" target="_blank" class="qna">고객센터 DB제보 문의하기</a><!-- N=a:btm.dbr --></p>
+<p class="mod_nanum"><span class="ic_warning"></span>본 페이지는 나눔글꼴에 최적화 되어있습니다.<a href="http://hangeul.naver.com/font" target="_blank">나눔글꼴설치</a></p>
+
+	</div>
+</div>
+
+
+<div class="staticbanner" id="floatingTopAnchor" style="bottom:40px">
+    <a href="point.nhn?code=17421#" title="맨위로"><img alt="맨위로" src="http://static.naver.net/movie/2012/08/btn_top.png" width="33" height="35"></a><!-- N=a:btm.top -->
+</div>
+<script type="text/javascript">
+jindo.$Fn(function () {
+    var welTopAnchor = jindo.$Element('floatingTopAnchor');
+    var welContent = jindo.$Element('content');
+    var nTopMargin = 342 + welTopAnchor.height();
+    var nMaxY;
+    var nMinY = 61;
+    var oFloatingLayer = new jindo.FloatingLayer(welTopAnchor).attach({
+        beforeMove: function (oEvent) {
+            // 상단 limit
+            nMaxY = welContent.height() - nTopMargin;
+            if (oEvent.nY > nMaxY) {
+                oEvent.nY = nMaxY;
+            }
+
+             // 하단 limit
+            if (oEvent.nY < nMinY) {
+                oEvent.nY = nMinY;
+            }
+        }
+    });
+}).attach(window, 'load');
+</script>
+</div>
+<script type="text/javascript">
+
+var isReviewListLoad = false;
+var isPointAfterListLoad = false;
+var isPointBeforeListLoad = false;
+
+function setParamForPointAfterList(pointAfterActualPointYn, pointAfterOrder, pointAfterPage) {
+	jindo.$("pointAfterActualPointYn").value = pointAfterActualPointYn;
+	jindo.$("pointAfterOrder").value = pointAfterOrder;
+	jindo.$("pointAfterPage").value = pointAfterPage;
+}
+
+function setParamForPointBeforeList(pointBeforeInterestYn, pointBeforePage) {
+	jindo.$("pointBeforeInterestYn").value = pointBeforeInterestYn;
+	jindo.$("pointBeforePage").value = pointBeforePage;
+}
+
+function setParamForReviewList(reviewOrder, reviewPage) {
+	jindo.$Element("reviewOrder").value = reviewOrder;
+	jindo.$Element("reviewPage").value = reviewPage;
+}
+
+function getParamForExcludeReview() {
+	var paramTotalSubPage = "&pointAfterActualPointYn=" + jindo.$("pointAfterActualPointYn").value
+		+ "&pointAfterOrder=" + jindo.$("pointAfterOrder").value
+		+ "&pointAfterPage=" + jindo.$("pointAfterPage").value
+	 	+ "&pointBeforeInterestYn=" + jindo.$("pointBeforeInterestYn").value
+		+ "&pointBeforePage=" + jindo.$("pointBeforePage").value;
+	
+	return paramTotalSubPage;
+}
+
+var writeInterest = '';
+
+function setWriteInterest( mode ){
+	writeInterest = mode;
+}
+function getWriteInterest( mode ){
+	return writeInterest;
+}
+
+function resizePointAfterListIframe(height) {
+	jindo.$("pointAfterListIframe").height = height + "px";
+}
+
+function resizePointBeforeListIframe(height) {
+	jindo.$("pointBeforeListIframe").height = height + "px";
+}
+
+function resizeReviewListIframe(height) {
+	jindo.$("reviewListIframe").height = height + "px";
+}
+
+function changePoint(type) {
+	var netizenPointSum = "";
+	
+	if (type == 'before') {
+		jindo.$Element("beforePointTab").className("on");
+		jindo.$Element("afterPointTab").className("");
+
+		jindo.$Element("beforePointArea").show();
+		jindo.$Element("afterPointArea").hide();
+		jindo.$Element("preference_area").show();
+		
+		if (jindo.$Element("graph_area")) {
+			jindo.$Element("graph_area").hide();
+			jindo.$Element("graph_comment").hide();
+		}
+		
+		jindo.$("pointAfterListIframe").src = "/movie/bi/mi/pointWriteFormList.nhn?code=17421&type=before";
+	} else if (type == 'after') {
+		jindo.$Element("beforePointTab").className("");
+		jindo.$Element("afterPointTab").className("on");
+		if(false){
+			jindo.$Element("afterPointArea").show();
+		}
+		jindo.$Element("beforePointArea").hide();
+		jindo.$Element("preference_area").hide();
+		
+		if (jindo.$Element("graph_area")) {
+			jindo.$Element("graph_area").show();
+			jindo.$Element("graph_comment").show();
+		}
+		
+		jindo.$("pointAfterListIframe").src = "/movie/bi/mi/pointWriteFormList.nhn?code=17421&type=after";
+
+	}
+}
+
+var maxNetizenAgePoint = null;
+var aNetizenAgePointData = null;
+var oNetizenAgePointChart = null;
+var aNetizenGenderPointData = null;
+var oNetizenGenderPointChart = null;
+
+var maxActualAgePoint = null;
+var aActualAgePointData = null;
+var oActualAgePointChart = null;
+var aActualGenderPointData = null;
+var oActualGenderPointChart = null;
+
+var markInterval = null;
+var intervalCount = 0;
+
+jindo.$Fn(function() {
+	
+	pointHelpLayerToggle = function() {
+		setTimeout( function() {
+			if (document.activeElement != null) {
+				var focusedEl = jindo.$Element(document.activeElement);
+				if (focusedEl != null) {
+					if ( !focusedEl.hasClass("_pointHelp") ) {
+						 jindo.$Element("pointHelpLayer").hide();
+					}
+				}
+			}
+		}, 100);
+	};
+
+	new jindo.LayerManager("beforePointHelpLayer", {
+		sCheckEvent : "click",
+		nHideDelay : 0
+	}).link(jindo.$("beforePointHelpLayer"), jindo.$("beforePointHelpButton"));
+
+	jindo.$Element("beforePointHelpButton").attach("click", function(e){
+		e.stop(jindo.$Event.CANCEL_DEFAULT);
+		jindo.$Element("beforePointHelpLayer").toggle();
+	});
+
+	jindo.$Element("beforePointHelpCloseButton").attach("click", function(e){
+		e.stop(jindo.$Event.CANCEL_DEFAULT);
+		jindo.$Element("beforePointHelpLayer").toggle();
+	});
+	
+	new jindo.LayerManager("afterPointHelpLayer", {
+		sCheckEvent : "click",
+		nHideDelay : 0
+	}).link(jindo.$("afterPointHelpLayer"), jindo.$("afterPointHelpButton"));
+
+	jindo.$Element("afterPointHelpButton").attach("click", function(e){
+		e.stop(jindo.$Event.CANCEL_DEFAULT);
+		jindo.$Element("afterPointHelpLayer").toggle();
+	});
+
+	jindo.$Element("afterPointHelpCloseButton").attach("click", function(e){
+		e.stop(jindo.$Event.CANCEL_DEFAULT);
+		jindo.$Element("afterPointHelpLayer").toggle();
+	});
+
+	// 평점 탭 노출 관련 로직.
+	if(true) {
+		
+		function createNetizenGenderPointGraph() {
+			if (oNetizenGenderPointChart == null || oNetizenGenderPointChart == "undefinded") {
+				aNetizenGenderPointData = [
+       				{ "iPer": 72.13933454023348, "sPer": 72 },
+       				{ "iPer": 27.860665459766523, "sPer": 28 }
+       			];
+				
+				oNetizenGenderPointChart = new GenderPointGraphForRaphael(jindo.$Element("netizenGenderPointGraph"), aNetizenGenderPointData);
+			} else {
+				oNetizenGenderPointChart.update();
+			}
+		}
+
+		
+		function createNetizenAgePointGraph() {
+			if (oNetizenAgePointChart == null || oNetizenAgePointChart == "undefinded") {
+				aNetizenAgePointData = [
+       				{ "iPer": 37.32670189617656, "sPer": 37 },
+       				{ "iPer": 37.60024867889338, "sPer": 38 },
+       				{ "iPer": 11.296238731737644, "sPer": 11 },
+       				{ "iPer": 13.776810693192415, "sPer": 14 }
+       			];
+
+       			oNetizenAgePointChart = new AgePointGraphForRaphael(jindo.$Element("netizenAgePointGraph"), aNetizenAgePointData);
+			} else {
+				oNetizenAgePointChart.update();
+			}
+		}
+		
+		// 최상단 탭(네티즌 평점) 클릭시 발생하는 스크립트.
+		if(jindo.$Element("netizen_point_tab")){
+			jindo.$Element("netizen_point_tab").attach("click", function(e){
+				e.stop(jindo.$Event.CANCEL_DEFAULT);
+				hideActualPointTab();
+			});
+			jindo.$Element("netizen_point_tab_inner").attach("click", function(e){
+				e.stop(jindo.$Event.CANCEL_DEFAULT);
+				hideActualPointTab();
+			});
+		}
+		function hideActualPointTab(){
+			if(!jindo.$Element("netizen_point_tab_h4").hasClass("on")) {
+				jindo.$Element("netizen_point_tab_h4").addClass("on");
+			}
+			if(jindo.$Element("actual_point_tab_h4")) {jindo.$Element("actual_point_tab_h4").removeClass("on");}
+			jindo.$Element("netizen_point_tab_div").show();
+			if(jindo.$Element("actual_point_tab_div")){jindo.$Element("actual_point_tab_div").hide();}
+			
+			// 평점 그래프 업데이트
+			createNetizenGenderPointGraph();
+			createNetizenAgePointGraph();
+		}
+		
+		//네티즌 평점 - 점수 분포 클릭시 발생하는 스크립트.
+		if (jindo.$Element("netizen_point")) {
+			jindo.$Element("netizen_point").attach("click", function(e){
+				e.stop(jindo.$Event.CANCEL_DEFAULT);
+				if(!jindo.$Element("netizen_point_h5").hasClass("on")) {
+					jindo.$Element("netizen_point_h5").addClass("on");
+				}
+				jindo.$Element("netizen_group_h5").removeClass("on");
+				jindo.$Element("netizen_point_graph").show();
+				jindo.$Element("netizen_group_graph").hide();
+			});
+		}
+		
+		//네티즌 평점 - 남녀별/연령별 클릭시 발생하는 스크립트.
+		if (jindo.$Element("netizen_group")) {
+			jindo.$Element("netizen_group").attach("click", function(e){
+				e.stop(jindo.$Event.CANCEL_DEFAULT);
+				if(!jindo.$Element("netizen_group_h5").hasClass("on")) {
+					jindo.$Element("netizen_group_h5").addClass("on");
+				}
+				jindo.$Element("netizen_point_h5").removeClass("on");
+				jindo.$Element("netizen_group_graph").show();
+				jindo.$Element("netizen_point_graph").hide();
+				
+				
+				createNetizenGenderPointGraph();
+				
+				
+				createNetizenAgePointGraph();
+				
+				
+				if (maxNetizenAgePoint == null) {
+					maxNetizenAgePoint = Math.max(9.48, 9.49, 9.34, 8.97);
+					
+					if (maxNetizenAgePoint < 10) {
+						maxNetizenAgePoint = maxNetizenAgePoint.toFixed(2);
+					} else {
+						maxNetizenAgePoint = maxNetizenAgePoint.toFixed(1);
+					}
+					
+					jindo.$A(jindo.$ElementList('._netizenAgePoint').$value()).forEach(function(value, index, array) {
+						if ( value.hasClass(maxNetizenAgePoint.toString()) ) {
+							value.addClass("on");
+						}
+					});
+				}
+			});
+		}
+		//도움말 레이어
+		if(jindo.$Element("netizen_point_help_div")) {
+			new jindo.LayerManager("netizen_point_help_div", {
+				sCheckEvent : "click",
+				nHideDelay : 0
+			}).link(jindo.$("netizen_point_help_div"), jindo.$("netizen_point_help"));
+			
+			jindo.$Element("netizen_point_help").attach("click", function(e){
+				e.stop(jindo.$Event.CANCEL_DEFAULT);
+				jindo.$Element("netizen_point_help_div").toggle();
+			});
+		
+			jindo.$Element("netizen_point_help_close").attach("click", function(e){
+				e.stop(jindo.$Event.CANCEL_DEFAULT);
+				jindo.$Element("netizen_point_help_div").toggle();
+			});
+		}
+		if(jindo.$Element("actual_point_help")){
+			new jindo.LayerManager("actual_point_help_div", {
+				sCheckEvent : "click",
+				nHideDelay : 0
+			}).link(jindo.$("actual_point_help_div"), jindo.$("actual_point_help"));
+			
+			jindo.$Element("actual_point_help").attach("click", function(e){
+				e.stop(jindo.$Event.CANCEL_DEFAULT);
+				jindo.$Element("actual_point_help_div").toggle();
+			});
+		
+			jindo.$Element("actual_point_help_close").attach("click", function(e){
+				e.stop(jindo.$Event.CANCEL_DEFAULT);
+				jindo.$Element("actual_point_help_div").toggle();
+			});
+		}
+	}
+	
+	if(true) {
+		
+		function createActualGenderPointGraph() {
+			if (oActualGenderPointChart == null || oActualGenderPointChart == "undefinded") {
+				aActualGenderPointData = [
+					{ "iPer": 46.666666666666664, "sPer": 47 },
+					{ "iPer": 53.333333333333336, "sPer": 53 }
+				];
+			        		
+				oActualGenderPointChart = new GenderPointGraphForRaphael(jindo.$Element("actualGenderPointGraph"), aActualGenderPointData);
+			} else {
+				oActualGenderPointChart.update();
+			}
+		}
+	
+		
+		function createActualAgePointGraph() {
+			if (oActualAgePointChart == null || oActualAgePointChart == "undefinded") {
+				aActualAgePointData = [
+					{ "iPer": 6.25, "sPer": 6 },
+					{ "iPer": 75.0, "sPer": 75 },
+					{ "iPer": 12.5, "sPer": 12 },
+					{ "iPer": 6.25, "sPer": 6 }
+				];
+		
+				oActualAgePointChart = new AgePointGraphForRaphael(jindo.$Element("actualAgePointGraph"), aActualAgePointData);
+			} else {
+				oActualAgePointChart.update();
+			}
+		}
+		
+		//최상단 탭(관람객 평점) 클릭시 발생하는 스크립트.
+		if(jindo.$Element("actual_point_tab")) {
+			jindo.$Element("actual_point_tab").attach("click", function(e){
+				e.stop(jindo.$Event.CANCEL_DEFAULT);
+				 hideNetizenPointTab();
+			});
+			jindo.$Element("actual_point_tab_inner").attach("click", function(e){
+				e.stop(jindo.$Event.CANCEL_DEFAULT);
+				 hideNetizenPointTab();
+			});
+		}
+		function hideNetizenPointTab(){
+			if(!jindo.$Element("actual_point_tab_h4").hasClass("on")) {
+				jindo.$Element("actual_point_tab_h4").addClass("on");
+			}
+			jindo.$Element("netizen_point_tab_h4").removeClass("on");
+			jindo.$Element("actual_point_tab_div").show();
+			jindo.$Element("netizen_point_tab_div").hide();
+			
+			// 평점 그래프 업데이트
+			createActualGenderPointGraph();
+			createActualAgePointGraph();
+		}
+		
+		//관람객 평점 - 점수 분포 클릭시 발생하는 스크립트.
+		if(jindo.$Element("actual_point")) {
+			jindo.$Element("actual_point").attach("click", function(e){
+				e.stop(jindo.$Event.CANCEL_DEFAULT);
+				if(!jindo.$Element("actual_point_h5").hasClass("on")) {
+					jindo.$Element("actual_point_h5").addClass("on");
+				}
+				jindo.$Element("actual_group_h5").removeClass("on");
+				jindo.$Element("actual_point_graph").show();
+				jindo.$Element("actual_group_graph").hide();
+			});
+		}
+		
+		//관람객 평점 - 남녀별/연령별 클릭시 발생하는 스크립트.
+		if(jindo.$Element("actual_group")){
+			jindo.$Element("actual_group").attach("click", function(e){
+				e.stop(jindo.$Event.CANCEL_DEFAULT);
+				if(!jindo.$Element("actual_group_h5").hasClass("on")) {
+					jindo.$Element("actual_group_h5").addClass("on");
+				}
+				jindo.$Element("actual_point_h5").removeClass("on");
+				jindo.$Element("actual_group_graph").show();
+				jindo.$Element("actual_point_graph").hide();
+				
+				
+				createActualGenderPointGraph();
+				
+				
+				createActualAgePointGraph();
+				
+				
+				if (maxActualAgePoint == null) {
+					maxActualAgePoint = Math.max(10.0, 9.83, 10.0, 10.0);
+					
+					if (maxActualAgePoint < 10) {
+						maxActualAgePoint = maxActualAgePoint.toFixed(2);
+					} else {
+						maxActualAgePoint = maxActualAgePoint.toFixed(1);
+					}
+					
+					jindo.$A(jindo.$ElementList('._actualAgePoint').$value()).forEach(function(value, index, array) {
+						if ( value.hasClass(maxActualAgePoint.toString()) ) {
+							value.addClass("on");
+						}
+					});
+				}
+			});
+		}
+	}
+
+	
+	var waelPointHelp = jindo.$ElementList('._pointHelp');
+
+	jindo.$A(waelPointHelp.$value()).forEach(function(value, index, array) {
+		jindo.$Fn(pointHelpLayerToggle, this).attach(value, "blur");
+	});
+    
+	markInterval = setInterval(function () {
+		
+		intervalCount++;
+		if (intervalCount > 30) {
+			clearInterval(markInterval);
+			markInterval = null;
+		}
+	
+		if (isReviewListLoad && isPointAfterListLoad && isPointBeforeListLoad) {
+			var url = window.location.toString();
+			if (url.indexOf("#") > 0) {
+				var markName = url.substring(url.indexOf("#") + 1);
+				
+				if (jindo.$(markName)) {
+					jindo.$(markName).scrollIntoView(true);
+				}
+			}
+			clearInterval(markInterval);
+			markInterval = null;
+		}
+		
+	}, 100);
+	
+}).attach(document, 'domready');
+
+if(jindo.$Element("btn_interest_point") != null && jindo.$Element("btn_notInterest_point") != null) {
+	
+	//기대지수 도움말 레이어 토글.
+	new jindo.LayerManager("preference_help_point", {
+		sCheckEvent : "click",
+		nHideDelay : 0
+	}).link(jindo.$("preference_help_point"), jindo.$("preference_help_show_point"));
+	
+	jindo.$Element("preference_help_show_point").attach("click", function(e){
+		e.stop(jindo.$Event.CANCEL_DEFAULT);
+		jindo.$Element("preference_help_point").toggle();
+	});
+	
+	jindo.$Element("preference_close_point").attach("click", function(e){
+		e.stop(jindo.$Event.CANCEL_DEFAULT);
+		jindo.$Element("preference_help_point").hide();
+	});
+	
+	//
+	preferenceHelpLayerToggle = function() {
+		setTimeout( function() {
+			if (document.activeElement != null) {
+				var focusedEl = jindo.$Element(document.activeElement);
+				if (focusedEl != null) {
+					if ( !focusedEl.hasClass("_preferenceHelp") ) {
+						 jindo.$Element("preference_help_point").hide();
+					}
+				}
+			}
+		}, 100);
+	};
+	
+	var waelPreferenceHelp = jindo.$ElementList('._preferenceHelp');
+
+	jindo.$A(waelPreferenceHelp.$value()).forEach(function(value, index, array) {
+		jindo.$Fn(preferenceHelpLayerToggle, this).attach(value, "blur");
+	});
+	
+	//
+	
+	if(false == true) {
+		jindo.$Element("btn_interest_point").attach("click", function(e){
+			e.stop(jindo.$Event.CANCEL_DEFAULT);
+			queryAndUpdatePreference('17421','interest');
+		});
+		
+		jindo.$Element("btn_notInterest_point").attach("click", function(e){
+			e.stop(jindo.$Event.CANCEL_DEFAULT);
+			queryAndUpdatePreference('17421','notInterest');
+		});
+	} else {
+		jindo.$Element("btn_interest_point").attach("click", function(e){
+			e.stop(jindo.$Event.CANCEL_DEFAULT);
+			alert("국내 개봉 후에는 기대지수 등록이 불가능합니다.");
+		});
+		
+		jindo.$Element("btn_notInterest_point").attach("click", function(e){
+			e.stop(jindo.$Event.CANCEL_DEFAULT);
+			alert("국내 개봉 후에는 기대지수 등록이 불가능합니다.");
+		});
+	}
+}
+
+</script>
+<!-- //content -->
+	</div>
+	<!-- //container -->
+	
+	<!-- footer -->
+	
+
+
+
+<div id="footer">
+	<div class="in_footer">
+		<div class="foot_con">
+				<ul>
+					<li class="first"><a href="http://www.naver.com/rules/service.html" target="rules"><strong>이용약관</strong></a><!-- N=a:fot.agreement --></li>		
+					<li><a href="http://www.naver.com/rules/privacy.html" target="rules"><strong>개인정보처리방침</strong></a><!-- N=a:fot.privacy --></li>
+					<li><a href="http://www.naver.com/rules/disclaimer.html" target="rules"><strong>책임의 한계와 법적고지</strong></a><!-- N=a:fot.disclaimer --></li>		
+					<li><a href="https://help.naver.com/support/service/main.nhn?serviceNo=800" target="customer"><strong>영화 고객센터</strong></a><!-- N=a:fot.help --></li>
+				</ul>
+				<p class="info">본 콘텐츠의 저작권은 저작권자 또는 제공처에 있으며, 이를 무단 이용하는 경우 저작권법 등에 따라 법적 책임을 질 수 있습니다.</p>
+				<p class="info">
+					사업자등록번호 : 220-81-62517<span>통신판매업 신고번호</span> : 경기성남 제 2006 - 692호<span>대표이사 : 김상헌</span><span><a href="http://www.ftc.go.kr/info/bizinfo/communicationList.jsp">사업자등록정보 확인</a><!-- N=a:fot.bizinfo --></span><br>
+					주소 : 경기도 성남시 분당구 불정로 6 네이버 그린팩토리 <span>대표전화 : 1588-3820</span>
+				</p> 
+				<address>
+					<a href="http://www.navercorp.com/" target="_blank" class="logo"><img src="http://static.naver.net/movie/2013/07/logo_naver.png" width="63" height="11" alt="NAVER"></a><!-- N=a:fot.nhn -->
+					<em>Copyright ©</em>
+					<a href="http://www.navercorp.com/" target="_blank">NAVER Corp.</a><!-- N=a:fot.corp -->
+					<span>All Rights Reserved.</span>
+				</address>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+if (false) {
+	var alertType = "NONE";
+	var koreanTitle = "";
+	var movieCode = "0";
+	var userReserveCount = "0";
+	var todayDatetime = "20170219133725";
+	var endDatetimeAfterTwoDays = "00000000000000";
+	
+	
+	if (movieCode > 0) {
+		openWriteActualPointAlert (alertType, koreanTitle, movieCode, userReserveCount, todayDatetime, endDatetimeAfterTwoDays);
+	}
+}
+
+function openWriteActualPointAlert (alertType, koreanTitle, movieCode, count, today, endDate) {
+	if (alertType == "ONE") {
+		setCookieLastUserReserveDate(today, endDate);
+		if (confirm("관람하신 " + koreanTitle + "에\n평점 등록 시 네이버페이 포인트 500원 적립!\n지금 평점쓰기 메뉴로 이동하시겠습니까?")) {
+			top.location.href = "http://movie.naver.com/movie/bi/mi/point.nhn?code=" + movieCode;
+		}
+	} else if (alertType == "MORE") {
+		setCookieLastUserReserveDate(today, endDate);
+		if (confirm("관람하신 작품에 평점을 등록해주세요\n작품당 네이버페이 포인트 500원씩 적립!\n평점 미등록작 리스트를 확인하시겠습니까?")) {
+			top.location.href = "http://ticket.movie.naver.com/Order/OverdueList.aspx";
+		}
+	}
+}
+
+function setCookieLastUserReserveDate(today, endDate) {
+	var cookieForNotOpenActualPointPopup = jindo.$Cookie();
+	
+	
+	cookieForNotOpenActualPointPopup.remove("lastUserReserveDatetime");
+	cookieForNotOpenActualPointPopup.remove("lastUserReserveCheckDatetime");
+	
+	cookieForNotOpenActualPointPopup.set("lastUserReserveDatetime", endDate, 9999, "movie.naver.com");
+	cookieForNotOpenActualPointPopup.set("lastUserReserveCheckDatetime", today, 9999, "movie.naver.com");
+}
+
+</script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+	
+		
+		
+		
+			var alertMessage = "지원되지 않는 브라우저로 서비스 이용에 제한이 있습니다.";
+		
+	
+	
+	if (jindo.$Cookie().get("notSupportBrowserAlert") != 'true') {
+		alert(alertMessage);
+		jindo.$Cookie().set("notSupportBrowserAlert", "true", "9999", "movie.naver.com");
+	}
+</script>
+
+
+	<!-- //footer -->
+</div>
+<script type="text/javascript">
+var isRecentTab = false;
+
+jindo.$Fn(function (we) {
+	
+	    // 윈도우창 리사이징에 따른 레이아웃 1/2단 관리
+	    var oViewMode = new nhn.movie.end.ViewMode();
+	
+
+	// 상단 검색영역
+	var oSearch = new nhn.movie.Search({
+		area : "jSearchArea",
+		autosearch : "http://auto.movie.naver.com/ac?q_enc=UTF-8&st=1&r_lt=1&n_ext=1&t_koreng=1&r_format=json&r_enc=UTF-8&r_unicode=0&r_escape=1&q=",
+		movelink : "/movie/bi/mi/basic.nhn?code=",
+		peoplelink : "/movie/bi/pi/basic.nhn?code="
+	});
+
+    // 좌측 LNB
+    var oLNB = new nhn.movie.LNB();
+	if( typeof oViewMode != "undefined") {
+		oViewMode.attach('change', jindo.$Fn(oLNB.update, oLNB).bind());
+	}
+
+    // 2단일때, 2열에 상단 회색 라인 없애기
+	if( typeof oViewMode != "undefined") {
+	    oViewMode.attach('change', function (oEvent) {
+	        var welSecondSectionGroup = jindo.$Element('content').queryAll('.section_group')[1];
+	        var wel2column1rowSection;
+	
+	        if (welSecondSectionGroup) {
+	            wel2column1rowSection = welSecondSectionGroup.query('.obj_section');
+	
+	            if (oEvent.sStyle == 'wide') {
+	                wel2column1rowSection.addClass('noline');
+	            } else {
+	                wel2column1rowSection.removeClass('noline');
+	            }
+	        }
+	
+		    //포토 묻어가기
+		    if( typeof oPhoto != "undefined" ){
+			    if (oEvent.sStyle == 'wide') {
+				    oPhoto.setWide("wide");
+			    } else {
+				    oPhoto.setWide("basic");
+			    }
+		    }
+		    // 비디오 묻어가기
+		    if( typeof oMovie != "undefined" ){
+			    if (oEvent.sStyle == 'wide') {
+				    oMovie.setWide("wide", 1);
+			    } else {
+				    oMovie.setWide("basic", 1);
+			    }
+		    }
+	
+	    });
+	}
+
+    // 상단썸네일영역
+    
+    
+		var welTopArea = jindo.$Element('_TopArea');
+		new nhn.movie.end.TopAreaThumbnailExpander(welTopArea.query('.current_mv_list .top_poster_area')).attach({
+		    click: function (oEvent) {
+		        clickcr(oEvent.element, 'rnk.nimg', '', '', event);
+		    }
+		});
+		new nhn.movie.end.TopAreaThumbnailExpander(welTopArea.query('.expected_mv_list .top_poster_area')).attach({
+		    click: function (oEvent) {
+		        clickcr(oEvent.element, 'rnk.simg', '', '', event);
+		    }
+		});
+		var oTopAreaManager = new nhn.movie.end.movie.TopAreaManager(welTopArea);
+		if ( typeof oViewMode == "undefined" || oViewMode.is('basic') ) {
+		    oTopAreaManager.enableNavigationBtns();
+		} else {
+		    oTopAreaManager.disableNavigationBtns();
+		}
+		if( typeof oViewMode != "undefined" ) {
+			var tempEvent = {};
+			oViewMode.attach('change', jindo.$Fn(oTopAreaManager.onViewModeChange, oTopAreaManager).bind());
+			
+		    if (oViewMode.is('basic') && oViewMode.serverSstyle != 'basic') {
+		    	tempEvent.sStyle = 'basic';
+			    oTopAreaManager.onViewModeChange(tempEvent);
+		    } else if (oViewMode.is('wide') && oViewMode.serverSstyle != 'wide') {
+		    	tempEvent.sStyle = 'wide';
+			    oTopAreaManager.onViewModeChange(tempEvent);
+		    }
+		}
+	
+    
+    
+	
+    var waelScriptOrderList = jindo.$ElementList('._gnb_another_service_layer');
+    
+    jindo.$A(waelScriptOrderList.$value()).forEach(function(value, index, array) {
+		jindo.$Fn(reviewOrderLayerToggle, this).attach(value, "blur");
+	});
+    //자동닫힘 기능 끝.
+    
+  //영화검색 결과에서 포커스 아웃될 경우, 검색 결과를 지우도록 변경.
+    jindo.$Element("lnb_gonaver").attach("focus",function(e){
+    	
+    	jindo.$Element('search_placeholder').attr({
+    		"style" : "display: inline;"
+    	})
+    	jindo.$Element('ipt_tx_srch').$value().value="";
+    	
+    	if(jindo.$Element("jAutoComplate") != null){
+    		jindo.$Element("jAutoComplate").hide();
+    	}
+    });    
+
+    
+    /**
+     * 영화 END 페이지
+     */
+    var welMovieInfoWideArea = jindo.$Element(jindo.$$.getSingle('.wide_info_area'));
+    var welMovieInfoBasicArea = jindo.$Element(jindo.$$.getSingle('.mv_info_area'));
+    if ( oViewMode.is('basic') ) {
+        welMovieInfoWideArea.hide();
+        welMovieInfoBasicArea.show();
+    } else {
+        welMovieInfoBasicArea.hide();
+        welMovieInfoWideArea.show();
+    }
+    oViewMode.attach('change', function (oEvent) {
+        // 기본정보 영역 변경
+        if ( oEvent.sStyle === 'basic' ) {
+            welMovieInfoWideArea.hide();
+            welMovieInfoBasicArea.show();
+        } else {
+            welMovieInfoBasicArea.hide();
+            welMovieInfoWideArea.show();
+        }
+    });
+
+    
+        
+        
+        
+        
+        
+        /* 영화 평점,리뷰 탭 */
+
+        
+        
+        
+        
+    
+	
+
+	
+
+    /**
+     * 기타 공통
+     */
+
+    // LCS
+	try{ lcs_do(); } catch(e){}
+}).attach(document, 'domready');
+</script>
+<script type="text/javascript">
+	//nClick 초기화 영역
+	//클릭로그 집계 코드 추가
+	var ccsrv="cc.naver.com";
+	var nclk_evt = 1;
+	
+	nclk_do();
+	//nClick 초기화 영역 끝
+</script>
+</body>
+</html>

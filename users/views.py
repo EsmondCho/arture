@@ -13,34 +13,67 @@ from login.views import authenticated
 
 from django.views.decorators.csrf import csrf_exempt
 
+import ast
+
 # Need to define what is user
 
 def get_profile_page(request, user_id):
-    
+    if not authenticated(request):
+        return redirect('/login/')
+
     profile = User.objects.get(id=user_id)
     user_objectId = request.session.get('user_objectId')
     user_name = request.session.get('user_name')
     login_token = request.session.get('login_token')
 
-    is_mine = False
+    is_mine = True if profile.name == user_name else False
+
     is_friend = False
+    for friend in profile.friend_list:
+        if friend == user_objectId:
+            is_friend = True
     is_request_sended = False
     is_request_received = False
 
-    if profile.name == user_name:
-        is_mine = True
+    article_list = []
+    article_objectId_list = profile.article_list
+    for id in article_objectId_list:
+        article = Article.objects.get(id=id)
+        dic = {}
+        dic['article_id'] = id
+        dic['user_id'] = article.user_id
+        dic['tag'] = article.tag
+        dic['text'] = article.text
+        dic['image'] = article.image.url if article.image is not None else ""
+        dic['comment_list'] = json.dumps(serializers.serialize("json", article.comment_list), default=datetime_to_json),
+        dic['registered_time'] = json.dumps(serializers.serialize("json", article.registered_time), default=datetime_to_json),
+        article_list.append(dic.copy())
 
-    return render(request, 'users/profile.html', {'profile_objectId': user_id,
-						'profile_name': profile.name,
-						'profile_img_url' : '192.168.1.209:80'+profile.pic.url,
-						'profile_email': profile.email,
-						'user_objectId' : user_objectId,
-						'user_name' : user_name,
-						'login_token' : login_token,
-						'is_mine' : is_mine,
-						'is_friend' : is_friend,
-						'is_request_sended' : is_request_sended,
-						'is_request_received' : is_request_received})
+    """
+    follow_list = []
+    follow_objectId_list = profile.arture_list
+    for id in follow_objectId_list:
+        arture = Arture.objects.get(id=id)
+        dic['title'] = arture.title
+        dic['image'] = arture.image.url if arture.image is not None else ""
+        dic['article_list'] = arture.article_list
+
+    """
+
+
+
+    return render(request, 'users/profile.html', { 'profile_objectId': user_id,
+                                                    'profile_name': profile.name,
+                                                    'profile_img_url' : 'http://192.168.1.209'+profile.pic.url,
+                                                    'profile_email': profile.email,
+                                                    'user_objectId' : user_objectId,
+                                                    'user_name' : user_name,
+                                                    'login_token' : login_token,
+                                                    'is_mine' : is_mine,
+                                                    'is_friend' : is_friend,
+                                                    'is_request_sended' : is_request_sended,
+						                            'is_request_received' : is_request_received
+                                                  })
 
 
 def newsfeed(request, user_id):
@@ -50,10 +83,11 @@ def newsfeed(request, user_id):
     user_objectId = request.session.get('user_objectId')
     user_name = request.session.get('user_name')
     login_token = request.session.get('login_token')
-
+    user_img_url = User.objects.get(id=user_id).pic.url
     return render(request, 'users/newsfeed.html', {'user_objectId': user_objectId,
                                                   'user_name': user_name,
-                                                  'login_token': login_token })
+                                                  'login_token': login_token,
+                                                  'user_img_url': user_img_url})
 
 
 def upload_picture(request, user_id):
@@ -100,27 +134,45 @@ def upload_profile_picture(request, user_id):
     return HttpResponseForbidden('Allowed only via POST')
 
 
-
 def get_friend_list(request, user_id):
     if request.method == 'GET':
         friend_list = User.objects.get(id=user_id).friend_list
+        response_data = {}
 
-        return HttpResponse(json.dumps(friend_list), content_type='application/json', status=200)
+        for friend_id in friend_list:
+            friend = User.objects.get(id=friend_id)
+            response_data[friend_id] = {}
+            response_data[friend_id]['name'] = friend.name
+            response_data[friend_id]['image'] = 'http://http://192.168.1.209:80' + friend.pic.url
+
+        return HttpResponse(json.dumps(response_data), content_type='application/json', status=200)
 
 
+@csrf_exempt
 def get_friend_request_list(request, user_id):
     if not authenticated(request):
         return redirect('/login/')
 
     if request.method == 'GET':
         user_request_list = User.objects.get(id=user_id).friend_request_list
-        response_data = {}
+        response_data = []
 
         for r in user_request_list:
+            user = User.objects.get(id=r.friend_id)
+            request = {}
+            request['user_id'] = user.id
+            request['name'] = user.name
+            request['image'] = 'http://192.168.1.209' + user.pic.url
+            request['request_type'] = r.request_type
+            request['request_id'] = r.id
+            """
             response_data[r.id] = {}
-            response_data[r.id]['friend_id'] = r.friend_id
+            response_data[r.id]['user_id'] = user.id
+            response_data[r.id]['name'] = user.name
+            response_data[r.id]['image'] = 'http://http://192.168.1.209:80' + user.pic.url
             response_data[r.id]['request_type'] = r.request_type
-
+            """
+            response_data.append(request.copy())
         return HttpResponse(json.dumps(response_data), content_type='application/json', status=200)
 
 
@@ -133,7 +185,7 @@ def create_friend_request(request, user_id):
 
         # create request object & insert into user who made request
         request_waiting = Request.objects.create(
-            friend_id = form['To_id'],
+            friend_id = form['to_id'],
             request_type = 1
         )
         request_waiting.save()
@@ -144,40 +196,75 @@ def create_friend_request(request, user_id):
         # create request object & insert into user requested
         requested_waiting = Request.objects.create( # requested & waiting
             friend_id = user_id,
-            request_type = 4
+            request_type = 3
         )
         requested_waiting.save()
-        user_requested = User.objects.get(id=form['To_id'])
+        user_requested = User.objects.get(id=form['to_id'])
         user_requested.friend_request_list.insert(0, requested_waiting)
         user_requested.save()
 
         return HttpResponse(status=200)
     return HttpResponseForbidden('Allowed only via POST')
 
-
+@csrf_exempt
 def response_to_friend_request(request, user_id, request_id):
+    print("a")
     if not authenticated(request):
         return redirect('/login/')
 
     if request.method == 'POST': # response to request & insert into friend_list??
-        form = request.POST
+        form = ast.literal_eval(request.body)
         user = User.objects.get(id=user_id)
-
-        if form['answer'] == True:
-            request_type = 5 # requested & accepted
+        if form['answer'] == "true":
+            request_type = 4 # requested & accepted
         else:
-            request_type = 6 # requested & rejected
+            reqiest_type = 3
 
+        if request_type == 4: # accepted
+#            r = Request.objects.get(id=request_id)
+            for r in user.friend_request_list:
+                if r.id == request_id:
+                    requested_object = Request.objects.create(
+                        friend_id=r.friend_id,
+                        request_type=4
+                    )
+                    requested_object.save()
+                    user.friend_request_list.insert(0, requested_object)
+                    user.friend_list.insert(0, r.friend_id)
+                    user.save()
+
+                    friend = User.objects.get(id=r.friend_id)
+
+                    request_object = Request.objects.create(
+                        friend_id=user.id,
+                        request_type=2
+                    )
+                    request_object.save()
+                    friend.friend_request_list.insert(0, request_object)
+                    friend.friend_list.insert(0, user.id)
+                    friend.save()
+
+                    return HttpResponse(status=200)
+        """
         for r in user.friend_request_list:
             if r.id == request_id:
                 r.request_type = request_type
-                user.friend_list.insert(0, r.friend_id) # insert into friend_list ... encode error
+                if request_type == 4: # accepted
+                    user.friend_list.insert(0, r.friend_id) # insert into friend_list ... encode error
+                    friend = User.objects.get(id=r.friend_id)
+                    friend.friend_list.insert(0, user.id)
+
+                    for r_ in friend.friend_request_list:
+                        if r_.friend_id == user_id:
+                            r_.request_type == 2
+                    friend.save()
                 user.save()
                 return HttpResponse(status=204)
+        """
         return HttpResponseForbidden('Invalid request id')
     return HttpResponseForbidden('Allowed only via POST')
 
-
+@csrf_exempt
 def delete_in_request_list(request, user_id, request_id):
     if not authenticated(request):
         return redirect('/login/')
@@ -227,11 +314,12 @@ def get_article_list(request, user_id):
 
 @csrf_exempt
 def create_article(request, user_id):
+
     if not authenticated(request):
         return redirect('/login/')
 
     if request.method == 'POST':
-        form = request.POST
+        form = ast.literal_eval(request.body)
         imageform = ImageUploadForm(request.POST, request.FILES)
 
         if imageform.is_valid():  # create article with image

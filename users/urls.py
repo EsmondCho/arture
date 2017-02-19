@@ -11,7 +11,7 @@ urlpatterns = [
     url(r'^/profile_picture/upload$', views.upload_profile_picture, name='upload_profile_picture'),
 
     url(r'^/friends$', views.get_friend_list, name='get_friend_list'),
-    url(r'^/friend_requests/$', views.get_friend_request_list, name='get_friend_request_list'),
+    url(r'^/friend_requests$', views.get_friend_request_list, name='get_friend_request_list'),
     url(r'^/friend_requests/create$', views.create_friend_request, name='create_friend_request'),
     url(r'^/friend_requests/(?P<request_id>\w+)/update$', views.response_to_friend_request, name='response_to_friend_request'),
     url(r'^/friend_requests/(?P<request_id>\w+)/delete$', views.delete_in_request_list, name='delete_in_request_list'),

@@ -15,7 +15,7 @@ def authenticated(request):
         if login_token == cache.get(session['user_email']):
             cache.set(session.get('user_email'), session.get('login_token'), nx=False)
             session['login_token'] = login_token
-            request.session.set_expiry(300)
+            request.session.set_expiry(3000)
             return True
     return False
 
@@ -53,7 +53,7 @@ def signup(request):
         request.session['user_email'] = form['rinput-email']
         request.session['user_name'] = form['rinput-name']
         request.session['login_token'] = login_token
-        request.session.set_expiry(300)
+        request.session.set_expiry(3000)
 
     return redirect('/users/' + user.id + '/newsfeed')
 
@@ -80,7 +80,7 @@ def signin(request):
             request.session['user_email'] = user_email
             request.session['user_name'] = user_name
             request.session['login_token'] = login_token
-            request.session.set_expiry(300)
+            request.session.set_expiry(3000)
 
             return redirect('/users/' + user.id + '/newsfeed')
 

@@ -1,3 +1,14 @@
+a:focus {
+	outline: none;
+}
+button::-moz-focus-inner {
+  border: 0;
+}
+button {
+	border: none;
+	background-color: white;
+}
+
 @font-face {
 	font-family: HelveticaNeue;
 	src: url('HelveticaNeueLTPro-BdCn.otf');
@@ -94,16 +105,19 @@ body {
 
 .left-container {
 	height: 100%;
-	width: 181px;
+	width: 260px;
 
 	position: absolute;
 	left: 0px;
+	
+	padding-top: 10px;
 }
 
 .mid-container {
-	width: calc(100% - 181px - 300px - 130px);
+	width: calc(100% - 181px - 300px - 130px - 200px);
 	
-	position: relative;
+	position: absolute;
+	left: 250px;
 }
 
 .mid-right-container {
@@ -130,7 +144,7 @@ body {
 }
 
 .main-contents {
-	width: 1100px;
+	width: 1300px;
 	height: 100%;
 
 	position: relative;
@@ -145,11 +159,75 @@ body {
 }
 
 .left-content {
-	width: calc(181px - 10px);
-	height: 100%;
+	width: calc(100% - 10px);
+	margin: 0px 10px 0px 0px;
+}
 
-	margin: 5px;
-	position: fixed;
+.request-info {
+	height: 55px;
+	background-color: white;
+
+	border-bottom-color: rgb(208, 209, 213);
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+
+	border-left-color: rgb(223, 224, 228);
+	border-left-style: solid;
+	border-left-width: 1px;
+
+	border-right-color: rgb(223, 224, 228);
+	border-right-style: solid;
+	border-right-width: 1px;
+
+	position: relative;
+}
+.request-img {
+	height: 43px;
+	width: 43px;
+
+	position: absolute;
+	left: 6px;
+	top: 6px;
+}
+.request-name {
+	font-weight: 600;
+}
+.request-txt {
+	font-size: 12px;
+	position: absolute;
+	top: 19px;
+	left: 55px;
+}
+.request-ac {
+	opacity: 0.8;
+
+	font-size: 11px;
+	right: 4px;
+	top: 7px;
+	position: absolute;	
+	padding-bottom: 4px;
+	border-bottom-color: rgb(208, 209, 213);
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	cursor: pointer;
+}
+.request-rj {
+	opacity: 0.8;
+	font-size: 11px;
+
+	right: 4px;
+	top: 32px;
+	position: absolute;
+	cursor: pointer;
+}
+.request-del {
+	opacity: 0.8;
+	font-size: 20px;
+	
+	top: 14px;
+	right: 4px;
+	position: absolute;
+	cursor: pointer;
 }
 
 .mid-content {
@@ -531,7 +609,6 @@ div.activate {
 }
 
 .user-profile-name {
-
 	font-size: 23px;
 	color: white;
 
@@ -568,4 +645,28 @@ div.activate {
 	transition: opacity 0.2s;
 	cursor: pointer;
 }
+
+.friend-tool {
+	height: 25px;
+	outline: none;
+
+	border: 1px solid rgb(220,221,225);
+	border-radius: 3px;
+	background-color: white;
+	font-weight: 900;
+
+	left: 200px;
+	top: 0px;
+	bottom: 0px;
+	margin: auto;
+	position: absolute;
+}
+
+#add-friend {
+	cursor: pointer;
+}
+#sended-friend-req {
+	background-color: rgb(210,210,210); 
+}
+
 
