@@ -44,12 +44,11 @@ def get_profile_page(request, user_id):
         dic['user_id'] = article.user_id
         dic['tag'] = article.tag
         dic['text'] = article.text
-        dic['image'] = article.image.url if article.image is not None else ""
+        dic['image'] = 'http://192.168.1.209:80' + article.image.url if article.image is not None else ""
         dic['comment_list'] = json.dumps(serializers.serialize("json", article.comment_list), default=datetime_to_json),
         dic['registered_time'] = json.dumps(serializers.serialize("json", article.registered_time), default=datetime_to_json),
         article_list.append(dic.copy())
 
-    """
     follow_list = []
     follow_objectId_list = profile.arture_list
     for id in follow_objectId_list:
@@ -57,10 +56,23 @@ def get_profile_page(request, user_id):
         dic['title'] = arture.title
         dic['image'] = arture.image.url if arture.image is not None else ""
         dic['article_list'] = arture.article_list
+        dic['user_list'] = arture.user_list
+        dic['arture_type'] = arture.arture_type
+        dic['description'] = arture.description
+        dic['related_arture_list'] = arture.related_arture_list
+        follow_list.append(dic.copy())
 
-    """
-
-
+    friend_list = []
+    friend_objectId_list = profile.friend_list
+    for id in friend_objectId_list:
+        friend = User.objects.get(id=id)
+        dic['name'] = friend.name
+        dic['email'] = friend.email
+        dic['gender'] = friend.gender
+        dic['birth'] = friend.birth
+        dic['address'] = friend.address
+        dic['pic'] = friend.pic.url
+        friend_list.append(dic.copy())
 
     return render(request, 'users/profile.html', { 'profile_objectId': user_id,
                                                     'profile_name': profile.name,
@@ -72,7 +84,10 @@ def get_profile_page(request, user_id):
                                                     'is_mine' : is_mine,
                                                     'is_friend' : is_friend,
                                                     'is_request_sended' : is_request_sended,
-						                            'is_request_received' : is_request_received
+						                            'is_request_received' : is_request_received,
+                                                    'article_list' : article_list,
+                                                    'follow_list' : follow_list,
+                                                    'friend_list' : friend_list,
                                                   })
 
 

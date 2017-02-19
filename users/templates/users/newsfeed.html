@@ -52,6 +52,35 @@
 							</div>		
 						</div>
 					</div>
+
+					<div class="left-content" ng-repeat="recommendation in friend_recommendation">
+						<div class="request-info">
+							<img class="request-img" src="{% templatetag openvariable %} request.image {% templatetag closevariable %}">
+							<div ng-if="request.request_type == 1">
+								<div class="request-txt">
+								  <span class="request-name"><a href="http://192.168.1.209/users/{% templatetag openvariable %} request.user_id {% templatetag closevariable %}">{% templatetag openvariable %} request.name {% templatetag closevariable %}</a></span>
+								  <span class="request-msg">님께 친구요청 보냄</span>
+								</div>
+								<button class="request-del" ng-click='replyFriendRequest("None", request.request_id)'>x</button>
+							</div>
+							<div ng-if="request.request_type == 2">
+								<div class="request-txt">
+								  <span class="request-name"><a href="http://192.168.1.209/users/{% templatetag openvariable %} request.user_id {% templatetag closevariable %}">{% templatetag openvariable %} request.name {% templatetag closevariable %}</a></span>
+								  <span class="request-msg">님과 친구과 되었습니다</span>
+								</div>
+								<button class="request-del" ng-click='replyFriendRequest("None", request.request_id)'>x</button>
+							</div>
+							<div ng-if="request.request_type == 3">
+								<div class="request-txt">
+								  <span class="request-name"><a href="http://192.168.1.209/users/{% templatetag openvariable %} request.user_id {% templatetag closevariable %}">{% templatetag openvariable %} request.name {% templatetag closevariable %}</a></span>
+								  <span class="request-msg">님의 친구요청</span>
+								</div>
+								<button class="request-ac" ng-click='replyFriendRequest("true", request.request_id)'>수락</button>
+								<button class="request-rj" ng-click='replyFriendRequest("false", request.request_id)'>거절</button>
+							</div>		
+						</div>
+					</div>
+
 				</div>
 				
 

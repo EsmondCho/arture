@@ -1,3 +1,4 @@
+import os
 import requests
 import codecs
 from bs4 import BeautifulSoup
@@ -64,22 +65,19 @@ def crawler(max_pages):
             """
 
             ##### get review #####
+            """
             reviews_url = 'http://movie.naver.com/movie/bi/mi/point.nhn?code=' + arture_num
             print('1')
-
+            os.environ["webdriver.chrome.driver"] = chromedriver
             driver = webdriver.Chrome('/usr/bin/chromedriver')
-
             print('2')
             driver.get(reviews_url)
             print('3')
-
             print(driver.page_source.endoce('utf-8'))
             print('4')
-
             driver.close()
             print('5')
 
-            """
             reviews_source_code = requests.get(reviews_url)
             reviews_plain_text = reviews_source_code.text
             f.write(reviews_plain_text)

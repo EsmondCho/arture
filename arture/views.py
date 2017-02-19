@@ -23,7 +23,7 @@ def get_description(request, arture_id):
 
     return HttpResponse(description)
 
-"""
+
 def crawler(request, max_pages):
     page = 1
     while page <= int(max_pages):
@@ -39,21 +39,20 @@ def crawler(request, max_pages):
             source_code = requests.get(arture_url)
             plain_text = source_code.text
             soup = BeautifulSoup(plain_text, 'lxml')
-            print(soup.select('div > div > div > div > div > div > div > div > p')[0])
-            print('---------------------------------------------------------------------------')
 
-
-
-            if Arture.objects.filter(title=title).count() == 0: # no existing arture
+            ### arture(movie) create ###
+            if Arture.objects.filter(title=title).count() == 0:
                 arture = Arture.objects.create(
                     title=title,
                     arture_type=False,
+                    description=soup.select('div > div > div > div > div > div > div > div > p')[0].get_text(),
                     related_arture_list=[],
+                    article_list=[],
+                    user_list=[]
                 )
                 arture.save()
-                print('arture saving done!')
-            else:
-                print("exist")
+
+            ### arture(director, actor) create ###
+
         page += 1
     return HttpResponse('good')
-"""

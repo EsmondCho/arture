@@ -24,7 +24,7 @@ class User(models.Model):
 
 class Request(models.Model):
     friend_id = models.CharField(max_length=30) # insert objectId
-    request_type = models.IntegerField() # request : 1(w), 2(a), 3(r) / requested : 4(w), 5(a), 6(r)
+    request_type = models.IntegerField() # request : 1(w), 2(a) / requested : 3(w), 4(a)
 
 
 class Article(models.Model):
@@ -32,7 +32,6 @@ class Article(models.Model):
     tag = models.CharField(max_length=30) # insert arture objectId
     text = models.TextField(null=True)
     image = models.ImageField(null=True, upload_to='article_pictures')
-    emotion_list = ListField(null=True)
     comment_list = ListField(EmbeddedModelField('Comment'), null=True)
     #config = models.CharField(max_length=30)
     registered_time = models.DateTimeField(auto_now_add=True)

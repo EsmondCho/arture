@@ -10,7 +10,7 @@ urlpatterns = [
     url(r'^admin$', admin.site.urls),
     url(r'^$', views.home, name='home'),
 
-    #url(r'^crawler/(?P<max_pages>\d+)$', views.crawler, name='crawler'),
+    url(r'^crawler/(?P<max_pages>\d+)$', views.crawler, name='crawler'),
 
     url(r'^login/', include('login.urls', namespace='login')),
     url(r'^users/(?P<user_id>\w+)', include('users.urls', namespace='users')),
