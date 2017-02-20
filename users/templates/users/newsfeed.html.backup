@@ -21,20 +21,49 @@
 				</div>
 			</div>
 		</div>
-		<div class="main-container">
+		<div class="main-container" ng-controller='mainController'>
 			<div class="main-contents">
-				<!--
 				<div class="left-container">
-					<div class="left-side-contents">
-						<div class="user-info">
-
+					<div class="left-content" ng-repeat="request in friend_requests">
+						<div class="request-info">
+							<img class="request-img" src="{% templatetag openvariable %} request.image {% templatetag closevariable %}">
+							<div ng-if="request.request_type == 1">
+								<div class="request-txt">
+								  <span class="request-name"><a href="http://192.168.1.209/users/{% templatetag openvariable %} request.user_id {% templatetag closevariable %}">{% templatetag openvariable %} request.name {% templatetag closevariable %}</a></span>
+								  <span class="request-msg">님께 친구요청 보냄</span>
+								</div>
+								<button class="request-del" ng-click='replyFriendRequest("None", request.request_id)'>x</button>
+							</div>
+							<div ng-if="request.request_type == 2">
+								<div class="request-txt">
+								  <span class="request-name"><a href="http://192.168.1.209/users/{% templatetag openvariable %} request.user_id {% templatetag closevariable %}">{% templatetag openvariable %} request.name {% templatetag closevariable %}</a></span>
+								  <span class="request-msg">님과 친구과 되었습니다</span>
+								</div>
+								<button class="request-del" ng-click='replyFriendRequest("None", request.request_id)'>x</button>
+							</div>
+							<div ng-if="request.request_type == 3">
+								<div class="request-txt">
+								  <span class="request-name"><a href="http://192.168.1.209/users/{% templatetag openvariable %} request.user_id {% templatetag closevariable %}">{% templatetag openvariable %} request.name {% templatetag closevariable %}</a></span>
+								  <span class="request-msg">님의 친구요청</span>
+								</div>
+								<button class="request-ac" ng-click='replyFriendRequest("true", request.request_id)'>수락</button>
+								<button class="request-rj" ng-click='replyFriendRequest("false", request.request_id)'>거절</button>
+							</div>		
+						</div>
+					</div>
+					<div class="left-content" ng-repeat="recommendation in friend_recommendation">
+						<div class="request-info">
+							<img class="request-img" src="http://192.168.1.209/media/{% templatetag openvariable %} recommendation.image {% templatetag closevariable %}">
+							<div class="request-txt">
+								<span class="request-name"><a href="http://192.168.1.209/users/{% templatetag openvariable %} recommendation.user_id  {% templatetag closevariable %}">{% templatetag openvariable %} recommendation.name {% templatetag closevariable %}</a></span>
+									<span class="request-msg">님과 {% templatetag openvariable %} recommendation.numSharing  {% templatetag closevariable %}명의 친구를 공유중</span>
+							</div>
 						</div>
 					</div>
 				</div>
-				-->
 
 				<div class="right-container">
-					<div class="right-side-contents">
+					<div class="right-side-content">
 						<div class="info-B">
 							area for showing node recommendation
 							<form action="{% url 'login:signout' %}">{% csrf_token %}
@@ -61,14 +90,14 @@
 					</div>
 				</div>
 
-				<div class="mid-container" ng-controller='mainController'>
+				<div class="mid-container">
 					<div class="mid-content">
 						<div class="article-input">
 							<div class="contents-input">
 								<textarea name="text-input" class="cinput" placeholder="무슨 생각을 하고 계신가요?" ng-model='text'></textarea>
 								<input type="text" class="cinput non-activate" placeholder="tag"  ng-model='tag'>
 								<input type="text" class="cinput non-activate" placeholder="emotion" ng-model='emotion'>
-								<button class="cinput non-activate" id="contents-submit" ng-click='createPost()'>Post</button>
+								<button class="cinput non-activate" id="contents-submit" onclick='un_focus()' ng-click='createPost("{{ user_name }}","{{ user_img_url }}")'>Post</button>
 							</div>
 						</div>
 					</div>
@@ -164,7 +193,7 @@
 		var shadow = document.getElementsByClassName("shadow")[0];
 		var artiInput = document.getElementsByClassName("article-input")[0];
 		var body = document.getElementsByTagName("body")[0];
-		var midContainer = document.getElementsByClassName("mid-container")[0];
+		var mainContainer = document.getElementsByClassName("main-container")[0];
 		var headerContainer = document.getElementsByClassName("header-container")[0];
 
 		// initiate
@@ -179,9 +208,12 @@
 		window.onscroll = function() {
 			if(headerContainer.clientHeight + midContainer.clientHeight <= window.pageYOffset + window.innerHeight+5) {
 				console.log("log: end of page");
-				angular.element(midContainer).scope().getFeeds();
+				angular.element(mainContainer).scope().getFeeds();
 			}
 		};
+
 		/* --------------------------------------------- */
+		function un_focus() { shadow.click(); }
+		angular.element(document).ready(function() {angular.element(mainContainer).scope().setUserId('{{ user_objectId }}');})
 	</script>
 </html>

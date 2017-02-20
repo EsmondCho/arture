@@ -1,10 +1,13 @@
-import requests
+#-*- coding: utf-8 -*-
 
+import requests
+import codecs
+import random
 from bs4 import BeautifulSoup
 from django.http import HttpResponseForbidden, HttpResponse
 from django.shortcuts import render, redirect
 from login.views import authenticated
-from users.models import Arture
+from users.models import Arture, User, Article
 
 
 def home(request):
@@ -24,35 +27,198 @@ def get_description(request, arture_id):
     return HttpResponse(description)
 
 
-def crawler(request, max_pages):
+def arture_crawler(request, max_pages):
     page = 1
     while page <= int(max_pages):
-        url = 'http://movie.naver.com/movie/sdb/rank/rmovie.nhn?sel=pnt&date=20170217&page='+str(page)
+        url = 'http://movie.naver.com/movie/sdb/rank/rmovie.nhn?sel=pnt&date=20170219&page=' + str(page)
         main_source_code = requests.get(url)
         main_plain_text = main_source_code.text
-        soup = BeautifulSoup(main_plain_text, 'lxml')
-        for link in soup.select('td > div > a'):
-            title = link.get('title')
+        main_soup = BeautifulSoup(main_plain_text, 'lxml')
+        for idx, link in enumerate(main_soup.select('td > div > a')):
+
+            ##### get movie_title and description #####
             arture_url = 'http://movie.naver.com' + link.get('href')
             arture_num = arture_url.split('=')[1]
 
-            source_code = requests.get(arture_url)
+            movie_source_code = requests.get(arture_url)
+            movie_plain_text = movie_source_code.text
+            movie_soup = BeautifulSoup(movie_plain_text, 'lxml')
+
+            movie_title = movie_soup.find_all('h3', class_='h_movie')[0].select('a')[0].get_text()
+            movie_description = movie_soup.find_all('p', class_='con_tx')[0].get_text()
+
+            ##### insert movie_title, movie_description into DB
+            movie = Arture.objects.create(
+                title=movie_title,
+                arture_type=False,
+                description=movie_description,
+                related_arture_list=[]
+            )
+            movie.save()
+
+            ##### get actor name and description #####
+            artists_url = 'http://movie.naver.com/movie/bi/mi/detail.nhn?code=' + arture_num
+            source_code = requests.get(artists_url)
             plain_text = source_code.text
             soup = BeautifulSoup(plain_text, 'lxml')
 
-            ### arture(movie) create ###
-            if Arture.objects.filter(title=title).count() == 0:
-                arture = Arture.objects.create(
-                    title=title,
-                    arture_type=False,
-                    description=soup.select('div > div > div > div > div > div > div > div > p')[0].get_text(),
-                    related_arture_list=[],
-                    article_list=[],
-                    user_list=[]
+            for div in soup.find_all('div', class_='p_info'):
+                actor_url = 'http://movie.naver.com' + div.select('a')[0].get('href')
+                actor_source_code = requests.get(actor_url)
+                actor_plain_text = actor_source_code.text
+                actor_soup = BeautifulSoup(actor_plain_text, 'lxml')
+
+                actor_name = actor_soup.find_all('h3', class_='h_movie')[0].select('a')[0].get_text()
+                if not actor_soup.find_all('div', class_='con_tx'):
+                    actor_description = "no description"
+                else:
+                    if not actor_soup.find_all('div', class_='con_tx')[0].select('p'):
+                        actor_description = actor_soup.find_all('div', class_='con_tx')[0].get_text()
+                    else:
+                        actor_description = actor_soup.find_all('div', class_='con_tx')[0].select('p')[0].get_text()
+
+                if Arture.objects.filter(title=actor_name).filter(arture_type=True).count() == 0: # if it is not existed actor
+                    actor = Arture.objects.create(
+                        title=actor_name,
+                        arture_type=True,
+                        description=actor_description,
+                        related_arture_list=[movie.id]
+                    )
+                    actor.save()
+                else: # existing actor
+                    actor = Arture.objects.get(title=actor_name, arture_type=True)
+                    actor.related_arture_list.insert(0, movie.id)
+
+                movie.related_arture_list.insert(0, actor.id)
+
+            ##### get director name and description #####
+            director_url = 'http://movie.naver.com' + soup.find_all('div', class_='dir_product')[0].select('a')[0].get(
+                'href')
+            director_source_code = requests.get(director_url)
+            director_plain_text = director_source_code.text
+            director_soup = BeautifulSoup(director_plain_text, 'lxml')
+
+            director_name = director_soup.find_all('h3', class_='h_movie')[0].select('a')[0].get_text()
+            if not director_soup.find_all('div', class_='con_tx'):
+                director_description = "no description"
+            else:
+                if not director_soup.find_all('div', class_='con_tx')[0].select('p'):
+                    director_description = director_soup.find_all('div', class_='con_tx')[0].get_text()
+                else:
+                    director_description = director_soup.find_all('div', class_='con_tx')[0].select('p')[0].get_text()
+
+            if Arture.objects.filter(title=director_name).filter(arture_type=True).count() == 0:  # if it is not existed director
+                director = Arture.objects.create(
+                    title=director_name,
+                    arture_type=True,
+                    description=director_description,
+                    related_arture_list=[movie.id]
                 )
-                arture.save()
+                director.save()
+            else:  # existing actor
+                director = Arture.objects.get(title=director_name, arture_type=True)
+                director.related_arture_list.insert(0, movie.id)
 
-            ### arture(director, actor) create ###
+            movie.related_arture_list.insert(0, director.id)
 
+            print(idx)
+        print('-------------------- This page : '+str(page)+' --------------------')
         page += 1
+
+    return HttpResponse('good')
+
+
+def review_crawler(request, max_pages):
+    ### get user_name_list from file ###
+    user_name_list = []
+    name_file = codecs.open('/home/smilegate/auto_client/user_name_list', 'r', 'utf-8')
+    lines = name_file.readlines()
+    for line in lines:
+        user_name_list.insert(0, line)
+
+    ### set gender_list
+    gender_list = [True, False]
+
+    page = 1
+    while page <= int(max_pages):
+        url = 'http://movie.naver.com/movie/point/af/list.nhn?&page=' + str(page)
+        main_source_code = requests.get(url)
+        main_plain_text = main_source_code.text
+        main_soup = BeautifulSoup(main_plain_text, 'lxml')
+        for idx, td in enumerate(main_soup.find_all('td', class_='ac num')):
+
+            ##### get User and Article objects from reviews #####
+            ### get user name ###
+            one_user_reviews_url = 'http://movie.naver.com/movie/point/af/list.nhn?st=nickname&sword=' + td.get_text()
+            one_user_reviews_source_code = requests.get(one_user_reviews_url)
+            one_user_reviews_plain_text = one_user_reviews_source_code.text
+            one_user_reviews_soup = BeautifulSoup(one_user_reviews_plain_text, 'lxml')
+
+            user_email = one_user_reviews_soup.find('h5', class_='sub_tlt').get_text().split('****')[0] + '@auto.com'
+
+            ### new user ###
+            if User.objects.filter(email=user_email).count() == 0:
+                user = User.objects.create(
+                    name=random.choice(user_name_list),
+                    email=user_email,
+                    pwd='asdf',
+                    gender=random.choice(gender_list),
+                    birth='20170220',
+                    friend_list=[],
+                    friend_request_list=[],
+                    arture_list=[],
+                    article_list=[]
+                )
+                user.save()
+            ### existing user ###
+            else:
+                user = User.objects.get(email=user_email)
+
+            ### get each movie_review's point, movie title, comment from one user ###
+            for a in one_user_reviews_soup.find_all('div', class_='paging')[0].select('a'):
+                if a.get_text() == '다음'.decode('utf-8'):
+                    break
+                print("one user's reviews page : " + a.get_text())
+
+                review_page_url = one_user_reviews_url + '&page=' + a.get_text()
+                review_page_source_code = requests.get(review_page_url)
+                review_page_plain_text = review_page_source_code.text
+                review_page_soup = BeautifulSoup(review_page_plain_text, 'lxml')
+
+                for tr in review_page_soup.find('tbody').find_all('tr'):
+                    point = tr.find('td', class_='point').get_text()
+                    review_number = tr.find('td', class_='ac num').get_text()
+                    movie_title_and_comment = tr.find('td', class_='title')
+                    movie_title = movie_title_and_comment.select('a')[0].get_text()
+                    movie_comment = movie_title_and_comment.get_text().split(movie_title)[1].split('신고'.decode('utf-8'))[0].strip()
+
+                    ### new arture ###
+                    if Arture.objects.filter(title=movie_title).count() == 0:
+                        arture = Arture.objects.get(title='out_of_top_movie_2000_default')
+                    ### existing arture ##
+                    else:
+                        arture = Arture.objects.get(title=movie_title)
+
+                    ### new article ###
+                    if Article.objects.filter(naver_review_number=review_number).count() == 0:
+                        article = Article.objects.create(
+                            user_id=user.id,
+                            tag=arture,
+                            text=movie_comment,
+                            comment_list=[]
+                        )
+                        article.save()
+                    ### existing article ###
+                    else:
+                        article = Article.objects.get(naver_review_number=review_number)
+
+                    ### insert article into article_list of arture
+                    arture.article_list.insert(0, article.id)
+
+                    ### insert article into article_list of User
+                    user.article_list.insert(0, article.id)
+            print('-----------------------------------' + idx)
+        print('---------------------------------------------- This page : ' + str(page))
+        page += 1
+
     return HttpResponse('good')

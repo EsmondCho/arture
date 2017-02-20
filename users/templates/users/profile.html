@@ -64,12 +64,12 @@
 												}
 											</script>
 										{% elif is_request_sended == True %}
-											<button class="friend-tool" disabled="true" id="sended-friend-req">친구요청 전송됨</button>
+											<button class="friend-tool" id="sended-friend-req">친구요청 전송됨</button>
 										{% else %}
-											<button class="friend-tool" disabled="true" id="received-friend-req">친구요청 받음</button>
+											<button class="friend-tool" id="received-friend-req">친구요청 받음</button>
 										{% endif %}
 									{% else %}
-										<button class="friend-tool" disabled="true">친구</button>
+										<button class="friend-tool">친구</button>
 									{% endif %}
 								{% endif %}
 							</div>
@@ -97,13 +97,16 @@
 							<span class="banner-text">Friends</span>
 						</div>
 					</div>
-					<!-- Angular -->
-					<div class="mid-right-content">
-						<div class="friend-profile">
-							<div class="profile-container">
+					{% for friend in friend_list %}
+					<div class="left-content">
+						<div class="request-info">
+							<img class="request-img" src="{{ friend.image }}">
+							<div class="request-txt">
+								<span class="request-name"><a href="http://192.168.1.209/users/{{ friend.user_id }}">{{ friend.name }}</a></span>
 							</div>
 						</div>
 					</div>
+					{% endfor %}
 				</div>
 
 				<!-- Timeline -->
@@ -113,34 +116,37 @@
 							<span class="banner-text">Timeline</span>
 						</div>
 					</div>
-					<!-- Angular -->
+					{% for article in article_list %}
 					<div class="mid-content">
 						<div class="article">
 							<div class="article-top">
 								<div class="profile-container">
+									<img class="profile-img" src="{{ profile_img_url }}">
+									<span class="profile-name"><a href="http://192.168.1.209/users/{{ profile_objectId }}">{{ profile_name }}</a></span><br>
+									<span class="time-stamp">{% templatetag openvariable %} setProperTimeString({{ article.registered_time }}) {% templatetag closevariable %}</span>
+								</div>
+								<div class="article-top-contents">{{ article.text }}</div>
+								<div class="article-top-sub-contents">
+									<span class="tag">#{{ article.tag }}</span>
 								</div>
 							</div>
-
 							<div class="article-bottom">
 								<!-- "comments" and "more comments button" and "comment write area" -->
 								<div class="comment-input">
-									<img class="profile-img-s" src="http://cphoto.asiae.co.kr/listimglink/6/2015040308595537373_1.jpg">
-									<input class="coinput" type="text" placeholder="댓글을 입력하세요..">
+									<img class="profile-img-s" src="{{ profile_img_url }}">
+									<form id="comment-form" onsubmit="return submitComment('{{ article.article_id }}');">{% csrf_token %}
+										<input class="coinput" id="comment" name="comment" type="text" placeholder="댓글을 입력하세요..">
+									</form>
 								</div>
 								<div class="comments-container">
-									<!-- Angular -->
+									{% for comment in article.comment_list %}
 									<div class="comment-content">
 										<img class="profile-img-s" src="http://cphoto.asiae.co.kr/listimglink/6/2015040308595537373_1.jpg">
 										<div class="comment-text">
-											<span class="profile-name">박수진</span><span class="comment-text-body">afasdfasdfasdf</span>
+											<span class="profile-name">{{ comment.name }}</span><span class="comment-text-body">{{ comment.comment }}</span>
 										</div>
 									</div>
-									<div class="comment-content">
-										<img class="profile-img-s" src="http://cphoto.asiae.co.kr/listimglink/6/2015040308595537373_1.jpg">
-										<div class="comment-text">
-											<span class="profile-name">박수진</span><span class="comment-text-body">adfasdfasdfasdf</span>
-										</div>
-									</div>
+									{% endfor %}
 								</div>
 								<div class="comments-bottom">
 									<!-- show more comments.. -->
@@ -148,11 +154,26 @@
 							</div>
 						</div>
 					</div><!-- mid content -->
-
+					{% endfor %}
 				</div>
 			</div>
 		</div>
 	</div>
-	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	</body>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script>
+		function submitComment(article_id) {
+			var URL = 'http://192.168.1.209/users/{{ user_objectId }}/articles/'+article_id+'/comments/create'
+			$.ajax({
+					url: URL,
+					type:'post',
+					data: $('#comment-form').serialize(),
+					success:function(data){ 
+						$('.comments-container')[0].innerHTML = '<div class="comment-content"><img class="profile-img-s" src="{{ profile_img_url }}"><div class="comment-text"><span class="profile-name"><a href="http://192.168.1.209/users/{{ profile_objectId }}">{{ profile_name }}</a></span><span class="comment-text-body">'+$('#comment').val()+'</span></div></div>' + $('.comments-container')[0].innerHTML
+						$('#comment').val("")
+					}
+			})	
+			return false;
+		}
+	</script>
 </html>

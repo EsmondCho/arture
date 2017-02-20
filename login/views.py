@@ -1,3 +1,5 @@
+import requests
+
 from django.http import HttpResponseForbidden
 from django.shortcuts import render, render_to_response, redirect
 from django.core.cache import cache
@@ -21,6 +23,8 @@ def authenticated(request):
 
 
 def signup(request):
+    if authenticated(request):
+        return redirect('/users/' + request.session["user_objectId"] + '/newsfeed')
 
     if request.method == 'POST':
         form = request.POST
@@ -45,6 +49,11 @@ def signup(request):
         )
         user.save()
 
+        ### requests to node.js ###
+        params = {}
+        res = requests.get('http://192.168.1.208:3000/api/v1/users/' + user.id + '/signup', params=params)
+        print(res)
+
         login_token = get_random_string(length=32)
         cache.set(form['rinput-email'], login_token, nx=False)
 
@@ -59,6 +68,9 @@ def signup(request):
 
 
 def signin(request):
+    if authenticated(request):
+        return redirect('/users/' + request.session["user_objectId"] + '/newsfeed')
+
     if request.method == 'POST':
         form = request.POST
 

@@ -29,11 +29,11 @@ class Request(models.Model):
 
 class Article(models.Model):
     user_id = models.CharField(max_length=30) # insert user_objectId
-    tag = models.CharField(max_length=30) # insert arture objectId
+    tag = EmbeddedModelField('Arture') # insert arture object
     text = models.TextField(null=True)
-    image = models.ImageField(null=True, upload_to='article_pictures')
+    image = models.ImageField(null=True, upload_to='article_pictures', default='article_images/default_image/default.png')
+    naver_review_number = models.CharField(null=True, max_length=10)
     comment_list = ListField(EmbeddedModelField('Comment'), null=True)
-    #config = models.CharField(max_length=30)
     registered_time = models.DateTimeField(auto_now_add=True)
 
     def save(self, force_insert=False, force_update=False, using=None):
@@ -52,11 +52,11 @@ class Comment(models.Model):
 class Arture(models.Model):
     title = models.CharField(max_length=30)
     image = models.ImageField(null=True, upload_to='arture_pictures')
-    article_list = ListField(null=True)
+    article_list = ListField(null=True) # insert Objectid
     user_list = ListField(null=True)
     arture_type = models.BooleanField() # True : artist / False : art
     description = models.TextField(null=True)
-    related_arture_list = ListField() # Insert Arture ObjectId
+    related_arture_list = ListField(null=True) # Insert Arture ObjectId
 
     def save(self, force_insert=False, force_update=False, using=None):
         for field in self._meta.fields:

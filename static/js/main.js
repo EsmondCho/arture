@@ -12,6 +12,9 @@ mainApp.factory('dataService', function($http,$sce) {
 				case "friend_request":
 					URL = 'http://192.168.1.209/users/'+params[0]+'/friend_requests'
 					break;
+				case "friend_recommendation":
+					URL = 'http://192.168.1.208:3000/api/v1/users/'+params[0]+'/friends'
+					return $http({ method: 'GET', url: URL }).success( function(data){ return data; } ).error( function(){ console.log("receiveData error"); });
 				case "comments":
 					break;
 				case "rec-nodes":
@@ -47,6 +50,7 @@ mainApp.controller("mainController", function($scope, dataService) {
 
 	$scope.feeds = [];
 	$scope.friend_requests = [];
+	$scope.friend_recommendation = [];
 	$scope.gettingFeeds = false;
 	$scope.user_id = "";
 
@@ -110,6 +114,7 @@ mainApp.controller("mainController", function($scope, dataService) {
 	$scope.setUserId = function(user_id) {
 		$scope.user_id = user_id;
 		$scope.getFriendRequests();
+		$scope.getFriendRecommendation()
 		$scope.getFeeds();
 	}
 
@@ -125,31 +130,33 @@ mainApp.controller("mainController", function($scope, dataService) {
 																	})
 	};
 
+	$scope.getFriendRecommendation = function() {
+		var cnt = 6 - $scope.friend_requests;
+		if(cnt < 0) cnt = 3;
+		dataService.receiveData("friend_recommendation",[$scope.user_id,cnt]).then(function(resultData){
+			for(var i=0;i<resultData.data.length;i++)
+				$scope.friend_recommendation.unshift(resultData.data[i])	
+			console.log("debug",$scope.friend_recommendation)
+		});
+	}
 	$scope.getFriendRequests = function() {
 		dataService.receiveData("friend_request",[$scope.user_id]).then(function(resultData){
 			for(var i=0;i<resultData.data.length;i++)
 				$scope.friend_requests.push(resultData.data[i])
-			console.log($scope.friend_requests[0])
 		});
   };
 
 	$scope.deleteFriendRequest = function(request_id) {
-		console.log(request_id)
 		dataService.sendData("friend_request_del",[$scope.user_id, request_id]).then(function(){
-			console.log("before")
-			console.log($scope.friend_requests)
 			for(var i=0;i<$scope.friend_requests.length;i++) {
 				if($scope.friend_requests[i].request_id == request_id)
 					$scope.friend_requests.splice(i,1);	
 			}
-			console.log("after")
-			console.log($scope.friend_requests)
 		})
 	}
 	$scope.replyFriendRequest = function(ans, request_id) {
-		if(ans == "None") {
+		if(ans == "None")
 			$scope.deleteFriendRequest(request_id);
-		}
 		else {
 		dataService.sendData("friend_request_rep",[$scope.user_id, request_id, ans]).then(function(){
 				$scope.deleteFriendRequest(request_id)

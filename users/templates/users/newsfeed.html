@@ -1,16 +1,13 @@
-<!--
-	info from Django:
-			url:
-		- about post : /aticles/:_id?token=
-		- about user: /users/:_id?token=
--->
-
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset='utf-8'>
 		<link rel="stylesheet" href="../../../static/css/style.css"> <title>Arture</title>
 	</head>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js">	</script>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="../../../static/js/test.js"></script>
+	<script src="../../../static/js/main.js"></script>
 	<body ng-app='mainApp'>
 		<div class="header-container">
 			<div class="head-content">
@@ -19,11 +16,53 @@
 					<span id="user-page-lnk"><a href="http://192.168.1.209/users/{{ user_objectId }}" style="text-decoration: none; color: inherit">{{ user_name }}</a></span>
 					<span id="user-welcome-message" class="system-message">welcome.</span>
 				</div>
+				<div id="search">
+					<select id="search-select"><option value="user">User</option><option value="arture">Arture</option></select>
+					<input id="search-input" type="text">
+					<div id="search-result"></div>
+					<script>
+						var str = ""
+						function search() {
+							if( $('#search-input').val() == "" ) {
+								console.log("asd")
+								$('#search-result').empty()
+								return;
+							}
+							var URL = 'http://192.168.1.210/search/'+$('#search-select').val()+'/'+$('#search-input').val()
+							if(str == URL) return;
+							console.log(URL)
+							$.ajax({
+							url:URL,
+							type:'get',
+							success:function(data) {
+								var result_str="";
+								data.forEach(function(result) {
+									result_str+="<div class='result'><button class='result-button'><img class='result-img' src='http://192.168.1.209/media/" + result.image + "'>" + "<span class='result-name'><a href='http://192.168.1.209/users/" + result._id + "'></a>" + result.name + "</span></button></div>"
+								})	
+								$('#search-result').empty()
+								$('#search-result').append(result_str)
+								console.log(result_str);	
+								str = URL;
+								}
+							})
+					 	}
+						$('#search-input').keyup(function(){
+							console.log("asdf")
+							search();
+						})
+						$('#search-input').focusin(function(){
+							$('#search-result').show();
+							search();
+						})
+						$('#search-input').focusout(function(){
+							$('#search-result').hide();
+						})
+					</script>
+				</div>
 			</div>
 		</div>
 		<div class="main-container" ng-controller='mainController'>
 			<div class="main-contents">
-				
 				<div class="left-container">
 					<div class="left-content" ng-repeat="request in friend_requests">
 						<div class="request-info">
@@ -35,7 +74,7 @@
 								</div>
 								<button class="request-del" ng-click='replyFriendRequest("None", request.request_id)'>x</button>
 							</div>
-							<div ng-if="request.request_type == 2">
+							<div ng-if="request.request_type == 2 || request.request_type == 4">
 								<div class="request-txt">
 								  <span class="request-name"><a href="http://192.168.1.209/users/{% templatetag openvariable %} request.user_id {% templatetag closevariable %}">{% templatetag openvariable %} request.name {% templatetag closevariable %}</a></span>
 								  <span class="request-msg">님과 친구과 되었습니다</span>
@@ -52,37 +91,16 @@
 							</div>		
 						</div>
 					</div>
-
 					<div class="left-content" ng-repeat="recommendation in friend_recommendation">
 						<div class="request-info">
-							<img class="request-img" src="{% templatetag openvariable %} request.image {% templatetag closevariable %}">
-							<div ng-if="request.request_type == 1">
-								<div class="request-txt">
-								  <span class="request-name"><a href="http://192.168.1.209/users/{% templatetag openvariable %} request.user_id {% templatetag closevariable %}">{% templatetag openvariable %} request.name {% templatetag closevariable %}</a></span>
-								  <span class="request-msg">님께 친구요청 보냄</span>
-								</div>
-								<button class="request-del" ng-click='replyFriendRequest("None", request.request_id)'>x</button>
+							<img class="request-img" src="http://192.168.1.209/media/{% templatetag openvariable %} recommendation.image {% templatetag closevariable %}">
+							<div class="request-txt">
+								<span class="request-name"><a href="http://192.168.1.209/users/{% templatetag openvariable %} recommendation.user_id  {% templatetag closevariable %}">{% templatetag openvariable %} recommendation.name {% templatetag closevariable %}</a></span>
+									<span class="request-msg">님과 {% templatetag openvariable %} recommendation.numSharing  {% templatetag closevariable %}명의 친구를 공유중</span>
 							</div>
-							<div ng-if="request.request_type == 2">
-								<div class="request-txt">
-								  <span class="request-name"><a href="http://192.168.1.209/users/{% templatetag openvariable %} request.user_id {% templatetag closevariable %}">{% templatetag openvariable %} request.name {% templatetag closevariable %}</a></span>
-								  <span class="request-msg">님과 친구과 되었습니다</span>
-								</div>
-								<button class="request-del" ng-click='replyFriendRequest("None", request.request_id)'>x</button>
-							</div>
-							<div ng-if="request.request_type == 3">
-								<div class="request-txt">
-								  <span class="request-name"><a href="http://192.168.1.209/users/{% templatetag openvariable %} request.user_id {% templatetag closevariable %}">{% templatetag openvariable %} request.name {% templatetag closevariable %}</a></span>
-								  <span class="request-msg">님의 친구요청</span>
-								</div>
-								<button class="request-ac" ng-click='replyFriendRequest("true", request.request_id)'>수락</button>
-								<button class="request-rj" ng-click='replyFriendRequest("false", request.request_id)'>거절</button>
-							</div>		
 						</div>
 					</div>
-
 				</div>
-				
 
 				<div class="right-container">
 					<div class="right-side-content">
@@ -173,9 +191,6 @@
 		</div>
 		<div class="shadow non-activate"></div>
 	</body>
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js">	</script>
-	<script src="../../../static/js/test.js"></script>
-	<script src="../../../static/js/main.js"></script>
 	<script>
 		/* --------------------------------------------- */
 		/* --------------------------------------------- */
