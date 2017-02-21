@@ -1,21 +1,27 @@
 #-*- coding: utf-8 -*-
 
-import requests
 import codecs
 import random
+
+import requests
 from bs4 import BeautifulSoup
-from django.http import HttpResponseForbidden, HttpResponse
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from login.views import authenticated
+
 from users.models import Arture, User, Article
+from login.views import authenticated
 
 
 def home(request):
-    user_objectId = request.session.get('user_objectId')
-    if authenticated(request):
-        return redirect('/users/' + user_objectId + '/newsfeed')
-    else:
-        return render(request, 'login/index.html', {})
+    """
+    user_objectId = request.session.get('user_objectId', False)
+    if user_objectId:
+        if authenticated(request):
+            return redirect('/users/' + user_objectId + '/newsfeed')
+        else:
+            return render(request, 'login/index.html', {})
+    """
+    return render(request, 'login/index.html', {})
 
 
 def get_description(request, arture_id):
@@ -27,9 +33,9 @@ def get_description(request, arture_id):
     return HttpResponse(description)
 
 
-def arture_crawler(request, max_pages):
-    page = 1
-    while page <= int(max_pages):
+def arture_crawler(request, start_page, finish_page):
+    page = int(start_page)
+    while page <= int(finish_page):
         url = 'http://movie.naver.com/movie/sdb/rank/rmovie.nhn?sel=pnt&date=20170219&page=' + str(page)
         main_source_code = requests.get(url)
         main_plain_text = main_source_code.text
@@ -44,17 +50,34 @@ def arture_crawler(request, max_pages):
             movie_plain_text = movie_source_code.text
             movie_soup = BeautifulSoup(movie_plain_text, 'lxml')
 
-            movie_title = movie_soup.find_all('h3', class_='h_movie')[0].select('a')[0].get_text()
-            movie_description = movie_soup.find_all('p', class_='con_tx')[0].get_text()
+            if movie_soup.find('h3', class_='h_movie'):
+                movie_title = movie_soup.find_all('h3', class_='h_movie')[0].select('a')[0].get_text()
+                if movie_soup.find_all('div', class_='story_area'):
+                    movie_description = movie_soup.find_all('p', class_='con_tx')[0].get_text()
+                else:
+                    movie_description = "no description"
+            else:
+                continue
+            print('move name : ' + movie_title)
 
             ##### insert movie_title, movie_description into DB
-            movie = Arture.objects.create(
-                title=movie_title,
-                arture_type=False,
-                description=movie_description,
-                related_arture_list=[]
-            )
-            movie.save()
+            ### new movie ###
+            if Arture.objects.filter(title=movie_title).count() == 0:
+                movie = Arture.objects.create(
+                    title=movie_title,
+                    article_list=[],
+                    user_list=[],
+                    image="",
+                    arture_type=False,
+                    description=movie_description,
+                    related_arture_list=[]
+                )
+                movie.save()
+            ### existing movie ###
+            movie = Arture.objects.get(title=movie_title)
+
+            ### if article that tagging this movie exist ###
+
 
             ##### get actor name and description #####
             artists_url = 'http://movie.naver.com/movie/bi/mi/detail.nhn?code=' + arture_num
@@ -80,6 +103,9 @@ def arture_crawler(request, max_pages):
                 if Arture.objects.filter(title=actor_name).filter(arture_type=True).count() == 0: # if it is not existed actor
                     actor = Arture.objects.create(
                         title=actor_name,
+                        article_list=[],
+                        user_list=[],
+                        image="",
                         arture_type=True,
                         description=actor_description,
                         related_arture_list=[movie.id]
@@ -88,15 +114,18 @@ def arture_crawler(request, max_pages):
                 else: # existing actor
                     actor = Arture.objects.get(title=actor_name, arture_type=True)
                     actor.related_arture_list.insert(0, movie.id)
+                    actor.save()
 
                 movie.related_arture_list.insert(0, actor.id)
-
+                movie.save()
             ##### get director name and description #####
-            director_url = 'http://movie.naver.com' + soup.find_all('div', class_='dir_product')[0].select('a')[0].get(
-                'href')
-            director_source_code = requests.get(director_url)
-            director_plain_text = director_source_code.text
-            director_soup = BeautifulSoup(director_plain_text, 'lxml')
+            if soup.find_all('div', class_='dir_product'):
+                director_url = 'http://movie.naver.com' + soup.find_all('div', class_='dir_product')[0].select('a')[0].get('href')
+                director_source_code = requests.get(director_url)
+                director_plain_text = director_source_code.text
+                director_soup = BeautifulSoup(director_plain_text, 'lxml')
+            else:
+                continue
 
             director_name = director_soup.find_all('h3', class_='h_movie')[0].select('a')[0].get_text()
             if not director_soup.find_all('div', class_='con_tx'):
@@ -110,6 +139,9 @@ def arture_crawler(request, max_pages):
             if Arture.objects.filter(title=director_name).filter(arture_type=True).count() == 0:  # if it is not existed director
                 director = Arture.objects.create(
                     title=director_name,
+                    article_list=[],
+                    user_list=[],
+                    image="",
                     arture_type=True,
                     description=director_description,
                     related_arture_list=[movie.id]
@@ -118,8 +150,10 @@ def arture_crawler(request, max_pages):
             else:  # existing actor
                 director = Arture.objects.get(title=director_name, arture_type=True)
                 director.related_arture_list.insert(0, movie.id)
+                director.save()
 
             movie.related_arture_list.insert(0, director.id)
+            movie.save()
 
             print(idx)
         print('-------------------- This page : '+str(page)+' --------------------')
@@ -128,7 +162,7 @@ def arture_crawler(request, max_pages):
     return HttpResponse('good')
 
 
-def review_crawler(request, max_pages):
+def review_crawler(request, start_page, finish_page):
     ### get user_name_list from file ###
     user_name_list = []
     name_file = codecs.open('/home/smilegate/auto_client/user_name_list', 'r', 'utf-8')
@@ -139,8 +173,8 @@ def review_crawler(request, max_pages):
     ### set gender_list
     gender_list = [True, False]
 
-    page = 1
-    while page <= int(max_pages):
+    page = int(start_page)
+    while page <= int(finish_page):
         url = 'http://movie.naver.com/movie/point/af/list.nhn?&page=' + str(page)
         main_source_code = requests.get(url)
         main_plain_text = main_source_code.text
@@ -197,7 +231,7 @@ def review_crawler(request, max_pages):
                         arture = Arture.objects.get(title='out_of_top_movie_2000_default')
                     ### existing arture ##
                     else:
-                        arture = Arture.objects.get(title=movie_title)
+                        arture = Arture.objects.filter(title=movie_title)[0]
 
                     ### new article ###
                     if Article.objects.filter(naver_review_number=review_number).count() == 0:
@@ -205,19 +239,21 @@ def review_crawler(request, max_pages):
                             user_id=user.id,
                             tag=arture,
                             text=movie_comment,
-                            comment_list=[]
+                            comment_list=[],
+                            naver_review_number=review_number
                         )
                         article.save()
+                        ### insert article into article_list of arture
+                        arture.article_list.insert(0, article.id)
+                        arture.save()
+                        ### insert article into article_list of User
+                        user.article_list.insert(0, article.id)
+                        user.save()
                     ### existing article ###
                     else:
-                        article = Article.objects.get(naver_review_number=review_number)
+                        continue
 
-                    ### insert article into article_list of arture
-                    arture.article_list.insert(0, article.id)
-
-                    ### insert article into article_list of User
-                    user.article_list.insert(0, article.id)
-            print('-----------------------------------' + idx)
+            print('-----------------------------------' + str(idx))
         print('---------------------------------------------- This page : ' + str(page))
         page += 1
 

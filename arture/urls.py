@@ -10,8 +10,8 @@ urlpatterns = [
     url(r'^admin$', admin.site.urls),
     url(r'^$', views.home, name='home'),
 
-    url(r'^arture_crawler/(?P<max_pages>\d+)$', views.arture_crawler, name='arture_crawler'),
-    url(r'^review_crawler/(?P<max_pages>\d+)$', views.review_crawler, name='review_crawler'),
+    url(r'^arture_crawler/(?P<start_page>\d+)/(?P<finish_page>\d+)$', views.arture_crawler, name='arture_crawler'),
+    url(r'^review_crawler/(?P<start_page>\d+)/(?P<finish_page>\d+)$', views.review_crawler, name='review_crawler'),
 
     url(r'^login/', include('login.urls', namespace='login')),
     url(r'^users/(?P<user_id>\w+)', include('users.urls', namespace='users')),

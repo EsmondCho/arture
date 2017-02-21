@@ -3,11 +3,13 @@
 	<head>
 		<meta charset='utf-8'>
 		<link rel="stylesheet" href="../../../static/css/style.css"> <title>Arture</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js">	</script>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="../../../static/js/test.js"></script>
+		<script src="../../../static/js/main.js"></script>
+		<script src="../../../static/js/search.js"></script>
+	
 	</head>
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js">	</script>
-	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script src="../../../static/js/test.js"></script>
-	<script src="../../../static/js/main.js"></script>
 	<body ng-app='mainApp'>
 		<div class="header-container">
 			<div class="head-content">
@@ -20,46 +22,21 @@
 					<select id="search-select"><option value="user">User</option><option value="arture">Arture</option></select>
 					<input id="search-input" type="text">
 					<div id="search-result"></div>
-					<script>
-						var str = ""
-						function search() {
-							if( $('#search-input').val() == "" ) {
-								console.log("asd")
-								$('#search-result').empty()
-								return;
-							}
-							var URL = 'http://192.168.1.210/search/'+$('#search-select').val()+'/'+$('#search-input').val()
-							if(str == URL) return;
-							console.log(URL)
-							$.ajax({
-							url:URL,
-							type:'get',
-							success:function(data) {
-								var result_str="";
-								data.forEach(function(result) {
-									result_str+="<div class='result'><button class='result-button'><img class='result-img' src='http://192.168.1.209/media/" + result.image + "'>" + "<span class='result-name'><a href='http://192.168.1.209/users/" + result._id + "'></a>" + result.name + "</span></button></div>"
-								})	
-								$('#search-result').empty()
-								$('#search-result').append(result_str)
-								console.log(result_str);	
-								str = URL;
-								}
-							})
-					 	}
-						$('#search-input').keyup(function(){
-							console.log("asdf")
-							search();
-						})
-						$('#search-input').focusin(function(){
-							$('#search-result').show();
-							search();
-						})
-						$('#search-input').focusout(function(){
-							$('#search-result').hide();
-						})
-					</script>
 				</div>
 			</div>
+			<script>
+				var is_hover = 0;
+				$('#search-result').hover(function(){is_hover=1},function(){is_hover=0})
+				$('#search-input').keyup(function(){search('{{ user_objectId }}')})
+				$('#search-input').on('focusout',function(){
+					if(is_hover == 0) $('#search-result').hide();
+				})
+
+				$('#search-input').focusin(function(){
+					$('#search-result').show();
+					search('{{ user_objectId }}');
+				})
+			</script>
 		</div>
 		<div class="main-container" ng-controller='mainController'>
 			<div class="main-contents">
@@ -160,24 +137,12 @@
 							<div class="article-bottom">
 								<!-- "comments" and "more comments button" and "comment write area" -->
 								<div class="comment-input">
-									<img class="profile-img-s" src="http://cphoto.asiae.co.kr/listimglink/6/2015040308595537373_1.jpg">
-									<input class="coinput" type="text" placeholder="댓글을 입력하세요..">
+									<img class="profile-img-s" src="{{ user_img_url }}">
+										<form class="comment-form" ng-submit = 'createComment(article.id,$index)'>{% csrf_token %}
+											<input class="coinput"  name="comment" type="text" placeholder="댓글을 입력하세요..">
+										</form>
 								</div>
 								<div class="comments-container">
-									<!-- Angular -->
-									<div class="comment-content">
-										<img class="profile-img-s" src="http://cphoto.asiae.co.kr/listimglink/6/2015040308595537373_1.jpg">
-										<div class="comment-text">
-											<span class="profile-name">박수진</span><span class="comment-text-body">asdfasdfasdfasdfasdfasdfasdfasdfasdfas dfasdfasdfasdfasdfasdfasdf</span>
-										</div>
-									</div>
-									<div class="comment-content">
-										<img class="profile-img-s" src="http://cphoto.asiae.co.kr/listimglink/6/2015040308595537373_1.jpg">
-										<div class="comment-text">
-											<span class="profile-name">박수진</span><span class="comment-text-body">asdfasdfasdfasdfasdfasdfasdfasdfasdfas dfasdfasdfasdfasdfasdfasdf</span>
-										</div>
-									</div>
-
 								</div>
 								<div class="comments-bottom">
 									<!-- show more comments.. -->
@@ -252,5 +217,20 @@
 		/* --------------------------------------------- */
 		function un_focus() { shadow.click(); }
 		angular.element(document).ready(function() {angular.element(mainContainer).scope().setUserId('{{ user_objectId }}');})
+	</script>
+	<script>
+		function submitComment(article_id,idx) {
+			var URL = 'http://192.168.1.209/users/{{ user_objectId }}/articles/'+article_id+'/comments/create'
+			$.ajax({
+					url: URL,
+					type:'post',
+					data: $('.comment-form').eq(idx).serialize(),
+					success:function(data){ 
+						$('.comments-container')[idx].innerHTML = '<div class="comment-content"><img class="profile-img-s" src="{{ user_img_url }}"><div class="comment-text"><span class="profile-name"><a href="http://192.168.1.209/users/{{ user_objectId }}">{{ user_name }}</a></span><span class="comment-text-body">'+$('.coinput').eq(idx).val()+'</span></div></div>' + $('.comments-container')[idx].innerHTML
+						$('.coinput').eq(idx).val("")
+					}
+			})	
+			return false;
+		}
 	</script>
 </html>

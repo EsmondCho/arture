@@ -30,7 +30,7 @@ mainApp.factory('dataService', function($http,$sce) {
 					URL = 'http://192.168.1.209/users/' + params[0] + '/articles/create'
 					return $http({ method: 'POST', url: URL, 
 					data: JSON.stringify({tag: params[1], text: params[2],csrfmiddlewaretoken: params[3]})
-											}).success(function(){}).error(function(){})
+											}).success(function(data){ return data; }).error(function(){})
 				case "friend_request_rep":
 					URL = 'http://192.168.1.209/users/' + params[0] + '/friend_requests/' + params[1] + '/update'
 					return $http({ method: 'POST', url: URL, 
@@ -119,16 +119,21 @@ mainApp.controller("mainController", function($scope, dataService) {
 	}
 
 	$scope.createPost = function(user_name,user_img_url) {
-		dataService.sendData("article",[$scope.user_id,$scope.tag,$scope.text,document.getElementsByName("csrfmiddlewaretoken")[0].value]).then(function(){ 
+		dataService.sendData("article",[$scope.user_id,$scope.tag,$scope.text,document.getElementsByName("csrfmiddlewaretoken")[0].value]).then(function(resultData){ 
 																		$scope.feeds.unshift({'writer_name':user_name,
-																											 'contents':$scope.text,
-																											 'tag':$scope.tag,
-																											 'emotion':"기쁘메츔~~",
-																											 'writer_image':user_img_url,
-																											 'reg_time':new Date()}); 
+																										 'contents':$scope.text,
+										  															 'id':resultData.data.article_id,
+																										 'tag':$scope.tag,
+																										 'emotion':"기쁘메츔~~",
+																										 'writer_image':user_img_url,
+																										 'reg_time':new Date()}); 
 																	},function(){
 																	})
 	};
+
+	$scope.createComment = function(article_id, idx) {
+		window.submitComment(article_id,idx);
+	}
 
 	$scope.getFriendRecommendation = function() {
 		var cnt = 6 - $scope.friend_requests;

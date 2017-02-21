@@ -5,9 +5,9 @@ from django.shortcuts import render, render_to_response, redirect
 from django.core.cache import cache
 
 from django.utils.crypto import get_random_string
+from django.views.decorators.csrf import csrf_exempt
 
 from users.models import User
-
 
 def authenticated(request):
     session = request.session
@@ -22,10 +22,12 @@ def authenticated(request):
     return False
 
 
+@csrf_exempt
 def signup(request):
+    """
     if authenticated(request):
         return redirect('/users/' + request.session["user_objectId"] + '/newsfeed')
-
+    """
     if request.method == 'POST':
         form = request.POST
         g = 0 if form['gender_info'] == "male" else 1
@@ -48,15 +50,14 @@ def signup(request):
             article_list = [],
         )
         user.save()
-
+        """
         ### requests to node.js ###
         params = {}
         res = requests.get('http://192.168.1.208:3000/api/v1/users/' + user.id + '/signup', params=params)
         print(res)
-
+        """
         login_token = get_random_string(length=32)
         cache.set(form['rinput-email'], login_token, nx=False)
-
 
         request.session['user_objectId'] = user.id
         request.session['user_email'] = form['rinput-email']
@@ -68,9 +69,10 @@ def signup(request):
 
 
 def signin(request):
+    """
     if authenticated(request):
         return redirect('/users/' + request.session["user_objectId"] + '/newsfeed')
-
+    """
     if request.method == 'POST':
         form = request.POST
 

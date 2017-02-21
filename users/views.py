@@ -1,21 +1,14 @@
-import json, datetime
-import pymongo
-import requests
+import ast
+import datetime
+import json
 
-from bson.objectid import ObjectId
-
-from django.core import serializers
 from django.http import HttpResponseForbidden, HttpResponse
 from django.shortcuts import render, redirect
-from users.forms import ImageUploadForm
-
-from .models import Article, Comment, Arture, User, Request
-
-from login.views import authenticated
-
 from django.views.decorators.csrf import csrf_exempt
 
-import ast
+from users.forms import ImageUploadForm
+from login.views import authenticated
+from .models import Article, Comment, Arture, User, Request
 
 # Need to define what is user
 
@@ -54,11 +47,21 @@ def get_profile_page(request, user_id):
         dic['text'] = article.text
         dic['image'] = 'http://192.168.1.209:80' + article.image.url if article.image else ""
         #dic['comment_list'] = json.dumps(serializers.serialize("json", article.comment_list), default=datetime_to_json),
-        dic['comment_list'] = article.comment_list
+        #dic['comment_list'] = article.comment_list
+        comment_list = []
+        comment_object_list = article.comment_list
+        for comment_object in comment_object_list:
+            comment_user = User.objects.get(id=comment_object.author)
+            dic_ = {}
+            dic_['name'] = comment_user.name
+            dic_['comment'] = comment_object.comment
+            dic_['registered_time'] = comment_object.registered_time
+            dic_['image'] = 'http://192.168.1.209:80' + comment_user.pic.url
+            comment_list.append(dic_.copy())
+        dic['comment_list'] = comment_list
         #dic['registered_time'] = json.dumps(serializers.serialize("json", article.registered_time), default=datetime_to_json),
         dic['registered_time'] = article.registered_time
         article_list.append(dic.copy())
-
 
     follow_list = []
     follow_objectId_list = profile.arture_list
@@ -260,12 +263,12 @@ def response_to_friend_request(request, user_id, request_id):
                     friend.friend_request_list.insert(0, request_object)
                     friend.friend_list.insert(0, user.id)
                     friend.save()
-
+                    """
                     ### requests to node.js ###
                     params = {}
                     res = requests.get('http://192.168.1.208:3000/api/v1/users/' + user.id + '/add_friend/' + friend.id, params=params)
                     print(res)
-
+                    """
                     return HttpResponse(status=200)
 
         return HttpResponseForbidden('Invalid request id')
@@ -348,13 +351,15 @@ def create_article(request, user_id):
             user = User.objects.get(id=user_id)
             user.article_list.insert(0, article.id)
             user.save()
-
+            """
             ### requests to node.js ###
             params = {}
             res = requests.get('http://192.168.1.208:3000/api/v1/users/' + user.id + '/create_article/' + article.id + '/tag/' + arture.id, params=params)
             print(res)
-
-            return HttpResponse(status=201)
+            """
+            response_data = {}
+            response_data['article_id'] = article.id
+            return HttpResponse(json.dumps(response_data, default=datetime_to_json), content_type='application/json', status=201)
 
         else:  # create article without image
             article = Article.objects.create(
@@ -367,7 +372,10 @@ def create_article(request, user_id):
             user = User.objects.get(id=user_id)
             user.article_list.insert(0, article.id)
             user.save()
-            return HttpResponse(status=201)
+
+            response_data = {}
+            response_data['article_id'] = article.id
+            return HttpResponse(json.dumps(response_data, default=datetime_to_json), content_type='application/json', status=201)
     return HttpResponseForbidden('Allowed only via POST')
 
 
@@ -538,11 +546,11 @@ def follow_arture(request, user_id):
         arture = Arture.objects.get(id=form['arture_id'])
         arture.user_list.insert(0, user_id)
         arture.save()
-
+        """
         ### requests to node.js ###
         params = {}
         res = requests.get('http://192.168.1.208:3000/api/v1/users/' + user.id + '/follow/' + arture.id, params=params)
         print(res)
-
+        """
         return HttpResponse(status=200)
     return HttpResponseForbidden('Allowed only via POST')
