@@ -27,14 +27,14 @@
 			<script>
 				var is_hover = 0;
 				$('#search-result').hover(function(){is_hover=1},function(){is_hover=0})
-				$('#search-input').keyup(function(){search('{{ user_objectId }}')})
+				$('#search-input').keyup(function(){search('t','{{ user_objectId }}')})
 				$('#search-input').on('focusout',function(){
 					if(is_hover == 0) $('#search-result').hide();
 				})
 
 				$('#search-input').focusin(function(){
 					$('#search-result').show();
-					search('{{ user_objectId }}');
+					search('t','{{ user_objectId }}');
 				})
 			</script>
 		</div>
@@ -82,27 +82,19 @@
 				<div class="right-container">
 					<div class="right-side-content">
 						<div class="info-B">
-							area for showing node recommendation
 							<form action="{% url 'login:signout' %}">{% csrf_token %}
 								<input type="submit" id="signout" name="signout" value="Signout">
 							</form>
-							<form action='/users/{{ user_objectId }}/profile_picture/upload' method="POST" enctype="multipart/form-data">{% csrf_token %}
-								<hr>
-								<p>upload profile picture : <input type="file" id="image" name="image"></p>
-								<input type="submit" value="Submit">
-							</form>
+					<div class="left-content">
+						<div class="request-info">
+							<img class="request-img" src="http://192.168.1.209/media/{% templatetag openvariable %} recommendation.image {% templatetag closevariable %}">
+							<div class="request-txt">
+								<span class="request-name"><a href="http://192.168.1.209/users/{% templatetag openvariable %} recommendation.user_id  {% templatetag closevariable %}">{% templatetag openvariable %} recommendation.name {% templatetag closevariable %}</a></span>
+									<span class="request-msg">님과 {% templatetag openvariable %} recommendation.numSharing  {% templatetag closevariable %}명의 친구를 공유중</span>
+							</div>
+						</div>
+					</div>
 
-							<form action='/users/{{ user_objectId }}/profile_picture' method="GET">{% csrf_token %}
-								<hr>
-								<p>get profile picture</p>
-								<input type="submit" value="Submit">
-							</form>
-
-							<form action="/users/58a54a83397f7f26288fa90c/artures" method="POST">{% csrf_token %}
-								<hr>
-								comment : <input type="text" name="comment">
-								<input type="submit" value="Submit">
-							</form>
 						</div>
 					</div>
 				</div>
@@ -112,9 +104,22 @@
 						<div class="article-input">
 							<div class="contents-input">
 								<textarea name="text-input" class="cinput" placeholder="무슨 생각을 하고 계신가요?" ng-model='text'></textarea>
-								<input type="text" class="cinput non-activate" placeholder="tag"  ng-model='tag'>
-								<input type="text" class="cinput non-activate" placeholder="emotion" ng-model='emotion'>
+								<input id="asearch-input" type="text" class="cinput non-activate" placeholder="tag"  ng-model='tag'>
 								<button class="cinput non-activate" id="contents-submit" onclick='un_focus()' ng-click='createPost("{{ user_name }}","{{ user_img_url }}")'>Post</button>
+								<div id="asearch-result"></div>
+								<script>
+									var ais_hover = 0;
+									$('#asearch-result').hover(function(){ais_hover=1},function(){ais_hover=0})
+									$('#asearch-input').keyup(function(){search('b','{{ user_objectId }}')})
+									$('#asearch-input').on('focusout',function(){
+										if(ais_hover == 0) $('#asearch-result').hide();
+									})
+
+									$('#asearch-input').focusin(function(){
+										$('#asearch-result').show();
+										search('b','{{ user_objectId }}');
+									})
+								</script>
 							</div>
 						</div>
 					</div>
@@ -125,12 +130,12 @@
 								<div class="profile-container">
 									<img class="profile-img" src="{% templatetag openvariable %} article.writer_image {% templatetag closevariable %}">
 									<span class="profile-name">{% templatetag openvariable %} article.writer_name {% templatetag closevariable %}</span><br>
-									<span class="time-stamp">{% templatetag openvariable %} setProperTimeString(article.reg_time) {% templatetag closevariable %}</span>
+									<span class="time-stamp">{% templatetag openvariable %} setProperTimeString(article.registered_time) {% templatetag closevariable %}</span>
 								</div>
-								<div class="article-top-contents">{% templatetag openvariable %} article.contents {% templatetag closevariable %}</div>
+								<div class="article-top-contents">{% templatetag openvariable %} article.text {% templatetag closevariable %}</div>
 								<div class="article-top-sub-contents">
 									<span class="tag">#{% templatetag openvariable %} article.tag {% templatetag closevariable %}</span>
-									<span class="emo">{% templatetag openvariable %} article.emotion {% templatetag closevariable %}</span>
+									<span class="emo"></span>
 								</div>
 							</div>
 
@@ -199,13 +204,13 @@
 		var headerContainer = document.getElementsByClassName("header-container")[0];
 
 		// initiate
-		turnOff([cinputs[1],cinputs[2],cinputs[3],shadow]);
+		turnOff([cinputs[1],cinputs[2],shadow]);
 		/* ------------  add event listener	------------ */
 		cinputs[0].onfocus = function() {
-			turnOn([cinputs[1],cinputs[2],cinputs[3],shadow]);
+			turnOn([cinputs[1],cinputs[2],shadow]);
 		};
 		shadow.onclick = function() {
-			turnOff([cinputs[1],cinputs[2],cinputs[3],shadow]);
+			turnOff([cinputs[1],cinputs[2],shadow]);
 		};
 		window.onscroll = function() {
 			if(headerContainer.clientHeight + midContainer.clientHeight <= window.pageYOffset + window.innerHeight+5) {

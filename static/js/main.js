@@ -6,9 +6,8 @@ mainApp.factory('dataService', function($http,$sce) {
 			var URL='';
 			switch(category) {
 				case "newsfeed":
-					URL = 'http://192.168.1.208:3000/main/users/'+params[0]+'/articles'
-					return;
-					break;
+					URL = 'http://192.168.1.208:3000/api/v1/users/'+params[0]+'/newsfeed'
+					return $http({ method: 'GET', url: URL }).success( function(data){ return data; }).error( function(){ console.log("receiveData error"); });
 				case "friend_request":
 					URL = 'http://192.168.1.209/users/'+params[0]+'/friend_requests'
 					break;
@@ -56,6 +55,7 @@ mainApp.controller("mainController", function($scope, dataService) {
 
 	$scope.createTimeInfo = function(date) {
 		var t_info = [];
+		date = new Date(date)
 		t_info[6] = date.getSeconds();
 		t_info[5] = date.getMinutes();
 		t_info[3] = (date.getHours()>=12 ? 1 : 0);
@@ -89,8 +89,10 @@ mainApp.controller("mainController", function($scope, dataService) {
 		else
 			pattern = [1,'월 ',2,'일 ',(t_info[3]==1 ? '오후':'오전'),' ',4,'시 ',5,'분'];
 
+		console.log(t_info)
 		for(var i=0; i<pattern.length; i++) {
 			if(typeof(pattern[i])!="string") {
+				console.log(pattern[i])
 				ret += t_info[pattern[i]].toString();
 			}
 			else 
@@ -113,20 +115,20 @@ mainApp.controller("mainController", function($scope, dataService) {
 
 	$scope.setUserId = function(user_id) {
 		$scope.user_id = user_id;
-		$scope.getFriendRequests();
-		$scope.getFriendRecommendation()
 		$scope.getFeeds();
+		$scope.getFriendRequests();
+		$scope.getFriendRecommendation();
 	}
 
 	$scope.createPost = function(user_name,user_img_url) {
 		dataService.sendData("article",[$scope.user_id,$scope.tag,$scope.text,document.getElementsByName("csrfmiddlewaretoken")[0].value]).then(function(resultData){ 
 																		$scope.feeds.unshift({'writer_name':user_name,
-																										 'contents':$scope.text,
+																										 'text':$scope.text,
 										  															 'id':resultData.data.article_id,
 																										 'tag':$scope.tag,
 																										 'emotion':"기쁘메츔~~",
 																										 'writer_image':user_img_url,
-																										 'reg_time':new Date()}); 
+																										 'registered_time':new Date()}); 
 																	},function(){
 																	})
 	};
@@ -170,22 +172,24 @@ mainApp.controller("mainController", function($scope, dataService) {
 	};
 
 	$scope.getFeeds = function(st, ed) {
-
+		console.log("asdf")
 		if($scope.gettingFeeds) return;
 		$scope.gettingFeeds = true; 
-		/* TODO : Processes with other parameter, combine user data 
-		dataService.receiveData("newsfeed",["user3@naver.com"]).then(function(resultData){
 
-			for(var i=resultData.data.length-1;i>=0;i--)
+		/* TODO : Processes with other parameter, combine user data */
+		dataService.receiveData("newsfeed",[$scope.user_id]).then(function(resultData){
+
+
+			for(var i=0;i<resultData.data.length;i++)
 			{
-				var temp = new Date(resultData.data[i].reg_time);
-				resultData.data[i].reg_time = temp.valueOf();
+				var temp = new Date(resultData.data[i].registered_time);
+				resultData.data[i].registered_time = temp.valueOf();
 				$scope.feeds.push(resultData.data[i]);
 			}
 
+
 			$scope.gettingFeeds = false;
 		});
-		*/
 	};
 
 });

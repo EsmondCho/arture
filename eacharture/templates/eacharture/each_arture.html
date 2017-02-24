@@ -42,9 +42,9 @@
 					<div class="top-content">
 						<div class="user-profile">
 							<div class="user-profile-img">
-								<img src="{{ profile_img_url }}"></img>
+								<img src="http://192.168.1.209:80/media/article_images/default_image/default.jpg"></img>
 								{% if is_mine == True %}
-								<form id="profile-img-form" action="/users/{{ user_objectId }}/profile_picture/upload" method="POST" enctype="multipart/form-data">{% csrf_token %}
+								<form id="profile-img-form">{% csrf_token %}
 								<input type="file" id="image" name="image" style="display:block;width:0;height:0;visibility:hidden">
 								<button type="button" class="upload-profile-img" onclick='upload_profile_img()'></button>
 								</form>
@@ -59,7 +59,7 @@
 								{% endif %}
 							</div>
 							<div class="user-profile-name">
-								<span class="user-profile-name-txt"><a href="http://192.168.1.209/users/{{ profile_objectId }}">{{ profile_name }}</a></span>
+								<span class="user-profile-name-txt"><a href="http://192.168.1.209/artures/{{ arture_id }}">{{ arture_title }}</a></span>
 							</div>
 							<div class="user-profile-tools">
 								{% if is_mine == False %}
@@ -99,34 +99,35 @@
 				<div class="right-container">
 					<div class="right-content">
 						<div class="banner">
-							<span class="banner-text">Following</span>
+							<span class="banner-text">Follower</span>
 						</div>
 					</div>
-					{% for follow in follow_list %}
+					{% for follower in followwer_list %}
 					<div class="mid-right-content">
 						<div class="request-info">
-							<img class="request-img" src="http://192.168.1.209/media/article_images/default_image/default.jpg">
+							<img class="request-img" src="{{ follower.image }}">
 							<div class="request-txt">
-								<span class="request-name"><a href="http://192.168.1.209/artures/{{ follow.arture_id }}">{{ follow.title }}</a></span>
+								<span class="request-name"><a href="http://192.168.1.209/users/{{ follower.object_id }}">{{ follower.user_name }}</a></span>
 							</div>
 						</div>
-				</div> 
+					</div>
 					{% endfor %}
+
 				</div>
 
 				<!-- Friend list -->
 				<div class="left-container">
 					<div class="left-content">
 						<div class="banner">
-							<span class="banner-text">Friends</span>
+							<span class="banner-text">Related</span>
 						</div>
 					</div>
-					{% for friend in friend_list %}
+					{% for related in related_arture_list %}
 					<div class="left-content">
 						<div class="request-info">
-							<img class="request-img" src="{{ friend.pic }}">
+							<img class="request-img" src="http://192.168.1.209:80/media/article_images/default_image/default.jpg">
 							<div class="request-txt">
-								<span class="request-name"><a href="http://192.168.1.209/users/{{ friend.user_id }}">{{ friend.name }}</a></span>
+								<span class="request-name"><a href="http://192.168.1.209/artures/{{ related.r_id  }}">{{ related.r_title }}</a></span>
 							</div>
 						</div>
 					</div>
@@ -137,28 +138,28 @@
 				<div class="mid-container">
 					<div class="mid-content">
 						<div class="banner">
-							<span class="banner-text">Timeline</span>
+							<span class="banner-text">Articles</span>
 						</div>
 					</div>
 					{% with 0 as idx %}
-					{% for article in article_list %}
+					{% for article in recent_articles %}
 					<div class="mid-content">
 						<div class="article">
 							<div class="article-top">
 								<div class="profile-container">
-									<img class="profile-img" src="{{ profile_img_url }}">
-									<span class="profile-name"><a href="http://192.168.1.209/users/{{ profile_objectId }}">{{ profile_name }}</a></span><br>
+									<img class="profile-img" src="{{ article.image }}">
+									<span class="profile-name"><a href="http://192.168.1.209/users/{{ article.id }}">{{ article.user_name }}</a></span><br>
 									<span class="time-stamp">{{ article.registered_time }}</span>
 								</div>
 								<div class="article-top-contents">{{ article.text }}</div>
 								<div class="article-top-sub-contents">
-									<span class="tag"><a href="http://192.168.1.209/artures/{{ article.tag_id }}">#{{ article.tag_title }}</a></span>
+									<span class="tag">#{{ article.tag }}</span>
 								</div>
 							</div>
 							<div class="article-bottom">
 								<!-- "comments" and "more comments button" and "comment write area" -->
 								<div class="comment-input">
-									<img class="profile-img-s" src="{{ profile_img_url }}">
+									<img class="profile-img-s" src="{{ article.image }}">
 									<form class="comment-form" onsubmit="return submitComment('{{ article.article_id }}',{{ forloop.counter0 }});">{% csrf_token %}
 										<input class="coinput" class="comment" name="comment" type="text" placeholder="댓글을 입력하세요..">
 									</form>
@@ -195,7 +196,7 @@
 					data: $('.comment-form').eq(idx).serialize(),
 					success:function(data){ 
 						console.log(idx)
-						$('.comments-container')[idx].innerHTML = '<div class="comment-content"><img class="profile-img-s" src="{{ user_image_url }}"><div class="comment-text"><span class="profile-name"><a href="http://192.168.1.209/users/{{ user_objectId }}">{{ user_name }}</a></span><span class="comment-text-body">'+$('.coinput').eq(idx).val()+'</span></div></div>' + $('.comments-container')[idx].innerHTML
+						$('.comments-container')[idx].innerHTML = '<div class="comment-content"><img class="profile-img-s" src="{{ user_img_url }}"><div class="comment-text"><span class="profile-name"><a href="http://192.168.1.209/users/{{ user_objectId }}">{{ user_name }}</a></span><span class="comment-text-body">'+$('.coinput').eq(idx).val()+'</span></div></div>' + $('.comments-container')[idx].innerHTML
 					}
 			})	
 			return false;

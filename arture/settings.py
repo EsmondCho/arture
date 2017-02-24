@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'djangotoolbox',
     'login',
     'arture',
-    'users'
+    'users',
+    'eacharture',
 ]
 
 MIDDLEWARE = [
@@ -80,7 +81,7 @@ WSGI_APPLICATION = 'arture.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django_mongodb_engine',
-        'NAME': 'arture',
+        'NAME': 'test',
         'HOST': 'localhost',
         'PORT': '27017',
         'USER': 'sgay',

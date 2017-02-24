@@ -26,6 +26,4 @@ urlpatterns = [
     url(r'^/articles/(?P<article_id>\w+)/comments/(?P<comment_id>\w+)/update$', views.update_comment, name='update_comment'),
     url(r'^/articles/(?P<article_id>\w+)/comments/(?P<comment_id>\w+)/delete$', views.delete_comment, name='delete_comment'),
 
-    url(r'^/artures$', views.get_following_arture_list, name='get_following_arture_list'),
-    url(r'^/artures/follow$', views.follow_arture, name='follow_arture'),
 ]

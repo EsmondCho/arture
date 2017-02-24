@@ -1,6 +1,7 @@
 import ast
 import datetime
 import json
+import requests
 
 from django.http import HttpResponseForbidden, HttpResponse
 from django.shortcuts import render, redirect
@@ -19,13 +20,13 @@ def datetime_to_json(ob):
 
 
 def get_profile_page(request, user_id):
-    if not authenticated(request):
-        return redirect('/login/')
 
     profile = User.objects.get(id=user_id)
     user_objectId = request.session.get('user_objectId')
     user_name = request.session.get('user_name')
     login_token = request.session.get('login_token')
+    user = User.objects.get(id=user_objectId)
+    user_image_url = 'http://192.168.1.209:80' + user.pic.url
 
     is_mine = True if profile.name == user_name else False
 
@@ -43,9 +44,20 @@ def get_profile_page(request, user_id):
         dic = {}
         dic['article_id'] = article.id
         dic['user_id'] = article.user_id
-        dic['tag'] = article.tag # tag is Arture objects
+
+        if Arture.objects.filter(id=article.tag).count() > 0:
+            arture = Arture.objects.get(id=article.tag)
+        else:
+            arture = Arture.objects.get(title='default_arture')
+
+        #print(type(article.tag))
+        #print(article.tag)
+        dic['tag_id'] = arture.id
+        dic['tag_title'] = arture.title
+        dic['tag_image'] = arture.image
+
         dic['text'] = article.text
-        dic['image'] = 'http://192.168.1.209:80' + article.image.url if article.image else ""
+        dic['article_image'] = 'http://192.168.1.209:80' + article.image.url if article.image else ""
         #dic['comment_list'] = json.dumps(serializers.serialize("json", article.comment_list), default=datetime_to_json),
         #dic['comment_list'] = article.comment_list
         comment_list = []
@@ -69,7 +81,10 @@ def get_profile_page(request, user_id):
         arture = Arture.objects.get(id=id)
         dic = {}
         dic['title'] = arture.title
-        dic['image'] = 'http://192.168.1.209:80' + arture.image.url if arture.image else ""
+        if arture.image:
+            dic['arture_image'] = arture.image
+        else:
+            dic['arture_image'] = None
         dic['arture_id'] = arture.id
         dic['arture_type'] = arture.arture_type
         follow_list.append(dic.copy())
@@ -98,12 +113,11 @@ def get_profile_page(request, user_id):
                                                     'article_list': article_list,
                                                     'follow_list': follow_list,
                                                     'friend_list': friend_list,
+                                                    'user_image_url': user_image_url,
                                                   })
 
 
 def newsfeed(request, user_id):
-    if not authenticated(request):
-        return redirect('/login/')
 
     user_objectId = request.session.get('user_objectId')
     user_name = request.session.get('user_name')
@@ -131,8 +145,6 @@ def upload_picture(request, user_id):
 
 
 def get_profile_picture(request, user_id):
-    if not authenticated(request):
-        return redirect('/login/')
 
     if request.method == 'GET':
         image_url = User.objects.get(id=user_id).pic.url
@@ -141,8 +153,6 @@ def get_profile_picture(request, user_id):
 
 
 def upload_profile_picture(request, user_id):
-    if not authenticated(request):
-        return redirect('/login/')
 
     if request.method == 'POST':
 
@@ -177,8 +187,6 @@ def get_friend_list(request, user_id):
 
 @csrf_exempt
 def get_friend_request_list(request, user_id):
-    if not authenticated(request):
-        return redirect('/login/')
 
     if request.method == 'GET':
         user_request_list = User.objects.get(id=user_id).friend_request_list
@@ -186,20 +194,18 @@ def get_friend_request_list(request, user_id):
 
         for r in user_request_list:
             user = User.objects.get(id=r.friend_id)
-            request = {}
-            request['user_id'] = user.id
-            request['name'] = user.name
-            request['image'] = 'http://192.168.1.209' + user.pic.url
-            request['request_type'] = r.request_type
-            request['request_id'] = r.id
+            dic = {}
+            dic['user_id'] = user.id
+            dic['name'] = user.name
+            dic['image'] = 'http://192.168.1.209' + user.pic.url
+            dic['request_type'] = r.request_type
+            dic['request_id'] = r.id
 
-            response_data.append(request.copy())
+            response_data.append(dic.copy())
         return HttpResponse(json.dumps(response_data), content_type='application/json', status=200)
 
 
 def create_friend_request(request, user_id):
-    if not authenticated(request):
-        return redirect('/login/')
 
     if request.method == 'POST': # create request
         form = request.POST
@@ -229,8 +235,6 @@ def create_friend_request(request, user_id):
 
 @csrf_exempt
 def response_to_friend_request(request, user_id, request_id):
-    if not authenticated(request):
-        return redirect('/login/')
 
     if request.method == 'POST': # response to request & insert into friend_list??
         form = ast.literal_eval(request.body)
@@ -263,12 +267,11 @@ def response_to_friend_request(request, user_id, request_id):
                     friend.friend_request_list.insert(0, request_object)
                     friend.friend_list.insert(0, user.id)
                     friend.save()
-                    """
+
                     ### requests to node.js ###
-                    params = {}
-                    res = requests.get('http://192.168.1.208:3000/api/v1/users/' + user.id + '/add_friend/' + friend.id, params=params)
+                    res = requests.get('http://192.168.1.208:3000/api/v1/users/' + user.id + '/add_friend/' + friend.id)
                     print(res)
-                    """
+
                     return HttpResponse(status=200)
 
         return HttpResponseForbidden('Invalid request id')
@@ -276,8 +279,6 @@ def response_to_friend_request(request, user_id, request_id):
 
 @csrf_exempt
 def delete_in_request_list(request, user_id, request_id):
-    if not authenticated(request):
-        return redirect('/login/')
 
     if request.method == 'DELETE': # delete request object in friend_request_list
         user = User.objects.get(id=user_id)
@@ -292,8 +293,6 @@ def delete_in_request_list(request, user_id, request_id):
 
 
 def get_article_list(request, user_id):
-    if not authenticated(request):
-        return redirect('/login/')
 
     if request.method == "GET":
         article_list = Article.objects.filter(user_id=user_id)
@@ -303,7 +302,9 @@ def get_article_list(request, user_id):
             request_ = {}
             request_['article_id'] = article.id
             request_['user_id'] = article.user_id
-            request_['tag'] = article.tag # response_data[article.id]['tag'] = serializers.serialize("json", article.tag)
+
+            request_['tag'] = article.tag
+
             request_['text'] = article.text
             if article.image:
                 request_['image'] = 'http://192.168.1.209:80' + article.image.url
@@ -327,14 +328,11 @@ def get_article_list(request, user_id):
 @csrf_exempt
 def create_article(request, user_id):
 
-    if not authenticated(request):
-        return redirect('/login/')
-
     if request.method == 'POST':
         form = ast.literal_eval(request.body)
         imageform = ImageUploadForm(request.POST, request.FILES)
 
-        if Arture.objects.filter(title=form['tag']).count():
+        if Arture.objects.filter(title=form['tag']).count() > 0:
             arture = Arture.objects.get(title=form['tag'])
         else:
             arture = Arture.objects.get(title='default_arture')
@@ -342,7 +340,7 @@ def create_article(request, user_id):
         if imageform.is_valid():  # create article with image
             article = Article.objects.create(
                 user_id=user_id,
-                tag=arture,
+                tag=arture.id,
                 text=form['text'],
                 image=imageform.cleaned_data['image'],
                 comment_list=[],
@@ -351,12 +349,12 @@ def create_article(request, user_id):
             user = User.objects.get(id=user_id)
             user.article_list.insert(0, article.id)
             user.save()
-            """
+
             ### requests to node.js ###
-            params = {}
-            res = requests.get('http://192.168.1.208:3000/api/v1/users/' + user.id + '/create_article/' + article.id + '/tag/' + arture.id, params=params)
+            url = 'http://192.168.1.208:3000/api/v1/users/' + user.id + '/create_article/' + article.id + '/tag/' + arture.id
+            res = requests.get(url)
             print(res)
-            """
+
             response_data = {}
             response_data['article_id'] = article.id
             return HttpResponse(json.dumps(response_data, default=datetime_to_json), content_type='application/json', status=201)
@@ -373,6 +371,11 @@ def create_article(request, user_id):
             user.article_list.insert(0, article.id)
             user.save()
 
+            ### requests to node.js ###
+            url = 'http://192.168.1.208:3000/api/v1/users/' + user.id + '/create_article/' + article.id + '/tag/' + arture.id
+            res = requests.get(url)
+            print(res)
+
             response_data = {}
             response_data['article_id'] = article.id
             return HttpResponse(json.dumps(response_data, default=datetime_to_json), content_type='application/json', status=201)
@@ -380,8 +383,6 @@ def create_article(request, user_id):
 
 
 def update_article(request, user_id, article_id):
-    if not authenticated(request):
-        return redirect('/login/')
 
     if request.method == "POST":
         form = request.POST
@@ -391,7 +392,6 @@ def update_article(request, user_id, article_id):
             arture = Arture.objects.get(title=form['tag'])
         else:
             arture = Arture.objects.get(title='default_arture')
-
 
         if imageform.is_valid():  # update article with image
             article = Article.objects.get(id=article_id)
@@ -411,8 +411,6 @@ def update_article(request, user_id, article_id):
 
 
 def delete_article(request, user_id, article_id):
-    if not authenticated(request):
-        return redirect('/login/')
 
     if request.method == "DELETE":
         article = Article.objects.get(id=article_id)
@@ -429,8 +427,6 @@ def delete_article(request, user_id, article_id):
 
 
 def get_comment_list(request, user_id, article_id):
-    if not authenticated(request):
-        return redirect('/login/')
 
     if request.method == "GET":
         comment_list = Article.objects.get(id=article_id).comment_list
@@ -449,8 +445,6 @@ def get_comment_list(request, user_id, article_id):
 
 
 def create_comment(request, user_id, article_id):
-    if not authenticated(request):
-        return redirect('/login/')
 
     if request.method == "POST":
         form = request.POST
@@ -471,8 +465,6 @@ def create_comment(request, user_id, article_id):
 
 
 def update_comment(request, user_id, article_id, comment_id):
-    if not authenticated(request):
-        return redirect('/login/')
 
     if request.method == "POST":
         form = request.POST
@@ -493,8 +485,6 @@ def update_comment(request, user_id, article_id, comment_id):
 
 
 def delete_comment(request, user_id, article_id, comment_id):
-    if not authenticated(request):
-        return redirect('/login/')
 
     if request.method == 'DELETE':  # delete comment object in comment_list
         article = Article.objects.get(id=article_id)
@@ -510,8 +500,6 @@ def delete_comment(request, user_id, article_id, comment_id):
 
 
 def get_following_arture_list(request, user_id):
-    if not authenticated(request):
-        return redirect('/login/')
 
     if request.method == 'GET':
         arture_list = User.objects.get(id=user_id).arture_list
@@ -521,7 +509,10 @@ def get_following_arture_list(request, user_id):
             dic = {}
             dic['arture_id'] = arture.id
             dic['arture_title'] = arture.title
-            dic['image'] = 'http://192.168.1.209:80' + arture.image.url
+            if arture.image:
+                dic['image'] = arture.image
+            else:
+                dic['image'] = None
             dic['article_list'] = arture.article_list
             dic['user_list'] = arture.user_list
             dic['arture_type'] = arture.arture_type
@@ -531,26 +522,3 @@ def get_following_arture_list(request, user_id):
 
         return HttpResponse(json.dumps(arture_list), content_type='application/json', status=200)
     return HttpResponseForbidden('Allowed only via GET')
-
-
-def follow_arture(request, user_id):
-    if not authenticated(request):
-        return redirect('/login/')
-
-    if request.method == 'POST':
-        form = request.POST
-        user = User.objects.get(id=user_id)
-        user.arture_list.insert(0, form['arture_id'])
-        user.save()
-
-        arture = Arture.objects.get(id=form['arture_id'])
-        arture.user_list.insert(0, user_id)
-        arture.save()
-        """
-        ### requests to node.js ###
-        params = {}
-        res = requests.get('http://192.168.1.208:3000/api/v1/users/' + user.id + '/follow/' + arture.id, params=params)
-        print(res)
-        """
-        return HttpResponse(status=200)
-    return HttpResponseForbidden('Allowed only via POST')

@@ -9,6 +9,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 from users.models import User
 
+
 def authenticated(request):
     session = request.session
     login_token = session.get('login_token', False)
@@ -50,12 +51,11 @@ def signup(request):
             article_list = [],
         )
         user.save()
-        """
+
         ### requests to node.js ###
-        params = {}
-        res = requests.get('http://192.168.1.208:3000/api/v1/users/' + user.id + '/signup', params=params)
+        res = requests.get('http://192.168.1.208:3000/api/v1/users/' + user.id + '/sign_up')
         print(res)
-        """
+
         login_token = get_random_string(length=32)
         cache.set(form['rinput-email'], login_token, nx=False)
 

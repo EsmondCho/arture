@@ -29,7 +29,7 @@ class Request(models.Model):
 
 class Article(models.Model):
     user_id = models.CharField(max_length=30) # insert user_objectId
-    tag = EmbeddedModelField('Arture') # insert arture object
+    tag = models.TextField() # insert arture object_id
     text = models.TextField(null=True)
     image = models.ImageField(null=True, upload_to='article_pictures', default='article_images/default_image/default.png')
     naver_review_number = models.CharField(null=True, max_length=10)
@@ -51,7 +51,7 @@ class Comment(models.Model):
 
 class Arture(models.Model):
     title = models.CharField(max_length=30)
-    image = models.ImageField(null=True, upload_to='arture_pictures')
+    image = models.CharField(null=True, max_length=100) # image url
     article_list = ListField(null=True) # insert Objectid
     user_list = ListField(null=True)
     arture_type = models.BooleanField() # True : artist / False : art
